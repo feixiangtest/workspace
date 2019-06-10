@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="color-blue">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>会员中心</title>
+    <!--日志监控插件-->
+    <script type="text/javascript" src="/resource/share/catchListen.js"  crossorigin="anonymous"></script>
+    <script>
+      (function () {
+        var IEvar = '9'
+        var IEnum = navigator.userAgent.toLowerCase()
+        // 检验是不是IE9 localstorage 只适用于IE9及以上
+        if (IEnum.indexOf('msie') > -1) {
+          if (Number(IEnum.match(/msie ([\d.]+)/)[1]) < IEvar) {
+            // location.href = '/updateBrowser.html'
+            alert('您的浏览器太旧或者开启了隐私模式/无痕模式，无法浏览网页，请更换浏览器或使用常规模式，给您带来的不便，表示抱歉！！')
+            window.opener = null
+            window.open('', '_self', '')
+            window.close()
+          }
+          return false
+        }
+        // Promise是否能用
+        if (typeof (Promise) === 'undefined') {
+          document.write('<script src="/resource/share/es6-promise.auto.min.js"><\/script>')
+        }
+      })()
+    </script>
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/jquery.base64.js"></script>
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/_.js" id="_js"></script>
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/layer.m.js"></script>
+    <link type="text/css" rel="stylesheet" href="/resource/share/RESOURCE_VERSION/css/layerBlue.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- 预设ajax-->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/request.js"></script>
+    <!-- 预设js -->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/common.js"></script>
+    <!-- 预设ajax-->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/requestUrl.js"></script>
+    <!--登录函数 -->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/login.js"></script>
+    <!-- 第三平台 live -->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/thirdPartyJump.js"></script>
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/myLayer.js"></script>
+    <!-- 解析第三发平台的结果 -->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/resolveResult.js"></script>
+    <!-- 预设数据 -->
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/const.js"></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

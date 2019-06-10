@@ -1,0 +1,30 @@
+/* LESS Document */
+@import "layerBase.less";   // 设置可通用样式
+
+.laymshade {
+    background-color: rgba(0, 0, 0, .4);
+}
+.layermchild {
+	background-color: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	h3{
+		color:#ffffff !important;
+		background: #428bca;
+	}
+}
+.layermbtn span{
+	&[type="0"] {
+		color: #333;
+		background: #d9d9d8;
+		&:hover {
+			background: #c9c9c8;
+		}
+	}
+	&[type="1"] {
+		color: #fff;
+		background: #2772ee;
+		&:hover {
+			background: #55acef !important
+		}
+	}
+}

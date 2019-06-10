@@ -1,0 +1,741 @@
+/***主要颜色色调 调盘***/
+// @skyBlue: #55acee; // 辅助颜色
+// @blue: #2772ee; // 主要颜色
+@white: #fff;
+@orange: #f88311; // 警告提示
+@lightGreen: #18B160; // 正确提示
+@purple: purple; //紫色
+@green: green; //绿色
+
+// @matter: #343434; // 主体文字
+// @minor: #666; // 次要文字
+// @inferior: #999; // 辅助文字
+
+// @ligBorColor: #e1e1e1; // 浅色边框线
+// @deepBorColor: darken(@ligBorColor, 5%); // 深色边框线
+
+@ligBacB: #e8ecef; // 以蓝色为主调的 淡色背景
+@ligBacR: #e7e7e7; // 以红色为主调的 淡色背景
+
+.orange{
+  color: @orange;
+}
+.purple{
+  color:@purple;
+}
+.green{
+  color:@green;
+}
+.dark {
+  background: @ligBacB;
+}
+
+.change(@a1:#55acee,@a2:#2772ee,@a3:#343434,@a4:#666,@a5:#999,@a6:#e1e1e1) {
+  /***主要颜色色调 调盘***/
+  @skyBlue: @a1; // 辅助颜色
+  @blue: @a2; // 主要颜色
+  
+  @matter: @a3; // 主体文字
+  @minor: @a4; // 次要文字
+  @inferior: @a5; // 辅助文字
+  
+  @ligBorColor: @a6; // 浅色边框线
+  @deepBorColor: darken(@a6, 5%); // 深色边框线
+  
+  // ---------------------------------------------------
+.inferior{
+  color: @inferior;
+}
+
+body {
+    background: lighten(@ligBacR,6%);
+}
+.memberHea {
+    .heaTop {
+        background: lighten(@ligBacR,6%);
+        .mdTime {
+            color: @minor;
+        }
+    }
+    .heaCon{
+        background: darken(@ligBacR,69%);
+        .nav{
+            button.el-button.is-plain, button.el-button.is-plain:focus{
+                border-color: @white;
+                color:  @white;
+                background: none;
+            }
+            button.el-button.is-plain:hover{
+                background: rgba(255,255,255,0.3);
+            }
+        }
+    }
+}
+#memberMenu {
+    .menuCont {
+        border: 1px solid @ligBorColor;
+        border-right: none;
+        background: @white;
+        h1{
+            background: @skyBlue;
+            color: @white;
+        }
+        .menuItem {
+            border-bottom: 1px solid @ligBorColor;
+            .menuTitle{
+                color: #a8b1b8;
+                border-bottom: 1px solid @ligBorColor;
+                &::after {
+                    background: #a8b1b8;
+                }
+            }
+            dd{
+                a{
+                    color: @matter;
+                    i.yo-icon{
+                        color: #a7b1b8;
+                    }
+                }
+                &.activeTab a, a:hover{
+                    background: @blue;
+                    color: @white;
+                    i.yo-icon{
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#memberContent{
+    .mainContent{
+        background: @white;
+        border:1px solid @ligBorColor;
+    }
+}
+
+.memberTab {
+    ul {
+        border-bottom: 1px solid @skyBlue;
+        li {
+            // border: 1px solid #dbe3ef;
+            border: 1px solid lighten(@skyBlue,28%);
+            color: @minor;
+            border-bottom-color: @skyBlue;
+            &.activeTab, &:hover {
+                color: @blue;
+                border-color: @skyBlue @skyBlue @white @skyBlue;
+            }
+        }
+    }
+}
+
+.memberInfo{
+    border: 1px solid @deepBorColor;
+    .infoBox{
+        div span ,p{
+            color: lighten(@inferior,18%)
+        }
+        p span{
+            color: @minor;
+        }
+    }
+}
+.yoFieldset {
+    border: 1px solid @deepBorColor;
+    legend{
+        color: @minor;
+    }
+}
+.platform{
+    dd{
+        border:1px solid @ligBorColor;
+        .platformIco{
+            background: lighten(@ligBacB,5%);
+        }
+        .platformAmount{
+            h4{
+                color: @minor;
+            }
+            span{
+                color: @blue;
+            }
+        }
+        &.refreshBut{
+            border:none;
+        }
+    }
+}
+.transformPlatform{
+    .platform;
+    dd{
+        .platHover{
+            background: rgba(0, 0, 0, 0.5);
+            a{
+                background: @blue;
+                color: @white;
+            }
+        }
+    }
+}
+table[class*='yoMemTable'], div[class*='yoMemTable']{
+    th{
+        background: lighten(@ligBacB,5%);
+    }
+    td,th{
+        color: @minor;
+    }
+    a{
+        color: @blue;
+    }
+}
+.yoMemTable2{
+    td,th{
+        border:1px solid @ligBorColor;
+    }
+}
+// 有效投注额
+.efficacbetCon{
+    scrollbar-face-color: darken(@deepBorColor,15%);
+    scrollbar-shadow-color: @ligBorColor;
+    scrollbar-highlight-color: @ligBorColor;
+    scrollbar-3dlight-color: @ligBorColor;
+    scrollbar-darkshadow-color: @ligBorColor;
+    scrollbar-track-color: @ligBorColor;
+    scrollbar-arrow-color: @ligBorColor;
+}
+.efficacbetCon::-webkit-scrollbar {
+    background-color: @ligBorColor;
+}
+.efficacbetCon::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, .3);
+    background-color: @ligBorColor;
+}
+.efficacbetCon::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, .3);
+    background-color:darken(@deepBorColor,15%);
+}
+// 功能导航切换
+.subNav{
+    border-bottom: 1px solid @ligBorColor;
+    ul{
+        li{
+            color: @inferior;
+            border:1px solid @ligBorColor;
+            background: @white;
+            &.cur, &:hover{
+                border-color: @blue;
+                background: @blue;
+                color: @white;
+            }
+        }
+    }
+}
+
+// 表单统一样式
+.formItem{
+    .formInline{
+        .errMsg{
+            color: @minor;
+        }
+        .error input{
+            border-color: @orange;
+        }
+    }
+    .yo-plaintFull{
+        color: @orange;
+    }
+    .yo-correctFull {
+        color: @lightGreen;
+    }
+}
+.amountSum{
+    li{
+        border:1px solid @blue;
+        color: @blue;
+        &.cur, &:hover, &:active{
+            color: @white;
+            background: lighten(@blue,10%);
+        }
+    }
+}
+
+.securityLevel{
+    span{
+        background: @ligBacB;
+        &.hasColor{
+            background: @lightGreen;
+        }
+    }
+}
+
+.tableForm{
+    background: lighten(@ligBacB,5%);
+    border:1px solid @ligBorColor;
+}
+
+.platformSelet{
+    span.platTit{
+        border:1px solid @deepBorColor;
+        border-right: none;
+        color: @minor;
+        background: @white;
+    }
+    .el-button.choose{
+        border:1px solid @deepBorColor;
+        border-left: none;
+    }
+}
+
+.yoPaging{
+    background: lighten(@ligBacB,5%);
+    border:1px solid @ligBorColor;
+}
+
+.platformTitle{
+    ul{
+        li{
+            color: @minor;
+            border:1px solid @ligBorColor;
+            &:hover, &:focus{
+                color: @blue;
+                border-color: @blue;
+            }
+            &:active, &.cur{
+                color: @white;
+                border-color: @blue;
+                background: @blue;
+            }
+        }
+    }
+}
+
+.information{
+    .operationBar{
+        span.checkAll{
+            color: @minor;
+        }
+    }
+ }
+
+ // 消息详情页面样式
+.msgDetail{
+    p{
+        color: @minor;
+        border-bottom: 1px solid @ligBorColor;
+    }
+    .detailCon{
+        color: @matter;
+    }
+}
+
+ //额度转换
+.transformBox{
+    .transformBut{
+        .yoIcon{
+            border:1px solid @blue;
+            color: @blue;
+            &:hover{
+                background: @blue;
+                color: @white;
+            }
+        }
+        .line{
+            &::before,&::after{
+                background: @ligBorColor;
+            }
+        }
+    }
+}
+
+// 额度转换中心区框架样式
+.lineConversion {
+    .overall{
+        span:first-child {
+            color: @minor;
+        }
+        .allGold{
+            color: @matter;
+        }
+        .refreshBut {
+            color: @blue;
+        }
+        .refTime{
+            color: @skyBlue;
+        }
+    }
+    .ConverMain{
+        border-left: 1px solid lighten(@ligBorColor,1%);
+    }
+}
+.lineConversion{
+    .c1{
+        border-bottom: 1px solid lighten(@ligBorColor,1%);
+        p{
+            color: @minor;
+        }
+        h4{
+            color: @orange;
+        }
+    }
+}
+.placelimt{
+    color: #868181;
+}
+// 线上存款
+.onlineDeposit{
+    .payFieldset{
+        border:none;
+        border-top:1px solid @ligBorColor;
+    }
+    legend{
+        color: @minor;
+    }
+    .paymentImg{
+        border-bottom:1px solid @ligBorColor;
+    }
+}
+
+.paylistStyle{
+    dd{
+        border:1px solid @ligBorColor;
+        &:hover, &.cur{
+            border-color: @blue;
+        }
+        &.cur{
+            &::after{
+                color: @blue;
+            }
+        }
+    }
+}
+
+.paymentItem{
+    border:1px solid @ligBorColor;
+    h2{
+        color: @matter;
+        .dark;
+        a.operation{
+            color: @blue;
+        }
+    }
+    .textCont{
+        color: @minor;
+    }
+}
+
+.affirmBut{
+    p{
+        color: @minor;
+    }
+}
+// 温馨提示
+.warmPrompt{
+    color: @minor;
+}
+// 线上存款--银行卡详情样式
+.companyBank{
+    dl{
+        h6, p{
+            color: @minor;
+        }
+        .bankDetails{
+            background: lighten(@ligBacB,5%);
+            color: @minor;
+        }
+    }
+}
+.publicPayMain{
+    .paymentItem;
+}
+// 扫码支付样式
+.scanCode{
+    dl{
+        dd{
+            background: @ligBacB;
+            i{
+                color: @blue;
+            }
+        }
+    }
+}
+
+// 取款密码 自定义密码键盘
+.yo-keyboard{
+    background-color:@white;
+    border: 1px solid @blue;
+  overflow: hidden;
+    .yo-shur{
+        background-color: lighten(@blue,38%);
+        span{
+            background-color: @white;
+            border: 1px solid @white;
+            &:focus{
+                border: 1px solid @blue;
+            }
+        }
+    }
+    .yo-number{
+        span{
+            border-bottom: 1px solid lighten(@ligBorColor,7%);
+            border-left: 1px solid lighten(@ligBorColor,7%);
+            color:@matter;
+            &:active,&:focus{
+                background: lighten(@ligBacR,2.6%);
+            }
+        }
+    }
+}
+
+// 帮助中心 主页排版
+.helpCategoryContainer{
+    .helpCategoryTitle{
+        .helpTitle{
+            color: darken(@skyBlue,38%);
+        }
+        .helpBlurb{
+            color: darken(@ligBacR,24.8%);
+        }
+    }
+}
+.helpItem{
+    h2{
+        color: @blue;
+        background: lighten(@ligBacB,5%);
+    }
+    .payItemCont{
+        border-top:1px solid @ligBorColor;
+    }
+}
+.helpSearch{
+    .SearchInput{
+        border:1px solid @white;
+        i{
+            color: @inferior;
+        }
+        input{
+            background: none;
+            color: @white;
+            border:none;
+        }
+    }
+}
+// 帮助中心导航栏
+#memberMenu .helpMenu{
+    ul.el-menu{
+        .is-active{
+            > .el-submenu__title{
+                background: @blue;
+                color: @white;
+                i{
+                    color: @white;
+                }
+            }
+        }
+        .homeTitle.is-active{
+            .is-active > .el-submenu__title;
+        }
+        .subMenu2.is-active{
+             .el-submenu__title{
+                background: #55acee;
+            }
+        }        
+    }
+}
+
+#memberHea .heaCon{
+    .nav.helpSearch button.el-button.is-plain,button.el-button.is-plain:focus{
+        background: rgba(255, 255, 255, 0.3);
+    }
+    .nav.helpSearch button.el-button.is-plain:hover{
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+// element 按钮自定义修改
+.el-button{
+    &:hover{
+        color: @white;
+        border-color: @skyBlue;
+        background-color: @skyBlue;
+    }
+    &.is-plain, &.is-plain:focus{
+        border-color: @blue;
+        color: @blue;
+    }
+    &.is-plain:hover {
+        background: @blue;
+        border-color:@blue;
+        color: @white;
+    }
+    &.is-disabled,
+    &.is-disabled:focus,
+    &.is-disabled:active,
+    &.is-disabled:hover{
+        color: lighten(@ligBacR,4%);
+        cursor: not-allowed;
+        background-image: none;
+        border-color:darken(@ligBacR,11.6%);
+        background-color: darken(@ligBacR,11.6%);
+    }
+}
+.el-button--primary,
+.el-button--primary:focus{
+    background: @blue;
+    border-color: @blue;
+}
+.el-button--primary:hover{
+    background: @skyBlue;
+    border-color: @skyBlue;
+}
+// element 面包屑自定义修改
+.el-breadcrumb{
+    background: lighten(@ligBacB,5%);
+    span.el-breadcrumb__item{
+        span.el-breadcrumb__inner{
+            color: @inferior;
+        }
+        &:last-child{
+            span.el-breadcrumb__inner{
+                color: @minor;
+            }
+        }
+    }
+}
+// element 表单自定义修改
+input.el-input__inner{
+    color: @minor;
+    border-color: @deepBorColor;
+    .placeholderStyle(@inferior,12px);
+    &:hover{
+        border-color: @blue;
+        background: lighten(@skyBlue,33.6%);
+    }
+    &:focus{
+        border-color: @blue;
+        .box-shadow(0, 0, 6px, @blue);
+    }
+}
+.el-input__inner{
+    border-color: @deepBorColor;
+}
+.el-input.is-disabled .el-input__inner{
+    background: @ligBacR;
+    border-color: @deepBorColor;
+    .placeholderStyle(@matter,12px);
+    color: @matter;
+}
+textarea{
+    &:focus{
+        border-color: @blue;
+        .box-shadow(0, 0, 6px, @blue);
+    }
+}
+.el-input-group__append{
+    background: darken(@ligBacR,4%);
+}
+// element 分页自定义修改
+.el-pagination{
+    .el-pager li{
+        border:1px solid @deepBorColor;
+        background: @white;
+        &:hover{
+            border-color: @blue;
+            color: @blue;
+        }
+        &.active{
+            background: @blue;
+            color: @white;
+            border-color: @blue;
+        }
+    }
+    .el-pager li.active+li{
+        border:1px solid @deepBorColor;
+    }
+    &.is-background .el-pager li:not(.disabled).active{
+        background: @blue;
+        border-color: @blue;
+    }
+    .btn-prev, .btn-next{
+        border:1px solid @deepBorColor;
+        background: @white;
+        &:hover{
+            border-color: @blue;
+            color: @blue;
+        }
+    }
+    button:disabled, button:disabled:hover{
+        color: darken(@ligBacR,10%);
+        border-color:darken(@ligBacR,2.6%);
+
+    }
+}
+// element 表格自定义修改
+.el-table{
+    border-color: @ligBorColor;
+    td,th, th.is-leaf{
+        border-color: @ligBorColor;
+    }
+    &::before, &::after{
+        background-color: @ligBorColor;
+    }
+}
+// element 弹框自定义修改
+.el-dialog{
+    background: transparent;
+}
+.el-dialog__header{
+    background: @skyBlue;
+}
+.el-dialog__body, .el-dialog__footer{
+    background:@white;
+}
+.el-dialog__title{
+    color: @white;
+}
+.el-dialog__headerbtn {
+    .el-dialog__close{
+        color: @white;
+        opacity: 0.7;
+    }
+    &:hover .el-dialog__close{
+        color: @white;
+        opacity: 1;
+    }
+}
+//element collapse折叠面板自定义修改
+.el-collapse{
+    border-top: none;
+    border-color: @ligBorColor;
+    .el-collapse-item__header{
+        border-bottom:none;
+        color: @minor;
+        &:hover{
+            background: lighten(@ligBacB,5%);
+        }
+    }
+}
+.el-collapse-item__wrap{
+    border-bottom: none;
+}
+.el-collapse-item {
+    border:1px solid @ligBorColor;
+    border-bottom: none;
+    &.is-active{
+        .el-collapse-item__header{
+            color: @blue;
+            background: lighten(@ligBacB,5%);
+        }
+    }
+}
+.el-collapse-item__content{
+    border-top:1px solid @ligBorColor;
+    color: @minor;
+}
+// element loading 样式调整
+.el-loading-mask{
+    background:rgba(202, 202, 202, 0.22) !important;
+}
+
+}

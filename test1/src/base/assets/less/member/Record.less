@@ -1,0 +1,325 @@
+.stripedMenu{
+    ul.newRecordUl{
+        #display-fix > .flex-container;
+        #display-fix > .flex-nowrap;
+        #display-fix > .justify-center;
+        height: 47px;
+        li{
+            flex: 1;
+            line-height: 47px;
+            a{
+                height: 100%;
+                .fontSize(@f16);
+            }
+        }
+    }
+}
+
+.fixationNav{
+    position: fixed;
+    top: 44px;
+    width: 100%;
+    height: 49px;
+    z-index: 2;
+    overflow: hidden;
+}
+ul.subNav{
+    height: 36px;
+    li{
+        width: 50% - 1px;
+        line-height: 36px;
+        a{
+            width: 100%;
+            .fontSize(@f14);
+            border:none;
+        }
+        &:last-child{
+        }
+        &.active a, &:active a{
+            border-bottom:none;
+        }
+    }
+}
+.recordList{
+    dd{
+        padding: 16px ;
+        border-top:none;
+        position: relative;
+    }
+    dd.newRecordsBody{
+         padding: 0;
+         border: 0;
+         position: relative;
+        //  top: 45px;
+         &:after{
+             content: '';
+             display: table;
+             clear: both;
+         }
+    }
+    dt{
+        .yo-pad10;
+        font-size: 16px;
+        i{
+            .floatR;
+            &.icon-arrows-right,&.icon-arrows-top,&.icon-arrows-bottom{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .item-note{
+        text-align: right;
+        margin: -37px 0 0 0;
+        .floatR;
+        .fontSize(@f12);
+    }
+    p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    ul{
+        width: 100%;
+        li{
+          width: 20%;
+          padding: 5px 0;
+          display: inline-block;
+          .floatL;
+          span{
+              font-size: 12px;
+              display: inline-block;
+              text-align: center;
+              width: 100%;
+          }
+        }
+    }
+    dd.newRecordsTitle{
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      height: 45px;
+      padding: 8px 0;
+      #titleBet{
+          font-size: 14px;
+          text-align: center;
+      }
+    }
+}
+.recordTitle{
+    height: 21px;
+    .fontSize(@f16);
+    margin-bottom:2px;
+}
+.sporsList{
+    .item-note{
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        margin: 0px;
+    }
+}
+.msDelete{
+    text-decoration: line-through;
+}
+
+// 电子游戏 红色的线
+.redLine{
+  display: none;
+  width: 26%;
+  height: 1px;
+  position: relative;
+  bottom: 4px;
+  margin: 0 auto;
+}
+
+.egameNav{
+   border-bottom: 2px solid #ececec;
+  .activeHide{
+    display: none;
+  }
+  ul{
+    overflow-x: auto;
+    overflow-y:hidden ;
+    #display-fix > .flex-container;
+    #display-fix > .flex-nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    #display-fix > .justify-center;
+    justify-content: unset;
+    height: 49px
+  }
+  li{
+    .box-flex(1);
+    flex: none;
+    line-height: 49px;
+    height: 100%;
+    a{
+      height: 100%;
+      width: 100%;
+      font-size: 16px;
+      color: #343434;
+    }
+    &:last-child {
+      .box-flex(0.3);
+      a{
+        width: 150%;
+        white-space: nowrap;
+        display:block;
+        font-size: 14px;
+        color: #343434;
+        border-bottom: 2px solid #ececec
+      }
+    }
+  }
+  li.active{
+    span.redLine{
+      display: block;
+    }
+  }
+  .navigation::-webkit-scrollbar {display:none}
+  .fixationNav{
+    top: 44px;
+    overflow: hidden;
+  }
+
+}
+/**  投注记录页面分页样式
+ **  @kollen  *************Start****************/
+.yoFooter {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+.yoFooter.total {
+    bottom: 44px;
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+}
+.yoFooter.total.onFooter{
+    bottom: 0;
+}
+.yoFootNav{
+    .center{
+        width: calc(100% - 10px);
+        margin: 0 auto;
+        position: relative;
+    }
+    .fot{
+        position: absolute;
+        top: 0;
+        width: 23%;
+        z-index: 10;
+        width: 50%;
+    }
+    .fotLeft {
+        left: -10px;
+        padding-left: 10px;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            font-family: 'Microsoft Yahei';
+            padding-left: 3px;
+        }
+    }
+    .fotRight{
+        right: 0px;
+        text-align: right;
+    }
+    .total{
+        span,em{
+             margin: 0 5px;
+        }
+    }
+    .fotTitle{
+        width: 100%;
+        text-align: center;
+        margin-top: -5px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 16px;
+        margin-top: 0px;
+    }
+}
+.mainCenterTwo.newBettingBox{
+    height: 84%;
+    padding-top:44px;
+    padding-bottom: 44px; 
+}
+.mainCenterTwo.newBettingBox.minBody{
+    height: 82%;
+}
+.mainCenterTwo.newBettingBox.iPhone{
+    height: 85%;
+}
+.mainCenterTwo.newBettingBox.maxBody{
+    height: 86.5%;
+}
+.yoPaging {
+    height: 44px;
+    line-height: 40px;
+    .detailedFoot{
+        width: 70px;
+        border-radius: 6px;
+        line-height: 26px;
+        height: 34px;
+        font-size: 14px;
+        padding: 0px;
+        text-align: center;
+    }
+    .center {
+        #display-fix > .flex-container; 
+    }
+}
+dd.chooseDate{
+  .formIput{
+      span.V-line{
+          display:inline-block;
+          width:2px;
+          height:20px;
+          margin-top:9px
+      }
+      span.fontSize16{
+          text-align:left
+      }
+  }
+}
+.formIput .itemNeir.red{
+    color:#f00;
+}
+.formIput .itemNeir.green{
+    color:green;
+}
+.fixedApp{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+.recordList{
+    .notDataShow{
+        width:116px;
+        padding-top: 53%;
+        margin:0 auto;
+        p{
+            text-align: center;
+            margin-top: 6px;
+        }
+    }
+    .newRecordsBody{
+        ul.historyLineThrough{
+            li{
+                span{
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+/********** 投注记录页面分页样式 End **************/
+
+
+

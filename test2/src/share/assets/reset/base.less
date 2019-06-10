@@ -1,0 +1,227 @@
+/**
+    全局 less 变量
+ */
+@imgUrl:'/resource/share/RESOURCE_VERSION/imgs';
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+}
+
+.placeholderStyle(@col:#999,@siz:12px){
+  &::-moz-placeholder{
+    color: @col;
+    font-size: @siz;
+  }
+  &:-ms-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+  &::-webkit-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+}
+
+.linear-gradient(@top, @bottom){
+  background: @top; /* Old browsers */
+  background: -moz-linear-gradient(top,  @top 0%, @bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @top 0%,@bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  @top 0%,@bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  @top 0%,@bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  // background: -moz-radial-gradient(@positionOrAngle,@shapeOrSize, @color_stop1,@color_stop2,@color_stop13);
+}
+
+.linear-gradient2(@angle, @start, @middle, @stop){
+	background: -webkit-linear-gradient(@angle,@start,@middle,@stop);
+	background: -moz-linear-gradient(@angle,@start,@middle,@stop);
+	background: -o-linear-gradient(@angle,@start,@middle,@stop);
+	background: linear-gradient(@angle,@start,@middle,@stop);
+}
+
+.transform(@val){
+	-webkit-transform:@val; /* Safari 和 Chrome */
+	-moz-transform:@val; 	/* Firefox */
+	-ms-transform:@val; 	/* IE 9 */
+	-o-transform:@val; 	/* Opera */
+	transform:@val;
+}
+
+.animation(@val){
+	-webkit-animation:@val;
+	-moz-animation: @val;
+	-ms-animation: @val;
+	-o-animation: @val;
+	animation: @val;
+}
+
+#display-fix{
+  .flex-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .flex-direction {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .flex-direction-co{
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+  }
+  .flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .flex-nowrap {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .justify-content {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .justify-flex-start{
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  .justify-flex-end{
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  .justify-center{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+  }
+  .align-center{
+    -webkit-box-align: center;
+    -webkit-align-items:center;
+  -ms-flex-align: center;
+    align-items:center;
+  }
+  .align-stretch{
+    align-content:stretch;
+  }
+}
+.box-flex (@grow){
+  -webkit-box-flex:@grow;
+  -webkit-flex:@grow;
+  -ms-flex:@grow;
+  flex:@grow;
+}
+.box-sizi{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//登录后 账户余额详情下拉样式
+.BalanceSelector1{
+	position: absolute;
+    z-index: 100000;
+    right: 0px;
+	ul{
+		width: 160px;
+		border-radius: 4px;
+		li{
+			line-height: 30px;
+			white-space: nowrap;
+      width: 160px;
+      text-align: left;
+			a, div{
+				background-color: #B4B4B4;
+				border-bottom: 1px solid #9E9E9E;
+				border-top: 1px solid #C0C0C0;
+				display: block;
+			}
+			a{
+				background-color: #BBBBBB;
+				border-radius: 4px 4px 0 0;
+				color: #333333;
+				font-family: verdana;
+				height: 28px;
+				padding: 0 10px;
+        font-size: 12px;
+        cursor: pointer;
+			}
+			div {
+				cursor: default;
+				font-size: 13px;
+				height: auto;
+				line-height: 30px;
+				width: 160px;
+        margin: 0px;
+        padding: 0 10px;
+			}
+			&:last-child div{
+				border-radius:  0 0 4px 4px;
+			}
+			h5{
+				color: #666666;
+				padding-left: 10px;
+				font-weight: normal;
+				display: inline-block;
+			}
+			span{
+				color: #333333;
+			}
+		}
+	}
+}
+//最新消息样式
+#memberLatestAnnouncement{
+  cursor:pointer;
+}
+// float.vue 组件 css
+#floatPage {
+  #leftBox a {display: block}
+  #rightBox a {display: block}
+}
+// 未读消息 红点
+#redPoint {
+  position: relative;
+  img{
+    position: absolute;
+    top: -12px;
+    right: -4px;
+  }
+}
+.el-icon-messages{
+  position: relative;
+}
+.redPointImg{
+  position: absolute;
+  left: 6px;
+  /* top: 1px; */
+  margin-top: -10px;
+}
+
+
+
+
+
+
+

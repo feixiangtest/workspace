@@ -1,0 +1,63 @@
+<html>
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PT电子游艺</title>
+      <script type="text/javascript" src="https://login.grandmandarin88.com/jswrapper/integration.js.php?casino=greenjade88"></script>
+      <script type="text/javascript">
+      // var gametype ="ngm";
+      function getUrlVars () {
+        var vars = {}
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+          vars[key] = value
+        })
+        return vars
+      }
+
+      window.onload = function () {
+        if (location.hostname === getUrlVars()['domain']) {
+          login()
+        } else {
+          window.location.href = 'http://' + getUrlVars()['domain'] + '/jsp/member/default/flex/ptWap/pt-play.jsp?userName=' + getUrlVars()['userName'] + '&password=' + getUrlVars()['password'] + '&gameid=' + getUrlVars()['gameid'] + '&domain=' + location.hostname
+  }
+      }
+
+      var realMode = 1
+      function login () {
+        iapiSetCallout('Login', calloutLogin)
+        iapiSetClientPlatform('mobile&deliveryPlatform=HTML5')
+        iapiLogin(getUrlVars()['userName'], getUrlVars()['password'], realMode, 'en')
+      }
+
+      function calloutLogin (response) {
+        if (response.errorCode) {
+          alert('Login failed. ' + response.playerMessage + ' Error code: ' + response.errorCode)
+        } else {
+          iapiSetCallout('GetTemporaryAuthenticationToken', calloutGetTemporaryAuthenticationToken)
+          iapiRequestTemporaryToken(realMode, '698', 'GamePlay')
+        }
+      }
+
+      function launchMobileClient (temptoken) {
+      // 	if (gametype == "mps") {//pt那边解释 旧游戏用这种方式  目前没用到
+      // 		//var clientUrl=''+'?username=' + getUrlVars()["userName"] + '&temptoken=' + temptoken + '&game=' + currentgame + '&real=1';
+      // 	} else if (gametype = "ngm") {
+      //	var clientUrl = 'http://hub.gm175788.com/igaming/' + '?gameId=' + currentgame + '&real=1' + '&username=' + getUrlVars()["username"] + '&lang=' + document.getElementById("languageform").language.value + '&tempToken=' + temptoken + '&lobby=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'lobby.html' + '&support=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'support.html' + '&logout=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'logout.html';
+        var clientUrl = 'http://hub.gm175788.com/igaming/' + '?gameId=' + getUrlVars()['gameid'] + '&real=1' + '&username=' + getUrlVars()['userName'] + '&lang=zh-cn&tempToken=' + temptoken + '&lobby=' + getUrlVars()['domain'] + '/wap/ptGame' + '&logout=' + getUrlVars()['domain'] + '/wap/ptGame'
+     // 	}
+        document.location = clientUrl
+      }
+
+    // CALLOUT----------------------------------------------
+function calloutGetTemporaryAuthenticationToken (response) {
+  if (response.errorCode) {
+          alert('Token failed. ' + response.playerMessage + ' Error code: ' + response.errorCode)
+  } else {
+          launchMobileClient(response.sessionToken.sessionToken)
+  }
+}
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>

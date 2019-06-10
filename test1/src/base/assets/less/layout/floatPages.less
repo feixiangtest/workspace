@@ -1,0 +1,410 @@
+.floatPages {
+  position: fixed;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+}
+.floatPages.active {
+  display: block;
+}
+.searchBox {
+  ul {
+    .clearfix;
+    width: 100%;
+    padding: 10px 10px 0;
+    li {
+      display: block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      .floatL;
+      a {
+        display: block;
+        height: 36px;
+        text-align: center;
+        padding: 0 12px;
+        .fontSize(@f16);
+        .border-radius(4px);
+      }
+    }
+    &.searchNav1 {
+      li {
+        a {
+          line-height: 34px;
+        }
+      }
+    }
+    &.searchNav2 {
+      li {
+        a {
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.searchBoxInput {
+  height: 30px;
+  margin: 0 10px 10px;
+  .border-radius(4px);
+  .clearfix;
+  i {
+    .floatL;
+    display: block;
+    margin: 4px 6px 0 8px;
+  }
+  input {
+    .floatL;
+    width: calc(~'100% - ( 14px + 28px)');
+    background: none;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.layermchild {
+  .icon-bulb {
+    margin-top: -4px;
+    margin-right: 10px;
+  }
+}
+.layermcont {
+    div.yo-tancen{
+        display: table;
+        width: 100%;
+        text-align: center;
+        min-height:60px;
+        p{
+            vertical-align: middle;
+            display:table-cell;
+        }
+    }
+}
+.guidePage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 100000;
+}
+.viewpager {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.skipButtom {
+    position: absolute;
+    bottom: 70px;
+    right: 0px;
+    display: block;
+    width: 90px;
+    height: 40px;
+    z-index: 100001;
+}
+.shareBox {
+    position: fixed;
+    bottom:10px;
+    width: 100%;
+    padding: 0 10px;
+      .shareBox-one {
+          padding: 10px;
+          .border-radius(6px 6px 0 0);
+          h4{
+              height: 40px;
+              line-height: 22px;
+          }
+      }
+  .shareBocCen{
+    #display-fix > .flex-container;
+    #display-fix > .flex-nowrap;
+    #display-fix > .justify-center;
+    #display-fix > .align-center;
+    a{
+      display: block;
+      flex: 1;
+      text-align: center;
+      span{
+        display: block;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+  .social-share {
+      font-family: "socialshare" !important;
+      font-size: 16px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+      #display-fix > .flex-container;
+      #display-fix > .flex-nowrap;
+      #display-fix > .justify-center;
+      #display-fix > .align-center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      padding-bottom: 10px;
+      a{
+          display: block;
+          .box-flex(1);
+          text-align: center;
+          span{
+              display: block;
+              font-size: 14px;
+              line-height: 26px;
+          }
+      }
+  }
+    .social-share-icon {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        border-radius: 50%;
+        line-height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        transition: background 0.6s ease-out 0s;
+        i{
+          .fontSize(32px);
+        }
+    }
+    .wechat-qrcode {
+        display: none;
+        position: absolute;
+        z-index: 9;
+        top: -242px;
+        left: -94px;
+        width: 200px;
+        height: 192px;
+        font-size: 12px;
+        text-align: center;
+        transition: all 200ms;
+        -webkit-tansition: all 200ms;
+        -moz-transition: all 200ms;
+      &.bottom:after {
+          display: none
+      }
+      h4 {
+          font-weight: normal;
+          height: 26px;
+          line-height: 26px;
+          font-size: 12px;
+          margin: 0;
+          padding: 0;
+      }
+      .qrcode {
+          width: 105px;
+          margin: 10px auto;
+          table {
+              margin: 0 !important;
+          }
+      }
+      .help p {
+          font-weight: normal;
+          line-height: 16px;
+          padding: 0;
+          margin: 0
+      }
+      &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          margin-left: -6px;
+          bottom: -13px;
+          width: 0;
+          height: 0;
+          border-width: 8px 6px 6px 6px;
+          border-style: solid;
+      }
+  }
+
+  .shareBoxBot{
+    .border-radius(0 0 6px 6px);
+    padding:20px 0;
+    .yo-cancel {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width: 50%;
+      height:36px;
+      line-height: 36px;
+      text-align: center;
+      font-size: 14px;
+      .border-radius(30px);
+    }
+  }
+
+}
+.gameNotBox{
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  #display-fix > .flex-container;
+  #display-fix > .flex-nowrap;
+  #display-fix > .justify-center;
+  #display-fix > .align-center;
+}
+.gameNotice{
+  width: 250px;
+  max-height: 90%;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  #display-fix > .flex-direction-co;
+  #display-fix > .flex-container;
+  .border-radius(4px);
+  .noticeTitle{
+    padding: 15px 10px;
+    text-align: center;
+  }
+  .noticeCenter{
+    padding: 10px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    div{
+      word-wrap: break-word;
+      word-break: normal;
+      &::-webkit-scrollbar-track-piece {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      &::-webkit-scrollbar {/*隐藏滚轮*/
+        // display: none;
+        width: 2px;
+        .border-radius(2px);
+      }
+    }
+  }
+  .noticeBut{
+      padding: 10px;
+      min-height: 65px;
+      text-align: center;
+      #display-fix > .flex-container;
+      #display-fix > .flex-direction;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      padding: 10px;
+      min-height: 65px;
+      .yo-anTwo{
+          width: 178px;
+          display: inline-block;
+          height: 35px;
+          line-height: 35px;
+          position: relative;
+          z-index: 5;
+          margin: 0 auto;
+          .border-radius(17px);
+      }
+  }
+}
+.MsgBox{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  #display-fix > .flex-container;
+  #display-fix > .flex-nowrap;
+  #display-fix > .justify-center;
+  #display-fix > .align-center;
+  z-index: 20180129;
+}
+.popMessages{
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 30%;
+  max-height: 55%;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  #display-fix > .flex-direction-co;
+  #display-fix > .flex-container;
+  .border-radius(4px);
+  .messTop{
+    position: relative;
+    min-height: 48px;
+    text-align: center;
+    .border-radius(4px 4px 0 0);
+    .box-flex(48px 1 auto);
+    span{
+      line-height: 48px;
+      height: 48px;
+      display: block;
+    }
+    i{
+      margin-top: -4px;
+    }
+    a{
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 12px;
+      width: 25px;
+      height: 29px;
+      margin-right: 10px;
+    }
+  }
+  .messCent{
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 18px 0 0;
+    width: 100%;
+    min-height: 150px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    .messContent{
+      margin: 0px 10px;
+      line-height: 20px;
+      div{
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+    }
+  }
+  .messBot{
+    .border-radius(0 0 4px 4px);
+    min-height: 20px;
+    span{
+      display: block;
+      height: 20px;
+      content:"0";
+    }
+  }
+}
+.payExplainBox{
+    .gameNotice{
+        width: 90%;
+        height: 84%;
+        max-height: 84%;
+        .noticeCenter{
+            height: calc(~'100% - (65px + 50px)') ;
+            max-height: calc(~'100% - (65px + 50px)');
+            img{
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
+            .mint-swipe-item{
+              top: 0px;
+              left: 0px;
+            }
+        }
+    }
+}
+// 5s兼容样式
+@media screen and (max-width: 320px) {
+    .popMessages{
+        padding-top:25px;
+    }
+}

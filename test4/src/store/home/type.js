@@ -1,0 +1,7 @@
+export const LOTTERY_ACTION = 'initData.action'
+export const HOME_MUTATION_INITDETAIL = 'home.initDetail'
+export const LOSE_AND_WIN_ACTION = 'loseAndWin.action'
+export const GET_BALANCE_ACTION = 'getBalance.action'
+export const GET_GPO_CP_BALANCE_ACTION = 'getGpoCPBalance.action'
+export const GET_BALANCE_INITDETAIL = 'getBalance.initDetail'
+export const LOSE_AND_WIN_INITDETAIL = 'loseAndWin.initDetail'

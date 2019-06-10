@@ -1,0 +1,52 @@
+// 修改mint-ui插件样式
+// 修改mint-ui swipe
+.mint-swipe, .mint-swipe-items-wrap{
+    // overflow: initial !important;
+    .border-radius(4px);
+    box-shadow: 0 4px 12px 0 rgba(121,121,121,.5);
+}
+
+// 修改mint-ui switch
+.mint-switch-core{
+    width:65px;
+    height: 26px;
+    &:before{
+        width: 62px;
+        height: 24px;
+    }
+    &:after{
+        width: 24px;
+        height: 24px;
+    }
+}
+.mint-switch-input:checked+.mint-switch-core{
+    &:after{
+        -webkit-transform: translateX(39px);
+        transform: translateX(39px);
+    }
+}
+
+// 单选按钮插件
+.mint-checkbox-core{
+    background-color: #eee !important;
+    &::after{
+        border-color: #ccc !important;
+        -webkit-transform: rotate(45deg) scale(1) !important;
+        transform: rotate(45deg) scale(1) !important;
+    }
+}
+.mint-checkbox-core:after{
+    border-width: 1px !important;
+    width:5px !important;
+}
+.mint-checkbox-input:checked+.mint-checkbox-core:after{
+    border-color: #fff !important;
+}
+
+.mint-loadmore{
+    min-height: 100%;
+}
+
+.mint-spinner-fading-circle{
+    margin: 0 auto;
+}

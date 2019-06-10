@@ -1,0 +1,23 @@
+.DS_Store
+node_modules/
+resource/gulp/*.js
+resource/gulp/**/*.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/test/unit/coverage/
+*/multipage.project.js
+# Editor directories and files
+dist/
+*/cdn
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+package-lock.json
+yarn.lock
+*.bat
+/devtool/nginx-1.12.0/logs
+/devtool/nginx-1.12.0/conf/nginx.conf
+test/*

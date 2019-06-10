@@ -1,0 +1,324 @@
+// 团队管理
+#manageCenter {
+  overflow: hidden;
+  .tmBanner {
+    margin-top: 44px;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content {
+    margin: 0px 10px;
+    transform: translateY(-10px);
+    .manageItem {
+      background: #ffffff;
+      box-shadow: 0 2px 4px 0 rgba(222, 222, 222, 0.5);
+      border-radius: 2px;
+      margin-bottom: 15px;
+      height: 50px;
+      .titleIcon {
+        float: left;
+        width: 30px;
+        height: 24px;
+        margin-top: 17px;
+        margin-left: 15px;
+      }
+      p {
+        line-height: 50px;
+        float: left;
+        font-size: 16px;
+        color: #343434;
+      }
+      .toDetail {
+        float: right;
+        width: 20px;
+        line-height: 50px;
+        margin-right: 10px;
+        color: #dcdcdc;
+      }
+    }
+    .nav {
+      height: 70px;
+      display: flex;
+      justify-content: space-around;
+      .menu {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        .iconPic {
+          width: 38px;
+          height: 38px;
+          margin: 6px auto;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          width: 70px;
+          line-height: 14px;
+          font-size: 14px;
+          color: #666666;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+//   会员推广说明
+#promotionState {
+  overflow: hidden;
+  .content {
+    padding: 0px 10px;
+    margin-top: 56px;
+    .banner {
+      height: 190px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      text-indent: 20px;
+      font-size: 14px;
+      color: #161616;
+      line-height: 19px;
+    }
+    .description {
+      line-height: 19px;
+      font-size: 14px;
+      color: #f78f28;
+      margin: 10px 0;
+    }
+    .title {
+      margin-top: 10px;
+      font-family: MicrosoftYaHei-Bold;
+      font-size: 14px;
+      color: #f78f28;
+      line-height: 22px;
+      font-weight: 600;
+    }
+  }
+}
+// 新增推广链接
+#promotionAdd {
+  .title {
+    padding: 0 10px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #343434;
+  }
+  .itemList {
+    padding: 0 10px;
+    height: 46px;
+    width: 100%;
+    line-height: 46px;
+    background: white;
+    position: relative;
+    margin-bottom: 1px;
+    .gameName {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 121px;
+      font-size: 14px;
+      color: #343434;
+    }
+    .inputStyle {
+      position: relative;
+      margin: auto;
+      width: 120px;
+      input {
+        display: inline-block;
+        width: 90px;
+        height: 34px;
+        border: 1px solid #d5d5d5;
+        border-radius: 2px;
+      }
+    }
+    .description {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 121px;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  .createLink {
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    background: #ececec;
+    margin: auto;
+    width: 335px;
+  }
+}
+// 团队报表
+#teamReport {
+  height: 100%;
+  .topContent {
+    padding: 44px 10px 10px 10px;
+    background: white;
+    .timeTab {
+      margin: 10px 0 19px 0;
+      height: 34px;
+      .timeItem {
+        width: 80px;
+        height: 34px;
+        line-height: 34px;
+        background: #ececec;
+        float: left;
+        text-align: center;
+        margin-right: 10px;
+        color: #666666;
+        border-radius: 2px;
+      }
+      .activeTimeTab {
+        background: #f7bd74;
+        color: white;
+      }
+    }
+    .search {
+      height: 34px;
+      line-height: 34px;
+      div {
+        float: left;
+      }
+      .account {
+        font-size: 16px;
+        color: #343434;
+        width: 32px;
+      }
+      .searchInput {
+        margin-left: 10px;
+        width: 215px;
+        input {
+          display: inline-block;
+          width: 210px;
+          height: 34px;
+          border: 1px solid #d5d5d5;
+          border-radius: 2px;
+          padding-left: 10px;
+          margin-top: -2px;
+        }
+      }
+      .searchBtn {
+        width: 80px;
+        height: 34px;
+        margin-left: 10px;
+        background: #f7bd74;
+        border-radius: 2px;
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        img {
+          color: white;
+          width: 16px;
+          height: 16px;
+          display: block;
+          margin-top: 10px;
+          float: left;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .reportList {
+    width: 100%;
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    dl {
+      background: #f7f7f7;
+      border-radius: 2px;
+      width: 111px;
+      height: 75px;
+      flex-shrink: 0;
+      margin-top: 10px;
+      text-align: center;
+      dd {
+        height: 42px;
+        line-height: 52px;
+        font-size: 16px;
+        color: #f68e27;
+      }
+      dt {
+        height: 35px;
+        font-size: 14px;
+        color: #343434;
+      }
+    }
+    .warmTips {
+      h4 {
+        font-size: 10px;
+        color: #df5a5a;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+      p {
+        font-size: 10px;
+        color: #161616;
+        line-height: 20px;
+      }
+    }
+  }
+}
+// 下级报表
+#nextReport {
+  .content {
+    padding-top: 44px;
+    background: white;
+    .timeTab {
+      height: 44px;
+      line-height: 44px;
+      font-size: 16px;
+      color: #666666;
+      text-align: center;
+      div {
+        width: 32%;
+        display: inline-block;
+      }
+      .timeActive {
+        font-size: 16px;
+        color: #e83b50;
+        border-bottom: 2px solid #e83b50;
+      }
+    }
+    .reportItem {
+      display: flex;
+      justify-content: space-around;
+      height: 44px;
+      line-height: 44px;
+      font-size: 14px;
+      color: #343434;
+      text-align: center;
+      div {
+        width: 80px;
+        flex-shrink: 0;
+      }
+    }
+    .reportHeader {
+      background: #ececec;
+    }
+    .redStyle {
+      color: #e61300;
+    }
+  }
+  .loadAll {
+    font-family: PingFang-SC-Medium;
+    font-size: 16px;
+    color: #999999;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
+}

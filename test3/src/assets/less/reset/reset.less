@@ -1,0 +1,108 @@
+/* LESS Document */
+/* 默认页面字体为-Microsoft YaHei*/
+html,
+body {
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+}
+div,
+span,
+iframe,
+map,
+font,
+input,
+img,
+a img,
+samp,
+hr, h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+a,
+address,
+code,
+dl, dt, dd,
+ol, ul, li,
+form,
+label,
+table, tr, td, th {
+	/*平滑像素级别上的字体，而不是子像素。在深色背景上从子像素渲染切换到抗锯齿，使其看起来更轻。*/
+    -webkit-font-smoothing: antialiased;
+	/*使用灰度抗锯齿渲染文本，而不是子像素。在深色背景上从子像素渲染切换到抗锯齿，使其看起来更轻。*/
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*将所有标签本身自带的padding、margin属性值归零。*/
+/*将所有标签的盒子模型设置为border-box*/
+* {
+    padding: 0;
+    margin: 0;
+    .box-sizi;
+}
+
+/*去掉所有的无序列表、有序列表的list-style*/
+/*如需要为某个模块的ol、ul加列表样式，请加上对应模块的class名称*/
+ol, ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+/*去掉a连接自带的下划线*/
+a{
+	&:link, &:visited, &:hover, &:active{
+		text-decoration: none;
+	}
+	&:focus, .hidefocus {
+		/*去掉a链接在点击的时候出现的边框线*/
+		outline: none;
+	}
+}
+
+img, a img{
+    border:none
+}
+
+input[type=text], input[type=button], input[type=submit] {
+	/*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+    -webkit-appearance: none;
+    outline: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+input{
+	outline:none
+}
+/*清除浮动-通用命名*/
+.clearfix{
+    &:before, &:after{
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* input 数字框密码弹框去掉下拉条 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/** 去除input输入框样式 */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.number__input {
+  border: 1px solid #ccc;
+}
+.hide{
+  display: none;
+}

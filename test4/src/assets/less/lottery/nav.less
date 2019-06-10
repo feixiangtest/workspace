@@ -1,0 +1,216 @@
+// header
+#chanGame {
+  position: fixed;
+  width: 100%;
+  top: 45px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px #909090;
+  padding: 5px 10px;
+  color: #888;
+  min-height: 67px;
+  height: auto;
+  z-index: 901;
+  span {
+    display: inline-block; 
+    text-align: center;
+    width: 25%;
+    position: relative;
+    line-height: 1;
+    margin: .7rem 0;
+  }
+  a {
+    display: inline-block;
+    padding: .5rem 0;
+    border-radius: .2rem;
+    width: 95%;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: 500;
+    font-size: 11px;
+    &.v-link-active {
+      color: #b62929;
+      border: 1px solid #b62929;
+      background: url('@{imgUrl}/ok.png') no-repeat right bottom;
+      background-size: 1rem auto;
+    }
+  }
+  &.yo-navlhc{
+    span{
+      width: 33.33%;
+    }
+  }
+}
+
+// nav
+.yo-navName {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 44px;
+    z-index: 79;
+    background:#ececec;
+    height: 36px;
+    [navName] {
+        display: block;
+        float: left;
+        margin-top: 4px;
+        a {
+            color: #fff;
+            background: white;
+            width: 100%;
+            display: inline-block;
+            padding: 4px 0px;
+            border-radius: 4px;
+            .yo-jiantou{
+                display:inline-block;
+                position: relative;
+                width: 9px;
+                height: 10px;
+                &::after{
+                    position: absolute;
+                    top: 2px;
+                    left: 1px;
+                    display: block;
+                    content: "";
+                    border-style: solid;
+                    border-width: 8px 4px 0;
+                    border-color: #fff transparent;
+                }
+            }
+        }
+    }
+} 
+.yotou{
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.yo-navName  [navName="1"] { 
+  width: calc(~'28% - 4px'); 
+  margin-left: 4px;
+}
+.yo-navName [navName="2"] {
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+  width: 50%;
+}
+.yo-navName [navName="3"] {
+  width: calc(~'22% - 4px'); 
+  margin-right: 4px;
+}  
+
+
+// 首页头部
+.yoHeader{
+    height: 44px; 
+    padding: 5px; 
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(#d83442,#c62c41,#b82541);
+    .center {
+        width: calc(~'100% - 10px');
+        margin: 0 5px;
+        position: relative;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+        margin-top: -5px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 16px;
+        color: #fff;
+        // .headerItem{}
+        .triangle{
+            display: inline-block;
+            position: relative;
+            top: 0;
+            width: 10px;
+            height: 5px;
+            &::after{
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: 3px;
+                display: inline-block;
+                border-style: solid;
+                border-color: #fff transparent;
+                border-width: 8px 5px 0px 5px;
+            }
+        }
+    }
+}
+.heaLeft, .heaRight{
+    position: absolute;
+    top: 5px;
+    width: 23%;
+    z-index: 10;
+}
+.heaLeft{
+    color: #fff;
+    left: -10px;
+    padding-left: 10px; //扩大返回按钮点击范围
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 16px;
+      font-family:'Microsoft Yahei';
+      padding-left: 3px;
+    }
+    i{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 32px;
+      line-height: 32px;
+    }
+}
+.h-home {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    margin-top: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: url('@{imgUrl}/common/yo-ico-home.svg') no-repeat;
+    background-size: cover;
+    &:hover, &:active, &:focus {
+        background-image: url('@{imgUrl}/common/yo-ico-home-hover.svg');
+    }
+}
+.heaRight{
+    right: 0px;
+    text-align: right;
+    span{
+        color: #fff;
+        line-height: 34px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ion-navicon{
+        font-size: 32px;
+        line-height: 32px;
+        color: #fff;
+        padding-right: 2px;
+        padding-left: 2px;
+        vertical-align: middle;
+    } 
+}
+.h-ues {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px 0; 
+    background: url('@{imgUrl}/common/h-ues.png') no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+.yoHeader{ 
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+}

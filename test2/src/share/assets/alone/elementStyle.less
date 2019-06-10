@@ -1,0 +1,138 @@
+// element 按钮自定义修改
+.el-button{
+    padding: 0px;
+    width: 120px;
+    text-align: center;
+    height: 36px;
+    line-height: 34px;
+    .border-radius(2px);
+}
+// element 面包屑自定义修改
+.el-breadcrumb{
+    height: 48px;
+    line-height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    i.el-breadcrumb__separator{
+        margin: 0px 2px;
+    }
+}
+// element 表单自定义修改
+.el-form-item{
+    margin-bottom: 0px;
+}
+.el-form--inline .el-form-item{
+    margin-right: 0px;
+}
+.el-date-editor {
+    .el-range-separator{
+        padding: 0px;
+        width: auto;
+        line-height: 19px;
+    }
+    .el-range-input{
+        width: 130px;
+    }
+}
+.el-date-editor--datetimerange.el-input, 
+.el-date-editor--datetimerange.el-input__inner{
+    width: 320px;
+    vertical-align: middle;
+    .border-radius(2px);
+}
+textarea{
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+}
+.el-input-group__append{
+    padding: 0 10px;
+}
+
+// element 分页自定义修改
+.el-pagination{
+    text-align: right;
+    .el-pager li{
+        line-height: 26px;
+        font-weight: normal;
+        padding: 0px 10px;
+        margin: 0 2px;
+        min-width: auto;
+        .border-radius(2px);
+    }
+    .el-pager .el-icon-d-arrow-right::before{
+        line-height: 26px;
+    }
+    .btn-prev, .btn-next{
+        padding: 0px 8px;
+        margin: 0 2px;
+        min-width: auto;
+    }
+}
+.el-pagination__jump .el-input__inner{
+    .border-radius(2px);
+}
+
+// element 表格自定义修改
+.el-table{
+    &.restrictFont{
+        cursor: pointer;
+        .cell{
+            white-space: nowrap;
+            word-break:normal;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+    }
+}
+
+
+// element 弹框自定义修改
+.el-dialog{
+    overflow: hidden;
+    .border-radius(4px);
+    .el-dialog__body{
+        padding: 20px 20px 10px;
+    }
+}
+.el-dialog__header{
+    padding: 10px 20px 10px;
+    text-align: left;
+    .border-radius(4px 4px 0 0);
+}
+.el-dialog__title{
+    font-size: 16px;
+}
+.el-dialog__headerbtn {
+    top: 12px;
+    font-size: 20px;
+}
+
+// element 时间插件自定义修改
+.el-time-spinner__wrapper{
+    max-height: 205px;
+}
+
+
+//element collapse折叠面板自定义修改
+.el-collapse{
+    .el-collapse-item__header{
+        font-size: 18px;
+    }
+    .el-collapse-item__arrow{
+        margin-left: 18px;
+        margin-right: 22px;
+        font-size: 13px;
+    }
+}
+.el-collapse-item__arrow{
+    .floatLf;
+}
+.el-collapse-item {
+    &:last-child{
+        margin-bottom:0px;
+    }
+}
+.el-collapse-item__content{
+    padding: 15px 20px;
+    line-height: 26px;
+}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ZH-cn" class="default-color">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/agentStatic/img/favicon.ico" />
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+
+    <title>系统维护</title>
+    <script src="/agentStatic/js/jquery.min_1.8.2.js"></script>
+    <link rel="stylesheet" href="/agentStatic/css/style.css">
+</head>
+
+<body>
+    <div class="err-main-box">
+        <!-- 维护 -->
+        <div class="maintain">
+            <div class="img-box">
+                <img src="/agentStatic/img/houtaiweihu-.png" alt="">
+            </div>
+            <p>网站例行维护中
+                <br>维护时间至北京时间
+                <span id="maintainDateTxt"></span>
+            </p>
+        </div>
+    
+        <div class="btn-box">
+            <a id="onlineService" href="javascript:void(0)" class="btn btn-lg btn-primary">联系客服</a>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $.ajax({
+      type: 'POST',
+      url: '/api/baseInit',
+      async: false,
+      dataType: 'json',
+      success: function (res) {
+        console.log(res, '维护res，status===6就是在维护')
+        // 发个请求判断是否在维护
+        if (res.status !== '6') {
+        // 如果没有维护就跳转到首页
+          window.location.href = '/m/login'
+        } else {
+          $('#maintainDateTxt').html(res.data.endTime)
+          $('#onlineService').attr('href', res.data.onlineservice === undefined ? 'javascript:alert("客服繁忙，请联系上级！")' : res.data.onlineservice.junctionSim)
+        }
+      }
+    })
+</script>
+
+</html>
+

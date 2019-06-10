@@ -1,0 +1,582 @@
+/* line 25, ../sass/reset.scss */
+blockquote, q {
+    quotes: none;
+  }
+  /* line 29, ../sass/reset.scss */
+  blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+  }
+  /* line 34, ../sass/reset.scss */
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  /*
+  *********useage*********
+  @include POS(475px,75px);
+  @include css3(transition,all 1s ease);
+  @include css3(box-shadow,0px 0px 14px #ffffff);
+  @include css3(border-radius,20px);
+  border: 2px solid #6d4b00;
+  left: calc(50% - 82.5px);
+  @include linear-gradient(#db3542, #bc2741);
+  @include range-width-in(0,0){}
+  @include ellipsistext();
+  @include linear-gradient($top, $bottom);
+  .btn_face{
+      @include btn_style_face($color_main ,65px ,30px,$radius);
+      @include hover_light();
+  }
+  .btn_line{
+      @include btn_style_line($color_main ,65px ,30px,$radius);
+  }
+  .tablebox{
+      @include table_style();
+  }
+  @media screen and (min-width: 0px) and (max-width:640px) {}
+  @media screen and (min-width: 641px) and (max-width:1200px) {}
+  @media screen and (min-width: 1201px) and (max-width:2000px) {}
+  *********animation*********
+  @include css3(transition,all 1s ease);
+  @include css3(animation,opacitylight 2s infinite linear);
+  @include keyframes(opacitylight) {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+  */
+  /* line 194, ../sass/screen.scss */
+  /* line 205, ../sass/screen.scss */
+  .wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /* line 217, ../sass/screen.scss */
+  .gameboxout {
+    padding: 20px 40px 30px 40px;
+    font-family: "MicrosoftYaHei";
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    .gamebox {
+      background: url('@{imgUrl}/video/beijingpc.png') top center;
+      background-size: 100% 100%;
+      min-width: 420px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      padding: 15px 25px;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      -webkit-align-items: center;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      .gametitle {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 900;
+        span {
+          font-weight: 100;
+        }
+      }
+      .cardline {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        border: 1px solid transparent;
+        padding: 5px 8px;
+        // min-width: 400px;
+        &.cardlineBj{
+          min-width: 430px;
+          flex-flow: row wrap;
+          .card:nth-child(6n+1){
+              margin-left: 57px;
+          }
+        }
+        .card-title {
+          padding: 0 2px;
+          background: #1a2743;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          border-radius: 2px;
+          line-height: 30px;
+          min-width: 50px;
+          margin-right: 5px;
+          .card-pretitle {
+            border-bottom: 1px solid #2b4671;
+          }
+          .card-suftitle {
+            font-size: 16px;
+          }
+          &.card-add-width{ // 单号OT-4514 PC 100px
+              min-width: 100px;
+          }
+
+        }
+        .card {
+          background: #fff;
+          border: 1px solid #192d22;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          border-radius: 2px;
+          height: 70px;
+          width: 52px;
+          margin: 0 2px;
+          color: #000;
+          .card-number {
+            text-align: left;
+            padding: 5px;
+            padding-bottom: 3px;
+            font-size: 16px;
+          }
+          .card-shape {
+            background: url('@{imgUrl}/video/pukemeihua.png') bottom center;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+          }
+        }
+        .wintxt {
+          width: 40px;
+          height: 47px;
+          margin-left: 2px;
+        }
+        .card-horizontal {
+          -webkit-transform: translateX(5px) rotate(-90deg);
+          -moz-transform: translateX(5px) rotate(-90deg);
+          -ms-transform: translateX(5px) rotate(-90deg);
+          -o-transform: translateX(5px) rotate(-90deg);
+          transform: translateX(5px) rotate(-90deg);
+        }
+        .card-meihua {
+          .card-shape {
+            background: url('@{imgUrl}/video/pukemeihua.png') bottom center;
+            background-size: cover;
+          }
+        }
+        .card-fangkuai {
+          .card-shape {
+            background: url('@{imgUrl}/video/pukefangkuai.png') bottom center;
+            background-size: cover;
+          }
+          .card-number {
+            color: #fa1931;
+          }
+        }
+        .card-hongtao {
+          .card-shape {
+            background: url('@{imgUrl}/video/pukehongtao.png') bottom center;
+            background-size: cover;
+          }
+          .card-number {
+            color: #fa1931;
+          }
+        }
+        .card-heitao {
+          .card-shape {
+            background: url('@{imgUrl}/video/pukeheitao.png') bottom center;
+            background-size: cover;
+          }
+        }
+        .card-white {
+          background: url('@{imgUrl}/video/dcbjlbai.png') top center;
+          background-size: cover;
+        }
+        .card-yellow {
+          background: url('@{imgUrl}/video/dcbjlhuang.png') top center;
+          background-size: cover;
+          .card-number {
+            color: #fff;
+          }
+        }
+        .card-blue {
+          background: url('@{imgUrl}/video/dcbjllan.png') top center;
+          background-size: cover;
+          .card-number {
+            color: #fff;
+          }
+        }
+        .card-green {
+          background: url('@{imgUrl}/video/dcbjllv.png') top center;
+          background-size: cover;
+          .card-number {
+            color: #fff;
+          }
+        }
+        .card-purple {
+          background: url('@{imgUrl}/video/dcbjlzi.png') top center;
+          background-size: cover;
+          .card-number {
+            color: #fff;
+          }
+        }
+        .card-A {
+          .card-number {
+            &:after {
+              content: "A";
+            }
+          }
+        }
+        .card-J {
+          .card-number {
+            &:after {
+              content: "J";
+            }
+          }
+        }
+        .card-Q {
+          .card-number {
+            &:after {
+              content: "Q";
+            }
+          }
+        }
+        .card-K {
+          .card-number {
+            &:after {
+              content: "K";
+            }
+          }
+        }
+        .card-1 {
+          .card-number {
+            &:after {
+              content: "1";
+            }
+          }
+        }
+        .card-2 {
+          .card-number {
+            &:after {
+              content: "2";
+            }
+          }
+        }
+        .card-3 {
+          .card-number {
+            &:after {
+              content: "3";
+            }
+          }
+        }
+        .card-4 {
+          .card-number {
+            &:after {
+              content: "4";
+            }
+          }
+        }
+        .card-5 {
+          .card-number {
+            &:after {
+              content: "5";
+            }
+          }
+        }
+        .card-6 {
+          .card-number {
+            &:after {
+              content: "6";
+            }
+          }
+        }
+        .card-7 {
+          .card-number {
+            &:after {
+              content: "7";
+            }
+          }
+        }
+        .card-8 {
+          .card-number {
+            &:after {
+              content: "8";
+            }
+          }
+        }
+        .card-9 {
+          .card-number {
+            &:after {
+              content: "9";
+            }
+          }
+        }
+        .card-10 {
+          .card-number {
+            &:after {
+              content: "10";
+            }
+          }
+        }
+        .card-11 {
+          .card-number {
+            &:after {
+              content: "11";
+            }
+          }
+        }
+      }
+      .winer {
+        background: #2e4774;
+        border: 1px solid #447cdd;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        -ms-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        -o-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 2px;
+        .wintxt {
+          background: url('@{imgUrl}/video/ying.png') center;
+          background-size: contain;
+        }
+      }
+    }
+    .gamecard-3 {
+      .cardline {
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+    }
+    .game-ballgass {
+      height: 190px;
+      .gametitle {
+        margin-bottom: 0;
+      }
+      .ballgase-ball {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        img {
+          width: 100%;
+        }
+      }
+      .cardline {
+        padding: 5px 8px;
+      }
+    }
+    .game-bgl {
+      height: 230px;
+      .cardline-bgl {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        .cardline {
+          -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          min-width: auto;
+          .bgltitle-part {
+            margin-right: 8px;
+            .card-title {
+              margin-right: 0;
+            }
+          }
+          .bglcard-part {
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            -webkit-align-items: center;
+            width: 130px;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+          }
+          .wintxt {
+            margin: 6px auto;
+          }
+        }
+      }
+    }
+    .game-bgl-fullcolor {
+      .cardline-bgl {
+        .cardline {
+          .bglcard-part {
+            .card {
+              border: 0px solid #192d22;
+              height: 60px;
+              width: 48px;
+              display: -webkit-flex;
+              display: flex;
+              align-items: center;
+              -webkit-align-items: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              .card-number {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .game-bgl-dragontiger {
+      .bglcard-part {
+        width: auto !important;
+      }
+    }
+  }
+  /* line 223, ../sass/screen.scss */
+  /* line 236, ../sass/screen.scss */
+  /* line 241, ../sass/screen.scss */
+  /* line 245, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
+  /* line 265, ../sass/screen.scss */
+  /* line 268, ../sass/screen.scss */
+  /* line 272, ../sass/screen.scss */
+  /* line 280, ../sass/screen.scss */
+  /* line 286, ../sass/screen.scss */
+  /* line 294, ../sass/screen.scss */
+  /* line 299, ../sass/screen.scss */
+  /* line 302, ../sass/screen.scss */
+  /* line 303, ../sass/screen.scss */
+  /* line 303, ../sass/screen.scss */
+  /* line 304, ../sass/screen.scss */
+  /* line 304, ../sass/screen.scss */
+  /* line 305, ../sass/screen.scss */
+  /* line 306, ../sass/screen.scss */
+  /* line 307, ../sass/screen.scss */
+  /* line 307, ../sass/screen.scss */
+  /* line 308, ../sass/screen.scss */
+  /* line 308, ../sass/screen.scss */
+  /* line 309, ../sass/screen.scss */
+  /* line 309, ../sass/screen.scss */
+  /* line 310, ../sass/screen.scss */
+  /* line 310, ../sass/screen.scss */
+  /* line 311, ../sass/screen.scss */
+  /* line 312, ../sass/screen.scss */
+  /* line 313, ../sass/screen.scss */
+  /* line 314, ../sass/screen.scss */
+  /* line 315, ../sass/screen.scss */
+  /* line 316, ../sass/screen.scss */
+  /* line 317, ../sass/screen.scss */
+  /* line 318, ../sass/screen.scss */
+  /* line 319, ../sass/screen.scss */
+  /* line 320, ../sass/screen.scss */
+  /* line 321, ../sass/screen.scss */
+  /* line 322, ../sass/screen.scss */
+  /* line 323, ../sass/screen.scss */
+  /* line 324, ../sass/screen.scss */
+  /* line 325, ../sass/screen.scss */
+  /* line 327, ../sass/screen.scss */
+  /* line 332, ../sass/screen.scss */
+  /* line 340, ../sass/screen.scss */
+  /* line 347, ../sass/screen.scss */
+  /* line 349, ../sass/screen.scss */
+  /* line 352, ../sass/screen.scss */
+  /* line 356, ../sass/screen.scss */
+  /* line 358, ../sass/screen.scss */
+  /* line 363, ../sass/screen.scss */
+  /* line 365, ../sass/screen.scss */
+  /* line 367, ../sass/screen.scss */
+  /* line 372, ../sass/screen.scss */
+  /* line 374, ../sass/screen.scss */
+  /* line 378, ../sass/screen.scss */
+  /* line 385, ../sass/screen.scss */
+  /* line 393, ../sass/screen.scss */
+  /* line 401, ../sass/screen.scss */
+  /* line 408, ../sass/screen.scss */
+  /* line 414, ../sass/screen.scss */
+  .gameboxout .game-ballgass-suibao .ballgase-ball, .gameboxout .game-ballgass-turn .ballgase-ball {
+    margin: 5px 10px;
+    position: relative;
+  }
+  /* line 417, ../sass/screen.scss */
+  .gameboxout .game-ballgass-suibao .ballgase-ball .ball-number, .gameboxout .game-ballgass-turn .ballgase-ball .ball-number {
+    line-height: 60px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 429, ../sass/screen.scss */
+  .gameboxout .game-ballgass-suibao .cardline .card-title, .gameboxout .game-ballgass-turn .cardline .card-title {
+    margin-right: 10px;
+  }
+  /* line 435, ../sass/screen.scss */
+  .winer-outbox {
+    background: green;
+    position: relative;
+    padding: 0;
+    .gametitle {
+      color: #ffebbf;
+    }
+    .winer-img {
+      position: absolute;
+      top: -195px;
+      left: calc(50% - 250px);
+    }
+    .gamebox {
+      min-width: 372px;
+      height: 170px;
+      margin: 15px 25px 25px 25px;
+    }
+    .closebtn {
+      position: absolute;
+      top: -90px;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  /* line 439, ../sass/screen.scss */
+  /* line 442, ../sass/screen.scss */
+  /* line 447, ../sass/screen.scss */
+  /* line 452, ../sass/screen.scss */
+  /* line 459, ../sass/screen.scss */
+  #bornToWin {
+    margin: auto;
+    z-index: 99999999;
+    top: 27%;
+    left: 39%;
+    position: fixed;
+  }
+  

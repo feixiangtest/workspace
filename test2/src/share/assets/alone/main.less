@@ -1,0 +1,603 @@
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.borNone {
+  border: 0 none transparent !important;
+}
+
+html, body {
+  font-size: 14px;
+}
+
+body {
+  min-width: 1230px;
+}
+
+.center {
+  width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.memberHea {
+  width: 100%;
+  .heaTop {
+    height: 30px;
+    text-align: right;
+    .mdTime {
+      font-size: 12px;
+      line-height: 30px;
+      i {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -2px;
+      }
+    }
+  }
+  .heaCon {
+    width: 100%;
+    padding: 9px 0;
+    .memberCen {
+      #display-fix > .flex-container;
+      #display-fix > .flex-nowrap;
+      #display-fix > .justify-content;
+      div {
+        .box-flex(1);
+      }
+    }
+    .logo img {
+      display: block;
+    }
+    .nav {
+      #display-fix > .flex-container;
+      #display-fix > .flex-nowrap;
+      #display-fix > .justify-flex-end;
+      #display-fix > .align-center;
+    }
+  }
+}
+
+#indexvue {
+  padding-top: 10px;
+  padding-bottom: 60px;
+  min-height: 670px;
+}
+
+// 菜单
+#memberMenu {
+  min-height: 600px;
+  .floatLf;
+  .menuCont {
+    width: 214px;
+    min-height: 600px;
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      padding: 10px;
+      span {
+        font-size: 10px;
+        display: block;
+      }
+    }
+    .menuItem {
+      padding: 0 10px;
+      .menuTitle {
+        margin-bottom: 7px;
+        height: 39px;
+        line-height: 37px;
+        font-size: 18px;
+        position: relative;
+        cursor: default;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: 0px;
+          width: 80px;
+          height: 2px;
+        }
+      }
+      dd {
+        a {
+          line-height: 40px;
+          margin-top: 1px;
+          display: block;
+          .el-icon-arrow-right {
+            display: none;
+            position: relative;
+            line-height: 40px;
+            margin-right: 8px;
+            .floatRi;
+          }
+          i.yo-icon {
+            margin: 0 18px;
+          }
+          &:hover {
+            .el-icon-arrow-right {
+              display: block;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 10px;
+        }
+        &.activeTab a {
+          .el-icon-arrow-right {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+#memberContent {
+  .floatRi;
+  .mainContent {
+    width: 100%;
+    min-height: 600px;
+  }
+;
+  width: 986px;
+  min-height: 600px;
+  
+  [role="tablist"]{
+    width: 100%;
+  }
+}
+  // 二级tab切换
+.memberTab {
+  ul {
+    padding-left: 15px;
+    li {
+      display: block;
+      padding: 0 15px;
+      font-size: 16px;
+      height: 41px;
+      line-height: 40px;
+      margin: 0 5px -1px 5px;
+      cursor: pointer;
+      .floatLf;
+      &.activeTab {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.contentBox {
+  padding: 20px;
+}
+
+// 基本信息
+.memberInfo {
+  padding: 20px;
+  .border-radius(4px);
+  .infoBox {
+    div {
+      margin-top: 6px;
+      h3 {
+        font-weight: normal;
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+    div, p {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+.memberPhoto {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+  .border-radius(2px);
+  img {
+    width: 100%;
+  }
+}
+
+.yoFieldset {
+  padding: 20px;
+  margin-top: 20px;
+  .border-radius(4px);
+  legend {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+}
+
+// 即时账号资讯
+.platform {
+  .clearfix;
+  dd {
+    width: 166px;
+    height: 64px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    position: relative;
+    .floatLf;
+    .clearfix;
+    .border-radius(8px);
+    .platformIco {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 4px;
+      .floatLf;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .platformAmount {
+      margin-left: 5px;
+      .floatLf;
+      h4 {
+        font-weight: normal;
+        height: 26px;
+        line-height: 26px;
+        margin-top: 6px;
+      }
+    }
+    &.refreshBut {
+      border: none;
+      button {
+        margin: 14px 0 0 23px;
+      }
+    }
+  }
+}
+
+.transformPlatform {
+  .platform;
+  dd {
+    margin-right: 12px;
+    &:nth-child(3n+0) {
+      margin-right: 0px;
+    }
+    .platHover {
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      .border-radius(8px);
+      a {
+        display: block;
+        width: 100px;
+        height: 34px;
+        line-height: 34px;
+        margin: 14px auto 0;
+        text-align: center;
+        .border-radius(4px);
+      }
+    }
+    &:hover {
+      .platHover {
+        display: block;
+      }
+    }
+  }
+}
+
+// 重置表格样式
+table[class*='yoMemTable'], div[class*='yoMemTable'] {
+  width: 100%;
+  th {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  td {
+    font-size: 12px;
+  }
+  td, th {
+    text-align: center;
+    padding: 7px 6px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  p {
+    padding: 6px 0;
+  }
+}
+
+.yoMemTable2 {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.agPhoneImg {
+  width: 100px;
+  height: 100px;
+}
+
+// 有效投注额
+.efficacbetCon {
+  max-height: 307px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.efficacbetCon::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.efficacbetCon::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.efficacbetCon::-webkit-scrollbar-thumb {
+  height: 20px;
+  border-radius: 10px;
+}
+
+// 功能导航切换
+.subNav {
+  min-height: 48px;
+  position: relative;
+  ul {
+    text-align: center;
+    padding-bottom: 20px;
+    #display-fix > .flex-container;
+    #display-fix > .flex-nowrap;
+    #display-fix > .justify-center;
+    li {
+      height: 48px;
+      line-height: 48px;
+      width: 154px;
+      cursor: pointer;
+      &:first-child {
+        .border-radius(8px 0 0 8px);
+      }
+      &:last-child {
+        .border-radius(0 8px 8px 0);
+      }
+    }
+  }
+  .backUp {
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.changePassword {
+  margin: 20px auto 0;
+  margin-left: 182px;
+}
+
+// 表单统一样式
+.formItem {
+  .clearfix;
+  padding: 4px 0;
+  margin-bottom: 12px;
+  .formTile {
+    display: block;
+    width: 150px;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    .floatLf;
+  }
+  .formInline {
+    display: block;
+    margin-left: 160px;
+    position: relative;
+    padding: 2px 0;
+    .el-input {
+      width: 292px;
+    }
+    .errMsg {
+      font-size: 12px;
+      max-width: 350px;
+    }
+  }
+  .formInline2 {
+    .inputText-2 {
+      width: 132px;
+    }
+    .selectSt-2 .el-input {
+      width: 76px;
+    }
+  }
+  .securityCode {
+    .el-input {
+      width: 180px;
+    }
+    img.code {
+      display: inline-block;
+      vertical-align: top;
+      height: 36px;
+      margin-left: 11px;
+      .border-radius(3px);
+    }
+  }
+}
+.amountSum{
+  .clearfix;
+  li{
+    float: left;
+    display: block;
+    // width: 52px;
+    min-width: 52px;  // OT-4878-yolanda
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 10px;
+    .border-radius(2px);
+  }
+}
+
+.securityLevel {
+  .clearfix;
+  span {
+    display: block;
+    width: 50px;
+    height: 10px;
+    margin: 15px 10px 0 0;
+    .border-radius(5px);
+    .floatLf;
+  }
+}
+
+.tableForm {
+  padding: 7px 20px;
+  margin-bottom: 20px;
+  .border-radius(2px);
+  .el-button {
+    height: 32px;
+    line-height: 32px;
+    width: auto;
+    padding: 0 10px;
+    vertical-align: middle;
+    .border-radius(4px);
+  }
+  .el-select {
+    width: 130px;
+    input {
+      .border-radius(2px);
+    }
+  }
+}
+
+.platformSelet {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+  span.platTit {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    width: 110px;
+    padding: 0 15px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-top: 2px;
+    .border-radius(2px 0 0 2px);
+  }
+  .el-button.choose {
+    height: 36px;
+    line-height: 36px;
+    .border-radius(0 2px 2px 0);
+    margin-top: 2px;
+  }
+}
+
+.yoPaging {
+  margin-top: 20px;
+  padding: 10px 20px;
+  .border-radius(2px);
+}
+
+.platformTitle {
+  ul {
+    .clearfix;
+    li {
+      display: block;
+      cursor: pointer;
+      width: 100px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      .floatLf;
+      .border-radius(2px);
+      &:nth-child(5n+0) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.popupConter {
+  .changePassword {
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
+.information {
+  position: relative;
+  z-index: 5;
+  .operationBar {
+    position: absolute;
+    left: 44px;
+    top: 5px;
+    z-index: 6;
+    span.checkAll {
+      padding-right: 15px;
+    }
+  }
+  .el-button {
+    width: auto;
+    padding: 0 15px;
+  }
+  .el-table th, .el-table th.is-leaf {
+    padding: 10px 6px;
+    border-right: none;
+    .el-checkbox__inner {
+      width: 20px;
+      height: 20px;
+      &::after {
+        height: 10px;
+        width: 6px;
+        left: 5px;
+      }
+    }
+  }
+}
+
+// 消息详情页面样式
+.msgDetail {
+  p {
+    font-size: 12px;
+    height: 35px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+  .detailCon {
+    font-size: 14px;
+    padding: 15px 20px 0;
+    line-height: 22px;
+  }
+}
+
+// vue bug*****************************************************************
+.vueBug {
+  width: 100%;
+  height: 1px;
+}
+
+#indexvue{
+  width: 100%;
+}
+html{
+  width: 100%;
+  height: 100%;
+  #appBody{
+    position: static!important;
+  }
+}
+.is-fullscreen{
+  width: 100%;
+  height: 100%;
+}

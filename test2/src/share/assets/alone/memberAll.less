@@ -1,0 +1,50 @@
+@import "~../reset/base.less";
+// 设置可通用样式
+@import "~../reset/reset.less";
+//  ot统一框架样式
+@import "icon.less";
+// 字体图标样式
+@import "elementStyle.less";
+// 修改原element-ui样式
+@import "main.less";
+// 主要区域样式
+@import "bankTransaction.less";
+// 银行交易部分样式
+@import "~../components/login.less";
+// 统一层弹框样式
+@import "~../components/err.less";
+//  err 统一框架样式
+@import "help.less";
+// 帮助中心样式
+@import "color.less"; // 色调
+// 牌型解析样式
+@import "~../components/videoStyle.less";
+
+/**
+
+辅助颜色
+主要颜色
+主体文字
+次要文字
+辅助文字
+浅色边框线
+
+ */
+.color-blue {
+  .change(); //默认 蓝
+}
+
+.color-green {
+  .change(#68bc8f, #40a46f, #343434,#666,#999, #d0d0d0); //
+}
+.color-black {
+  .change(#18B160, #18B160, #18B160, #18B160, #18B160, #18B160); //
+}
+// 临时 css
+.themChange {
+  position: absolute;
+  color: white;
+  top: 108px;
+  left: 150px;
+  cursor:pointer;
+}

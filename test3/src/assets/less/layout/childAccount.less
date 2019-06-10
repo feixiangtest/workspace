@@ -1,0 +1,276 @@
+.child-title,
+.child-item {
+    overflow: hidden;
+    div {
+        float: left;
+        width: 25%;
+        text-align: center;
+        color: @deepText;
+    }
+}
+.child-title{
+    font-size: 14px;
+    line-height: 46px;
+    background-color: #f4f4f4;
+}
+.child-item {
+    font-size: 12px;
+    background-color: @white;
+    border-bottom: 1px solid #f4f4f4;
+    &:last-child{
+        border-bottom: none;  
+    }
+    div{
+        height: 60px;
+        #display-fix .flex-container;
+        #display-fix .justify-content(center);
+        #display-fix > .align-center(center);
+    }
+    .arrow{
+        color: #CDCED3;
+    }
+    .note{
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .color-red{
+        color: #E95F5F;
+    }
+    .color-blue{
+        color: @chiefly;
+    };
+}
+
+
+// 现金流查询-类别选择面板样式
+.query-type-tab{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(20,22,32,0.68);
+    .query-box{
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        .title{
+            font-size: 16px;
+            padding: 0 20px;
+            overflow: hidden;
+            margin: 0;
+            height: 40px;
+            line-height: 40px;
+            .cancle{
+                padding-right: 20px;
+            }
+        }
+        .select-item{
+            padding: 13px 20px;
+            #display-fix .flex-container;
+            #display-fix .justify-content(space-around);
+            .item{
+                width: 80px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 28px;
+                border-radius: 15px;
+            }
+        }
+        .query-box-item{
+            position: relative;
+            max-height: 286px;
+            overflow: scroll;
+            .item{
+                font-size: 16px;
+                padding: 0 20px;
+            }
+        }
+    }
+    .mint-checklist-title{
+        display: none !important;
+    }
+    .mint-cell{
+        min-height: 40px !important;
+        margin-bottom: 1px;
+    }
+    .mint-checkbox-label{
+        margin-left: 0 !important;
+    }
+}
+// mint多选按钮 样式
+.svg-box-check{
+    display: block;
+    .float-l;
+    svg{
+        margin-top: 10px;
+        margin-right: 6px;
+    }
+}
+// ------------end---------accountManagement style ---ducken
+
+// 现金流查询-查询列表盒子样式
+.cash-list-box{
+    margin-top: 44px;
+    position: absolute;
+    width: 100%;
+    height: calc(~'100% - 44px');
+    overflow: hidden;
+    #display-fix > .flex-container;
+    #display-fix > .flex-direction-co;
+}
+.cash-title{
+    height: 46px;
+    .box-flex(0 0 46px);
+}
+.cash-list-content{
+    height: calc(~'100% - 94px');
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    .box-flex(0 1 auto);
+}
+.mint-loadmore{
+    min-height: 100%;
+}
+.total-item{
+    #display-fix > .flex-container;
+    #display-fix > .flex-wrap(nowrap);
+    #display-fix > .justify-content(space-between);
+    height: 48px;
+    box-shadow: 0px 0px 5px 1px rgba(157,162,173,0.35);
+    position: relative;
+    div{
+        height: 48px;
+        width: auto;
+        margin: 0 @padVal+10px;
+        .box-flex(0 0 auto);
+    }
+    .box-flex(0 0 48px);
+}
+// 单选按钮插件
+.mint-checkbox-core{
+    background-color: #eee !important;
+    &::after{
+        border-color: #ccc !important;
+        -webkit-transform: rotate(45deg) scale(1) !important;
+        transform: rotate(45deg) scale(1) !important;
+    }
+}
+.mint-checkbox-core:after{
+    border-width: 1px !important;
+    width:5px !important;
+}
+.mint-checkbox-input:checked+.mint-checkbox-core:after{
+    border-color: #fff !important;
+}
+
+// 上拉刷新-下拉加载 样式
+.mint-spinner-fading-circle{
+    margin: 0 auto;
+}
+.mint-loadmore-bottom{
+  display: none;
+}
+// 会员选择页面-样式修改 ---yolanda
+.member-selection {
+    .cash-list-box;
+    z-index: 120;
+    .list-title {
+        position: relative;
+        padding: 0 @padVal2;
+        height: 48px;
+        line-height: 48px;
+        margin-bottom: 1px;
+        input{
+            width: 100%;
+            height: 30px;
+            padding-left: 45px;
+            .border-radius(24px);
+        }
+        i.icon-search{
+            position: absolute;
+            left: 20px;
+            top: 1px;
+        }
+        // 代理页面-头部搜索样式
+        .agent-title{
+            width: calc(~'50% - 8px');
+            .float-l;
+            position: relative;
+            .agent-in-box{
+                width: 100%;
+                height: 30px;
+                line-height:28px; 
+                margin-top: 10px;
+                padding-right: 24px;
+                text-align: center;
+                .zz-icon-down{
+                    .float-r;
+                    &::after{
+                        right: -12px;
+                        margin-top: 12px;
+                    }
+                }
+            }
+            input, .agent-in-box{
+                .border-radius(4px);
+            }
+            &:last-child{
+                .float-r;
+            }
+        }
+    }
+    .common-item{
+        // padding: 0 8px;
+        line-height: 48px;
+    }
+}
+// 会员选择 上拉刷新-下拉加载 样式
+.member-selection-list{
+    .cash-list-content;
+    height: calc(~'100% - 48px');
+    .mint-cell{
+        margin-bottom: 1px;
+    }
+}
+// 会员列表 上拉刷新-下拉加载 样式
+.member-ship-list{
+    .cash-list-content;
+    height: calc(~'100% - 98px');
+}
+.member-ship{
+    // 手势图
+    .gestureMask{
+        position:absolute;
+        top:0;left:0;right:0;
+        bottom:0;z-index:10000;
+        .gestureTop {
+            position:absolute;top:0;left:0;right:0;z-index:10001;height:100px;background:rgba(0,0,0,0.23);
+        }
+        .gestureBottom{
+            position:absolute;top:145px;left:0;right:0;bottom:0;z-index:10001;background:rgba(0,0,0,0.23);
+            .gestureFinger{
+                width:98px;height:92px;margin-left:37vw;margin-top:2px;
+                .palmPic{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .teachpage2{
+                position:relative;background:none;
+                .teachout2{
+                    position:relative;top:0;
+                }
+            }
+
+        }
+    }
+}
+
+

@@ -1,0 +1,549 @@
+/* layer弹层移动版样式 */
+
+.layermbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 19891014;
+}
+
+/*.layermbox *{margin:0; bottom:0;}*/
+
+.layermanim {
+  transition: all .18s;
+  -webkit-transition: all .18s;
+}
+
+.laymshade,
+.layermmain {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.laymshade {
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: auto;
+}
+
+.layermmain {
+  display: table;
+  font-family: Helvetica, arial, sans-serif;
+  pointer-events: none;
+}
+
+.layermmain .section {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.layermchild {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  pointer-events: auto;
+}
+
+.layermborder {
+  border: 1px solid #999;
+}
+
+.layermshow .layermchild {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.layermbox0 .layermchild {
+  max-width: 260px;
+  min-width: 150px;
+}
+
+.layermbox1 .layermchild {
+  border: none;
+  border-radius: 0;
+}
+
+.layermbox2 .layermchild {
+  width: auto;
+  max-width: 260px;
+  min-width: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+
+.layermchild h3 {
+  /* padding: 0 45px 0 10px; */
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #EBEBEB;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+/**
+ **CP-2933 彩票投注提示修改
+ **/
+.layermchild.betTips{
+    width:320px !important;
+    min-height:170px !important;
+    .layermcont{
+      margin-top: 28px;
+      span{
+        color: #f00;
+      }
+    }
+    h3{
+      border-bottom: 2px solid #ddd;
+    }
+    .layermbtn{
+       bottom: 0;
+       border-top: 2px solid #ddd;
+       span{
+         border-radius: 0;
+         display: inline-block;
+         text-align: center;
+         width: 50%;
+         background: #fff;
+         margin: 0;
+         height: 40px;
+         line-height: 40px;
+       }
+       span[type="1"]{
+         font-weight: bold;
+         color: #00f;
+         border-left: 2px solid #ddd;
+       }
+    }
+}
+.layermchild.betTips.smallTip{
+   width: 80% !important;
+}
+.layermanim.layermchild.bttingTips{
+   width: auto;
+   min-height: 32px!important;
+   line-height: 32px;
+   .layermcont{
+      margin: 0;
+      padding: 5px;
+      img{
+        width: 20px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+   }
+}
+/**======================CP-2933 END ================**/
+.layermchild h3,
+.layermbtn span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.layermcont {
+  padding: 20px 15px;
+  line-height: 22px;
+  border-radius: 5px;
+}
+
+.layermbox1 .layermcont {
+  padding: 0;
+}
+
+.layermbox2 .layermcont {
+  text-align: center;
+  padding: 30px 30px 0;
+  line-height: 0;
+}
+
+.layermbox2 .layermcont i {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.layermbox2 .layermcont i {
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0)
+  }
+  40% {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0)
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1)
+  }
+}
+
+.layermbox2 .layermcont i:first-child {
+  margin-left: 0;
+  -webkit-animation-delay: -.32s;
+  animation-delay: -.32s;
+}
+
+.layermbox2 .layermcont i.laymloadtwo {
+  -webkit-animation-delay: -.16s;
+  animation-delay: -.16s;
+}
+
+.layermbox2 .layermcont > div {
+  line-height: 22px;
+  padding-top: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.layermbtn {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0;
+  text-align: center;
+  border-top: 1px solid #EBEBEB;
+}
+
+.layermbtn span {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 5px 0 0;
+}
+
+.layermbtn span:first-child {
+  height: 39px;
+  background-color: #fff;
+  border-radius: 0 0 0 5px;
+}
+
+.layermbtn:before {
+  content: '\20';
+  position: absolute;
+  width: 1px;
+  height: 39px;
+  left: 50%;
+  top: 0;
+  background-color: #EBEBEB;
+}
+
+.layermend {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 30px;
+}
+
+.layermend::before,
+.layermend::after {
+  position: absolute;
+  left: 5px;
+  top: 13px;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, .3);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-radius: 3px;
+}
+
+.layermend::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.layermsg .layermcont {
+  padding: 10px;
+  line-height: 21px;
+  text-align: center
+}
+
+.width380 {
+  width: 380px
+}
+
+.laymshade {
+  background-color: rgba(0, 0, 0, .4)
+}
+
+.layermbox2 .layermcont i:nth-child(1) {
+  background-color: #f40
+}
+
+.layermbox2 .layermcont i:nth-child(2) {
+  background-color: #f60
+}
+
+.layermbox2 .layermcont i:nth-child(3) {
+  background-color: #f90
+}
+
+.layermchild {
+  position: relative;
+  border-radius: 3px !important
+}
+
+.layermchild h3 {
+  margin: 0;
+  /* padding: 0 80px 0 20px; */
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #2e4158;
+  /* padding-left: 30px; */
+  border-radius: 2px 2px 0 0;
+  border-bottom: none;
+  text-align: center;
+}
+
+.layermend {
+  animation-duration: .5s;
+  transition: .5s;
+  width: 26px;
+  height: 28px;
+  right: 10px
+}
+
+.layermend:focus {
+  outline: none
+}
+
+.layermend:before {
+  -ms-transform: rotate(-45deg)
+}
+
+.layermend:after {
+  -ms-transform: rotate(45deg)
+}
+
+.layermend:after,
+.layermend:before {
+  background-color: #83828a;
+  width: 16px
+}
+
+.layermend:hover {
+  transform: rotate(180deg)
+}
+
+.layermbox0 .layermchild {
+  width: 100%;
+  max-width: 500px;
+  min-height: 210px;
+  border-radius: 3px
+}
+
+.layerBet.layermanim.layermchild,
+.msg.layermanim.layermchild {
+  width: inherit;
+  min-width: 380px
+}
+
+.layermcont {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-bottom: 65px;
+  word-break: break-all;
+  max-height: 500px;
+  max-height: 60vh;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.layermbtn {
+  border: none;
+  bottom: 14px;
+  position: absolute;
+  width: 100%
+}
+
+.layermbtn:before {
+  display: none
+}
+
+.layermbtn span[type="0"],
+.layermbtn span[type="1"] {
+  height: 30px;
+  min-width: 85px;
+  padding: 0 15px;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 3px;
+  margin: .5em .4em .5em 0;
+  font-weight: 400;
+  line-height: 29px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  position: static;
+  width: auto
+}
+
+.layermbtn span[type="0"]:hover,
+.layermbtn span[type="1"]:hover {
+  opacity: .9;
+  text-decoration: none
+}
+
+.layermbtn span[type="1"] {
+  color: #fff;
+  border: none;
+  background: #3e5779
+}
+
+.layerConfirm .layermcont,
+.layermsg .layermcont,
+.msgWarn .layermcont,
+.url .layermcont {
+  padding: 0 20px;
+  margin-top: 30px;
+  padding-bottom: 0;
+  margin-bottom: 80px;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto
+}
+
+.imageReview {
+  max-width: 90% !important;
+  min-width: 100px !important;
+  min-height: 100px !important
+}
+
+.imageReview .layermcont {
+  padding: 20px
+}
+
+.imageReview img {
+  width: 100%;
+  display: block
+}
+
+.msgWait {
+  min-height: 50px !important;
+  max-height: 50px !important;
+  min-width: 160px !important;
+  max-width: 270px !important;
+  background-color: inherit !important;
+  box-shadow: none
+}
+
+.msgWait .layermcont {
+  padding: 15px 6px;
+  background-color: inherit
+}
+
+.msgWait .layermcont .svgLoad {
+  float: left;
+  margin: -4px 5px 0 0
+}
+
+.msg {
+  min-height: 60px !important;
+  min-width: 250px !important
+}
+
+.msg .layermcont {
+  margin: 25px 0 !important
+}
+
+.lotteryConfirm {
+  width: 400px;
+  min-height: 250px;
+  background: #fff;
+  text-align: left;
+  font-size: 14px;
+  line-height: 2.5;
+  padding-left: 10px
+}
+
+.lotteryConfirm .textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 2px 5px;
+  display: inline-block;
+  font-size: 12px;
+  width: 310px;
+  height: 120px;
+  overflow: auto;
+  vertical-align: top
+}
+
+.lotteryConfirm .textarea p {
+  margin: 0
+}
+
+.lotteryConfirm span {
+  margin-right: 5px
+}
+
+.lotteryConfirm em em {
+  color: red;
+  margin: 5px
+}
+
+.chaseLayer {
+  width: 420px;
+  margin: 0;
+  padding-left: 30px;
+  margin-bottom: 35px
+}
+
+.layermbox2 .layermchild[data-v-5e5a3c80] {
+  box-shadow: none;
+  background-color: inherit
+}
+
+.laymshade[data-v-5e5a3c80] {
+  background-color: rgba(0, 0, 0, .05)
+}

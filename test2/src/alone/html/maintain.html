@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>系统维护中！非常抱歉</title>
+    <link rel="stylesheet" href="/resource/share/RESOURCE_VERSION/css/maintenance.css">
+    <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page_zone">
+            <div class="mainicon">
+                <img src="/resource/share/RESOURCE_VERSION/imgs/maintenance/mainicon_h5_air.png" style="width: 100%; height: auto;">
+            </div>
+            <div class="sloganzone">
+                <div class="titleimg">
+                    <img src="/resource/share/RESOURCE_VERSION/imgs/maintenance/maintitle_air.png" style="width: 100%; height: auto;">
+                </div>
+                <div class="sg_content">维护时间至北京时间</div>
+                <div class="sg_content" id="maintainDateTxt"></div>
+            </div>
+            <div class="btn">
+                <div class="btn_text">
+                  <a class="onlineService" href="javascript:void(0)">
+                  在线客服
+                </a></div>
+            </div>
+
+            <div class="btn_aria_h5">
+                <div class="btn_c_h5">
+                    <div class="btn_load_h5">
+                      <a class="onlineService" href="javascript:void(0)">
+                        在线客服
+                      </a>
+                    </div>
+                    <div class="loadicon_h5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      // 根据配置项切换不同的logo
+/*      var element = document.getElementById('myImage')
+      if (platformType == 0) {
+        element.src = '/static/gpo_mobile_v9/local/img/maintain/bg_OPlogo_h5.png'
+      } else {
+        element.src = '/static/gpo_mobile_v9/local/img/maintain/bg_Maintain_h5.png'
+      }
+*/
+      window.$.ajax({
+        type: 'post',
+        url: '/member/message/getSystemMessage',
+        dataType: 'json',
+        timeout: 10000,
+        success: function (res) {
+          // 发个请求判断是否在维护
+          if (res.status !== '6') {
+          // 如果没有维护就跳转到首页
+            window.location.href = '/'
+          } else {
+            var reg = new RegExp('^http')
+            var reg2 = new RegExp('^https')
+            $('#maintainDateTxt').html(res.data.endTime)
+            if (res.data.onlineservice !== undefined) {
+              if (reg.test(res.data.onlineservice.junctionSim) || reg2.test(res.data.onlineservice.junctionSim)) {
+
+              } else {
+                res.data.onlineservice.junctionSim = '//' + res.data.onlineservice.junctionSim
+              }
+            }
+            $('.onlineService').attr('href', res.data.onlineservice === undefined ? 'javascript:alert("客服繁忙，请联系上级！")' : res.data.onlineservice.junctionSim)
+            // if (!res.data.onlineservice) {
+            //   $('.onlineService').removeAttr('href')
+            // }
+          }
+        }
+      })
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+.left-menu{
+    padding-top: 8px;
+    h1{
+        line-height: 30px;
+        padding: 14px 28px 14px 0;
+        font-weight: normal;
+        position: relative;
+        .clearfix;
+        .menu-logo{
+            width: 30px;
+            height: 30px;
+            margin-left: 25px;
+            margin-right: 20px;
+            background: #557FDE;
+            .border-radius(50%);
+            img{
+                width: 20px;
+                height: 20px;
+                margin: 0px auto;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+        span{
+            display: block;
+            font-size: 18px;
+            .float-l;
+        }
+    }
+    i.ic-right{
+        position: absolute;
+        right: 28px;
+    }
+}
+.side-menu{
+    position: relative;
+    padding:10px 0 11px;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 80%;
+        height: 1px;
+        left: 10%;
+    }
+    &:last-child{
+        &::after{
+            display: none;
+        }
+    }
+    li{
+        a{
+            height: 48px;
+            line-height: 48px;
+            padding: 0 28px;
+            font-size: 16px;
+            display: block;
+            position: relative;
+            z-index: 10;
+            &::before,&::after{
+                content: '';
+                position: absolute;
+                z-index: -1;
+                display: block;
+                height: 48px;
+                top: 0px;
+            }
+            &::before{
+                width:calc(~'100% - (28px + 20px)');
+                left: 0px;
+            }
+            &::after{
+                width: 48px;
+                right: 28px;
+                .border-radius(50%);
+            }
+        }
+        .zz-icon-dot{
+            top:21px;
+            margin-right: 10px;
+        }
+    }
+    i.ic-left{
+        margin-right: 15px;
+    }
+    .child-menu{
+        a{
+            font-size: 14px;
+            text-indent: 35px;
+        }
+    }
+}
+
+
+.yo-rotation{
+    -webkit-transform:rotateZ(90deg);
+            transform:rotateZ(90deg);
+}

@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.smart</groupId>
+	<artifactId>gpo_mobile</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0</version>
+	<name>gpo_mobile</name>
+
+	<build>
+		<finalName>gpo_mobile</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+				<executions>
+					<!-- 安装依赖 -->
+					<execution>
+						<id>exec-npm-install</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+					<!-- 安打包 -->
+					<execution>
+						<id>exec-npm-run-build</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<executable>npm</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>build</argument>
+								<argument>${gpo_mobile_env}</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+          <execution>
+            <id>clean the dist and target</id>
+            <phase>clean</phase>
+            <configuration>
+              <target>
+                <echo message="clean the dist and target:" />
+                <delete dir="${project.basedir}/dist" failonerror="false" />
+                <delete dir="${project.basedir}/target" failonerror="false" />
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
+					<execution>
+						<id>compress dist directory</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo message="compress the dist folder:" />
+
+								<mkdir dir="${project.basedir}/target/gpo_mobile" />
+
+								<copy todir="${project.basedir}/target/gpo_mobile" overwrite="true">
+									<fileset dir="${project.basedir}/dist" includes="**/*" />
+								</copy>
+
+								<tstamp>
+									<format property="current_date_time" pattern="yyyyMMddHHmmss" locale="en,US" />
+								</tstamp>
+
+								<zip destfile="${project.basedir}/target/gpo_mobile_${current_date_time}.zip">
+									<zipfileset dir="${project.basedir}/target/" includes="gpo_mobile/**/*" />
+								</zip>
+
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

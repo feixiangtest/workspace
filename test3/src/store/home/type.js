@@ -1,0 +1,18 @@
+export const LOGIN_ACTION = 'login.action'
+export const LOGINTOW_ACTION = 'loginTow.action'
+export const LOGINTOW_MUTATION = 'loginTow.mutation'
+export const LOGIN_MUTATION = 'login.mutation'
+export const LOGOUT_ACTION = 'logout.action'
+export const LOGOUT_MUTATION = 'logout.mutation'
+export const QUERYINDEX_ACTION = 'qeruyIndex.action'
+export const QUERYINDEX_MUTATION = 'qeruyIndex.mutation'
+export const INITDATA_ACTION = 'initData.action'
+export const INITDATA_MUTATION = 'initData.mutation'
+export const MENU_ACTION = 'menu.action'
+export const MENU_MUTATION = 'menu.mutation'
+// 预览logo 登录 和首页头部
+export const PREVIEW_LOGO = 'preview.logo'
+export const PREVIEW_MUTATION = 'preview.mutation'
+// 代理H5首页--代理弹出公告
+export const NOTICE_ACTION = 'notice.action'
+export const REPAIR_ACTION = 'repair.action'

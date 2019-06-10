@@ -1,0 +1,400 @@
+/**
+    app css 全局调整
+ */
+@imgUrl: '/static/lt_h5_v3/local/img';
+.wine {
+  color: #11c1f3;
+}
+
+.red {
+  color: #e61300;
+}
+
+.box-sizi {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hide-overflow-y {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.clearfix {
+  &:after, &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+#display-fix {
+  .flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .flex-direction {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  .flex-column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .flex-nowrap {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .justify-content {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .justify-flex-start {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  .justify-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .align-center {
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .align-stretch {
+    align-content: stretch;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.pull-left {
+  float: left;
+}
+
+.yo-left {
+  float: left;
+}
+
+.yo-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  width: 100%;
+  font-size: 14px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+i,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+fieldset,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+html {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei', '-apple-system', 'Helvetica Neue', 'Roboto', 'Segoe UI', sans-serif;
+  line-height: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+}
+
+body {
+  cursor: url('@{imgUrl}/finger.png'), auto;
+  background: #ececec;
+  color: #343434;
+}
+
+*, *:before, *:after {
+  .box-sizi;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Microsoft Yahei';
+  color: #343434;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+img {
+  pointer-events: none;
+}
+
+div {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, a:focus, a:active, a:hover,
+button, button:focus,
+:focus, :active {
+  outline: 0;
+}
+
+img, a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+  outline-offset: 0;
+  outline-style: none;
+  outline-width: 0;
+  -webkit-font-smoothing: inherit;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft Yahei', '-apple-system', 'Helvetica Neue', 'Roboto', 'Segoe UI', sans-serif;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: 34px;
+  color: #111;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 16px;
+  border: 0;
+}
+
+/*webkit自定????*//*整体部分*/
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.item,
+.item h1,
+.item h2,
+.item h3,
+.item h4,
+.item h5,
+.item h6,
+.item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mb0 {
+  margin-bottom: 0!important;
+}
+
+// 彩票规则背景色
+.orange {
+  background: #FF6600;
+  border-top: 2px solid #8E1914;
+  display: block;
+  width: 100%;
+  padding-left: 2px;
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.chip_show {
+  display: block !important;
+}
+
+.chip_hide {
+  display: none !important;
+}
+
+
+

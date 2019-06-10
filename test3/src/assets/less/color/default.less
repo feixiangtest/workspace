@@ -1,0 +1,632 @@
+
+@chiefly:     #557fde;    // 主要颜色
+@minor:       #4976dd;    // 次要颜色
+@highColor:   #E95F5F;    // 高亮颜色
+
+@white:       #ffffff;    // 白色
+
+@assist1:     #fbd067;    // 辅助颜色1
+@assist2:     #3cd4d2;    // 辅助颜色2
+@assist3:     #FD9D00;    // 辅助颜色3-滑块-余额存取
+@assist4:     #5DCB4E;    // 辅助颜色3-滑块-修改按钮
+
+@deepText:    #343434;    // 重要文本
+@subText:     #666666;    // 次要文本
+@ligText:     #999999;    // 轻文本
+
+@headline:    #4D5D84;    // 标题文本
+@hoverText:   #5E73A5;    // tab hover文本颜色
+
+@ligBgColor:  #fbfcfd;    // 浅色背景
+
+@borderColor:    #DFDFDF;    // 轻筐线色
+
+// 链接-蓝
+.link-txt{
+    color: @minor !important;
+}
+// 提示-红
+.warn-txt{
+    color: @highColor !important;
+}
+// 醒目-黄
+.showy-txt{
+    color: darken(@assist1,20%) !important;
+}
+// 弱文本-灰
+.weak-txt{
+    color: @ligText !important;
+}
+// 次要文本
+.subText{
+    color: @subText !important;
+}
+.op-add{ // 滑块-添加
+    background: @chiefly;
+}
+.op-edit{ // 滑块-修改
+    background: @assist4;
+}
+.op-del{ // 滑块-余额存取
+    background: @assist3;
+}
+.default-color{
+    height: 100%;
+    width: 100%;
+  body{
+    height: 100%;
+    width: 100%;
+  }
+    body, .floatPage, .member-selection-list{
+        background-color: darken(@white,2.8%);
+    }
+    // 白色背景
+    .nullBg{
+        background: @white;
+    }
+    // 浅色背景
+    .tintBg{
+        background: @ligBgColor;
+    }
+    
+    // 深色背景
+    .deepBg{
+        background: darken(@ligBgColor,1.2%);
+    }
+    // 标题H3
+    .title-3{
+        color: @deepText;
+    }
+    
+     // 统一内容背景颜色
+    .body-bg{
+        .deepBg;
+    }
+    .icon-next{
+        color: darken(@white,20%);
+    }
+    // 备注
+    .note-item{
+        color: @highColor;
+    }
+    // 头部背景色
+    .index-header{
+        background: @chiefly;
+        color: @white;
+        i{
+            color: @white;
+        }
+    }
+    // 全局红色星
+    .star {
+      color: red;
+    }
+    // 首页---------------Yolanda
+    // 资金信息
+    .uesr-info{
+        .gradient(to bottom, @chiefly 48%, @white 40%);
+        .info-box{
+            .y(@any){
+                .nullBg;
+                h4{
+                    color: @headline;
+                }
+                .circle{
+                    color: @white;
+                }
+                .sum{
+                    span{
+                        color: @subText;
+                    }
+                    p{
+                        color: @deepText;
+                    }
+                }
+            }
+            &-one{
+                .y(one);
+                .circle{background: @assist1;}
+            }
+            &-tow{
+                .y(tow);
+                .circle{background: @assist2;}
+            }
+            &-three{.y(three);}
+            &-four{ .y(four); }
+        }
+    }
+    // 数据饼图
+    .inde-char{
+        .nullBg;
+        i{
+            color: lighten(@chiefly, 8%);
+        }
+    }
+    .sum-title{
+        color: @deepText;
+        i{
+            color: darken(@assist1,20%);
+        }
+    }
+    // tab 导航
+    .menu-tab{
+        ul{
+            border-bottom: 1px solid lighten(@headline,52%);
+            li{
+                color: lighten(@headline,35%);
+                &.cur{
+                    color: @hoverText;
+                    &::after{
+                        background: @minor;
+                    }
+                }
+            }
+        }
+    }
+    // 下注金额表
+    .bet-amount{
+        background: darken(@white,1.2%);
+        .bet-sum-table{
+            th{
+                color: @deepText;
+                .nullBg;
+            }
+            td{
+                color: @subText;
+                
+            }
+            tr:hover, tr:active{
+                background: #F3F4F5;
+            }
+        }
+    }
+    //----------结束---首页
+
+    // 右边导航---------------Yolanda
+    .left-menu{
+        background:@white url('@{imgUrl}menu-bg.png') top left no-repeat;
+        background-size: contain;
+        h1, h1 i{
+            color: @chiefly;
+        }
+        i{
+            color: darken(@white,25%);
+        }
+        ul{
+            &::after{
+                background: darken(@white,3%);
+            }
+            li a{
+                color: @deepText;
+            }
+            a:hover{
+                &::before,&::after{
+                    background: darken(@white,5%);
+                }
+            }
+            .zz-icon-dot::after{
+                background: @highColor;
+            }
+        }
+        .child-menu a{
+            color: @subText;
+        }
+    }
+    //----------结束---右边导航
+
+    // 个人用户中心页面---------------Yolanda
+    .basic-info{
+        .gradient(to bottom, @chiefly 68%, darken(@white,2.8%) 32%);
+        .head-name{
+            h2{
+                color: @white;
+            }
+            p{
+                color: fade(@white,50%);
+            }
+        }
+    }
+    //----------结束---个人用户中心页面
+
+    // 公用dl列表样式---------------Yolanda
+    .public-list{
+        .common-item{
+            .nullBg;
+            .title{
+                color: @deepText;
+            }
+            .arrow{
+                color: #CDCED3;
+            }
+            .mint-switch-core{
+                &:before{
+                    background: #CACED4;
+                }
+            }
+            .mint-switch-input:checked+.mint-switch-core{
+                background: @assist2;
+                border-color: @assist2;
+            }
+            .input{
+                .y(@any){
+                }
+                // 有边框
+                &-type1{
+                    .y(type1);
+                    border: 1px solid #DFDFDF;
+                    background-color: #fcfcfc;
+                    .placeholderStyle(@ligText,12px)
+                }
+                // 无边框
+                &-type2{
+                    .y(type2);
+                    .placeholderStyle(@ligText,14px)
+                }
+            }
+            .cash-input{
+                border:none;
+                .nullBg;
+            }
+            .con-txt{
+                color: @ligText;
+            }
+            .bg-none{
+                background-color: @white!important;
+            }
+            .txtarea{
+                textarea{
+                    border:1px solid #DFDFDF;
+                    .placeholderStyle(@ligText,12px);
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+    }
+    // 表单-时间选择-公用
+    .date-time-box{
+        input{
+            .placeholderStyle( @deepText,14px);
+        }
+        .zz-icon-down::after{
+            border-color: @ligText transparent;
+        }
+    }
+    //----------结束---公用dl列表样式
+
+    // 列表，滑块列表统一样式---------------Yolanda
+    .yo-cell-box{
+        .cell-box{
+            color: @deepText;
+        }
+        .cell-item{
+            .nullBg;
+            border-bottom: 1px solid darken(@white,2.8%);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    //----------结束---列表，滑块列表统一样式
+
+    // 统一表格背景---------------Yolanda
+    .table-bg{
+        td{
+            .nullBg;
+            border-bottom: 1px solid darken(@white,2.8%);
+        }
+        th, td{
+            color:@deepText;
+        }
+    }
+    //----------结束---统一表格背景
+
+    // 登录页面样式---------------Yolanda
+    .login-body{ .nullBg; }
+    .login{
+        background-color: @white;
+        background-image: url('@{imgUrl}login-banner.png');
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        .login-head{
+            i{
+                .nullBg;
+                color: @chiefly;
+            }
+        }
+        .login-logo{
+            .nullBg;
+        }
+    }
+    .login-info{
+        .login-item{
+            .nullBg;
+            input{
+                .placeholderStyle(@ligText,14px);
+                color: @deepText;
+                .nullBg;
+            }
+            i{
+                color: lighten(@headline,40%);
+            }
+        }
+    }
+    //----------结束---登录页面样式
+
+    // 修改picker插件样式---------------Yolanda
+    .mask-box {
+        .picker-tab{
+            .nullBg;
+        }
+        .pic-header{
+            background: darken(@white,5%);
+        }
+        .pic-cancel{
+            color: @subText;
+        }
+        .pic-titile, .picker-item.picker-selected{
+            color: @deepText;
+        }
+        .pic-sure{
+            color: lighten(@headline,15%);
+        }
+        .picker-item{
+            color: @ligText;
+        }
+    }
+    //----------结束---修改picker插件样式
+    
+    // 现金流查询-类别选择面板样式----------Yolanda
+    .query-type-tab{
+        .query-box{
+            background: darken(@white,5%);
+            .select-item{
+                .nullBg;
+                .item{
+                    color: #b2b4bf;
+                    border:1px solid lighten(@headline,15%);
+                    &.active{
+                        background-color: lighten(@headline,15%);
+                        color:#fff;
+                    }
+                }
+            }
+            .select-all, .cancle, .mint-checkbox-label{
+                color: @deepText;
+            }
+            .sure{
+                color: lighten(@headline,15%);
+            }
+            .query-box-item{
+                .item{
+                    color: @deepText;
+                    border-bottom: 1px solid #f4f4f4;
+                }
+                
+            }
+        }
+    }
+    // mint多选按钮 样式
+    .mint-checkbox-input:checked+.mint-checkbox-core{
+        background-color: @assist2 !important;
+        border-color: @assist2 !important;
+    }
+    //-----结束--现金流查询-类别选择面板样式
+
+    // 子账号头部样式----------Yolanda
+    .search-box{
+        background: fade(@white, 20%);
+        border:1px solid fade(@white, 50%);
+        i{
+            color: fade(@white, 70%);
+        }
+        input{
+            background: none;
+            color: @white;
+            .placeholderStyle(fade(@white, 60%), 12px)
+        }
+    }
+    //-----结束--子账号头部样式
+
+    // 公告管理样式---------------Yolanda
+    .notice-tab{
+        .nullBg;
+    }
+    .notice-item{
+        .nullBg;
+        .title {
+            color: @deepText;
+            .arrow i{
+                color: lighten(@ligText,20.4%);
+            }
+        }
+        .content {
+            color: @subText;
+            .time {
+                color: lighten(@ligText,17.6%);
+            }
+        }
+    }
+    .notice-detail-box {
+        .nullBg;
+        .title{
+            color: @deepText;
+            border-bottom: 1px solid #f4f4f4;
+            .time{
+                color: #C6C5C5;
+            }
+        }
+        .content{
+            color: @subText;
+        }
+    }
+    //----------结束---公告管理样式
+    // 会员选择页面-样式修改---------------Yolanda
+    .member-selection {
+        .list-title {
+            .nullBg;
+            input{
+            
+            }
+            i.icon-search{
+                color: darken(@white,20%);
+            }
+        }
+        .list-title input, .agent-in-box{
+            background-color: #fcfcfc;
+            border: 1px solid #dfdfdf;
+            .placeholderStyle(@ligText,12px)
+        }
+        // 代理页面-头部搜索样式
+        .agent-title{
+            .agent-in-box{
+                color: @ligText;
+                font-size: 12px;
+                .zz-icon-down::after{
+                    border-color: @ligText transparent;
+                }
+            }
+        }
+    }
+    .op-item{
+        color: @white;
+    }
+    //----------结束---会员选择页面-样式修改
+    // 加载样式
+    .load-box{
+        .nullBg;
+    }
+    .loading-text, .err-main-box p{
+        color: @subText;
+    }
+    // 安全码
+    .legendCode h3{
+        background: darken(@white,10%) !important;
+        color: @subText !important;
+    }
+    .legend-input input{
+        background-color: #fcfcfc;
+        border: 1px solid #dfdfdf;
+        .placeholderStyle(@ligText,12px)
+    }
+    // 绑定安全码样式
+    .security-page{
+        background: @white;
+        color:@subText;
+        // .part{
+        //     border-top: 1px solid @borderColor;
+        // }
+        nav.security-nav{
+            color:@ligText;
+            .is-selected{
+                color:@minor!important;
+                border-bottom: 1px solid @minor!important;
+            }
+            .mint-navbar {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+        .titlestep{
+            .title{
+                border-left: 2px solid @minor;
+            }
+        }
+        input{
+            border: 1px solid @borderColor;
+            background: #FCFCFC;
+            &::placeholder{
+                color:@ligText;
+            }
+        }
+        .qrcode{
+            border: 2px solid @chiefly;
+            &:after,&:before{
+                background: @white;
+            }
+        }
+        .keybox{
+            border: 1px solid @borderColor;
+            background: #FCFCFC;
+            .copy{
+                width: 30px;
+                color: #FFB980;
+            }
+        }
+    }
+    .teachpage{
+        background: rgba(20,22,32,0.7);
+        .teachout{
+            .teachbox{
+                background: rgba(1,1,1,0.40);
+                border: 1px dashed @white;
+                color: @white;
+            }
+        }
+    }
+    // button 初始化---------------Yolanda
+    .button-variant(@color; @background; @border) {
+        color: @color;
+        background-color: @background;
+        border-color: @border;
+        // &:hover {
+        //     // darken(@background,30%)
+        //     color: @color;
+        //     background-color: fade(@background,80%);
+        //         border-color: fade(@border,80%);
+        // }
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &:hover{
+            background-color: @background;
+                border-color: @border ;
+            }
+        }
+    }
+    @btn-default-color:              @chiefly;
+    @btn-default-bg:                 transparent;
+    @btn-default-border:             @chiefly;
+
+    @btn-primary-color:              @white;
+    @btn-primary-bg:                 @chiefly;
+    @btn-primary-border:             @chiefly;
+
+    @btn-disabled-color:             @white;
+    @btn-disabled-bg:                 #e7dfe5;
+    @btn-disabled-border:             darken(@btn-disabled-bg, 5%);
+
+    .btn-default {
+        .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+        &:hover{
+            color: @white;
+            background-color: @chiefly;
+                border-color: @chiefly;
+        }
+    }
+    .btn-primary {
+        .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+        &:hover {
+            color: @btn-primary-color;
+            background-color: darken(@hoverText,2%);
+                border-color: darken(@hoverText,2%);
+        }
+    }
+    .btn-disabled{
+        .button-variant(@btn-disabled-color; @btn-disabled-bg; @btn-disabled-border);
+    }
+  // 账号管理- 代理
+  
+  .randomWord{
+    background: #169bd5;
+    color: @white;
+  }
+  .agentSave{
+    .googleCode{
+      .warn-txt;
+    }
+  }
+  
+}

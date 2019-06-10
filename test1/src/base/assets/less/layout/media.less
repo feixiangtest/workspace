@@ -1,0 +1,157 @@
+
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+    .popMessages,.gameNotice{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 359px) {
+    .specialbox{
+        width: calc(~'100% - (85px + 20px)');
+    }
+    .item-input{
+        .itemTxt{
+            width: 76px;
+            .fontSize(@f14);
+        }
+    }
+    .formIput{
+        .item-input;
+        .banktitle{
+            .fontSize(@f14);
+        }
+    }
+    .fontSize16{
+        font-size: @f14;
+    }
+    .depTips{
+        padding-left: 82px;
+    }
+    .paytype{
+        dd{
+            .banktitle,.paybankName{
+                .fontSize(@f14);
+            }
+        }
+    }
+    .selBankBox {
+        h1,dl dt{
+            .fontSize(@f14);
+        }
+    }
+    .yo-headline2{
+        .fontSize(@f14);
+        &::before{
+            top: 17px;
+        }
+    }
+    .yo-titile2::before{
+        top: 2px;
+    }
+    .inpu-box {
+        padding-left: 0px;
+        p{
+            .fontSize(@f14);
+            margin-left: -20px;
+        }
+        input,select{
+            width: calc(~'100% - (35% + 20px)');
+            flex: 1;
+            .placeholderStyle(#aaa,12px);
+            margin-right:0px;
+        }
+        .yo-select{
+            .fontSize(@f14);
+        }
+    }
+    // .liveSporBox{
+    //     min-height: 261px;
+    // }
+  .yo-register{
+    .yo-pad-bot20{
+        margin-top: 0px;
+    }
+  }
+  .yo-anniu-message {
+    top: 405px !important;
+  }
+  .gxxy{
+      margin-bottom: 0px;
+      span{
+          width: 83%;
+          margin-top:0px;
+      }
+  }
+    // 用户注册
+    img.code {
+        right: 1px;
+    }
+    .yo-register{
+        div.passwordTextClick{
+        right: 0px;
+        }
+    }
+    input,textarea{
+        .placeholderStyle(#aaa,12px);
+    }
+    .formIput{
+        .typeinput{
+            .placeholderStyle(#aaa,12px);
+        }
+    }
+}
+// 三星 ipad 支付
+@media screen and (min-width: 700px) {
+  // 公司入款 支付宝
+    .pay-ali{
+      .item-input .itemTxt{
+        width: 110px;
+      }
+    }
+  .secondForm{
+    .formIput .itemTxt{
+      width: 110px;
+    }
+  }
+  #payScroll{
+    .item-input .itemTxt{
+      width: 110px;
+    }
+  }
+  #completeAccount{
+    .secondForm2{
+      .formIput .itemTxt{
+        width: 110px;
+      }
+    }
+  }
+  .SamsungPad{
+    width: 110px;
+  }
+}
+  //兼容问题处理
+.mengceng.leftMengceng {
+  // pointer-events: auto; q23213
+}
+.opacity6{
+  opacity: 0.6;
+}
+.payHeight {
+  height: calc(~"100% - 145px")
+}
+@media screen and (min-width: 768px) {
+    .formIput .specialbox .Tspe img {
+        margin-left: -12px;
+    }
+}
+@media screen and (min-width: 375px) {
+    
+}
+// 5s兼容样式
+@media screen and (max-width: 320px) {
+  ul.payListUl{
+    display: flex;
+    li{
+        width: 25%;
+    }
+  } 
+}

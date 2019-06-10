@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'memberFont';
+    src: url('@{imgUrl}font/memberfont.eot');
+    src: url('@{imgUrl}font/memberfont.eot#iefix') format('embedded-opentype'),
+         url('@{imgUrl}font/memberfont.woff2') format('woff2'),
+         url('@{imgUrl}font/memberfont.woff') format('woff'),
+         url('@{imgUrl}font/memberfont.ttf') format('truetype');
+        //  url('@{imgUrl}font/agent-font.svg#yofont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.yo-icon:before, [class*="icon-"]:before, [class^=icon-]:before {
+    font-family: 'memberFont';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-account:before { content: '\e800'; } /* 账户 */
+.icon-back:before { content: '\e801'; } /* 返回 */
+.icon-yzm:before { content: '\e802'; } /* 验证码 */
+.icon-balance:before { content: '\e803'; } /* 余额 */
+.icon-bank:before { content: '\e804'; } /* 银行卡 */
+.icon-close:before { content: '\e805'; } /* 关闭 */
+.icon-deal:before { content: '\e806'; } /* 交易记录 */
+.icon-fold:before { content: '\e807'; } /* 折叠 */
+.icon-game:before { content: '\e808'; } /* 游戏 */
+.icon-game-client:before { content: '\e809'; } /* 游戏客户端 */
+.icon-mony:before { content: '\e80a'; } /* 钱币符 */
+.icon-my:before { content: '\e80b'; } /* 我的 */
+.icon-news:before { content: '\e80c'; } /* 新闻 */
+.icon-next:before { content: '\e80d'; } /* 下一页 */
+.icon-notice:before { content: '\e80e'; } /* 公告 */
+.icon-online:before { content: '\e80f'; } /* 在线客服 */
+.icon-pc:before { content: '\e810'; } /* 电脑端 */
+.icon-promotion:before { content: '\e811'; } /* 优惠活动 */
+.icon-pull:before { content: '\e812'; } /* 下拉 */
+.icon-pwd:before { content: '\e813'; } /* 密码 */
+.icon-pwd-off:before { content: '\e814'; } /* 密码-不可见 */
+.icon-pwd-on:before { content: '\e815'; } /* 密码-可见 */
+.icon-recommend:before { content: '\e816'; } /* 推荐 */
+.icon-refresh:before { content: '\e817'; } /* 刷新 */
+.icon-refresh2:before { content: '\e818'; } /* 刷新2 */
+.icon-search:before { content: '\e819'; } /* 搜索 */
+.icon-sure:before { content: '\e81a'; } /* 确定 */
+.icon-transition:before { content: '\e81b'; } /* 转换 */
+.icon-cancel:before { content: '\e81d'; } /* 取消 */
+
+// 彩色icon 
+
+
+// 自制-icon
+.zz-icon-{
+    .y(@any){
+        position: relative;
+        &::before,&::after{
+            position: absolute;
+            display: block;
+            content: '';
+        }
+    }
+    &down{
+        .y(down);
+        &::after{
+            top: 0px;
+            right: 0px;
+            border-width: 5px 5px 0;
+            border-style: solid;
+        }
+    }
+    &dot{
+        .y(dot);
+        &::after{
+            top: 0px;
+            right: 0px;
+            width: 6px;
+            height: 6px;
+            .border-radius(50%);
+        }
+    }
+}
+
+// 图片做的icon
+.yo-img-icon{
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-huobao{
+    background-image: url('@{imgUrl}icon/huobao.png');
+}
+.img-huodong{
+    background-image: url('@{imgUrl}icon/huodong.png');
+}
+.img-shiwan{
+    background-image: url('@{imgUrl}icon/shiwan.png');
+}
+.img-zuixin{
+    background-image: url('@{imgUrl}icon/zuixin.png');
+}

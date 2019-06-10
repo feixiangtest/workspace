@@ -1,0 +1,206 @@
+ 
+a.button {
+    text-decoration: none;
+}
+.forthwith-receipts-nav {
+    height: 3rem;
+    background: #eeeeee;
+    color: #0F0F0F;
+    border-bottom: 1px solid #bebebe;
+}
+.forthwith-receipts-nav span {
+    display: inline-block;
+    width: 25%;
+    height: 1.8rem;
+    float: left;
+    text-align: center;
+    margin-top: .8rem;
+} 
+.detailed-form-foot {
+    background: #000000;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+} 
+.forthwith-receipts-minute {
+    li{
+        overflow: hidden;
+        span{
+            display: inline-block;
+            width: 25%;
+            height: 3rem;
+            float: left;
+            text-align: center;
+            margin-top: 0.8rem ;
+            border-bottom: 1px  dashed;
+            text-indent: -1rem;
+            border-color:black ;
+        }
+        i{
+            display: block;
+            width: auto;
+        }
+        u{
+            text-decoration:none;
+        }
+    }
+}
+.red {
+    color: #e61300;
+}
+
+.blue {
+    color: #2400fc;
+}
+
+.green {
+  color: green;
+}
+.historyLineThrough span,.historyLineThrough i{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.bettingLineThrough span,.bettingLineThrough i{
+    text-decoration: line-through;
+    text-decoration-color:#000;
+}
+
+
+.yoFooter{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+.yoFootNav{
+    width: 100%;
+    .center{
+        .yoHeader .center;
+    } 
+    .fotLeft{
+        .heaLeft;
+        .count{
+            color: #000;
+            font-size: 14px;
+        }
+    }
+    .fotTitle{
+        .yoHeader .title;
+        margin-top:0px; 
+    }
+    .fotRight{
+        .heaRight;
+        width: 50%; 
+    }
+}
+.yoPaging{
+    height: 44px;
+    background: #000;
+    .center{
+        #display-fix>.flex-container;
+    }
+    .detailedFoot{
+        width: 70px;
+        color: #ffffff;
+        background: #f0960c;
+        border: 3px solid #171717;
+        border-radius: 6px;
+        line-height: 26px;
+        height: 34px;
+        font-size: 14px;
+        padding: 0px;
+        text-align: center;
+        &.btnGo{
+            margin-left: .8rem;
+        }
+        &.btnback{
+            margin-right: .8rem;
+        }
+    }
+}
+
+ 
+
+.LotteryTypes{
+    position: fixed;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    bottom: 0rem;
+    left: 0px;
+    z-index:999;
+    .shadeIn{
+        width: 100vw;
+        height: 100%;
+        background: rgba(0,0,0,.6);
+        overflow: hidden;
+        .selLotteryType{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            background: #fff;
+            div{
+                background-color: #ececec;
+                height: 42px;
+                .allButton {
+                    color: #ffffff;
+                    background: #f02030;
+                    border-radius: 2px;
+                    line-height: 26px !important;
+                    display: block;
+                    width: 55px;
+                    float: left;
+                    margin: 8px;
+                    text-align: center;
+                }
+                .cancelButton {
+                    color: #ffffff;
+                    background: #969696;
+                    border-radius: 2px;
+                    line-height: 26px !important;
+                    display: block;
+                    width: 55px;
+                    float: right;
+                    margin: 8px;
+                    text-align: center;
+                }
+            }
+            dl{
+                max-height: 294px;
+                overflow-x: hidden;
+                overflow-y: visible;
+                dt{
+                    border-width:0 0 1px 0;
+                    border-color:#ddd;
+                    border-bottom: 0.5px solid #ececec;
+                    padding-top: 0px !important;
+                    padding-bottom: 0px !important;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    i{
+                        margin: 5px 0px 0;
+                    }
+                }
+                .isSelected {
+                    background-color: #ececec;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){ 
+     // 
+     .forthwith-receipts-minute {
+        li{
+            span{
+                height: 4rem;
+            }
+        }
+    }
+}

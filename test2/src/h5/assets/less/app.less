@@ -1,0 +1,39 @@
+@import "./reset/base.less";  // 设置可通用样式
+
+@import "./reset/reset.less"; //  ot统一框架样式
+
+@import "./layout/main.less"; //  首页、以及主要架构样式
+
+@import "./pages/index.less"; //  首页推荐、游戏大厅、优惠活动、我的 相关页面样式
+
+@import "./pages/difference.less"; // 登录、等单页面样式
+
+@import "./pages/register.less"; // 注册页 绑定银行卡页页面样式
+@import "./pages/transactionRecord.less"; // 注册页 绑定银行卡页页面样式
+@import "./pages/messageList.less"; // 消息
+@import "./layout/media.less"; // 媒体查询
+
+@import "./layout/amend.less"; // 修改 各种 插件样式
+
+@import "./dataTime/dateRange.less"; // 选择日期控件
+
+@import "./reset/icon.less";  //  字体图标样式
+
+@import "./color/default.less"; //  颜色样式
+
+@import "./layer/layer.less"; // member h5单独 弹框样式
+
+//  静态图片资源变量
+@imgUrl:'../../img/'; // 普通默认图片资源
+@colorUrl: '@{imgUrl}/default'; // 跟主体走的图片资源
+// @colorUrl: '@{imgUrl}/bule';
+
+.default-color {
+  .change(); //默认 颜色
+}
+
+//测试-蓝色
+.bule-color {
+  .change(#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,
+  #7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5,#7889F5);
+}

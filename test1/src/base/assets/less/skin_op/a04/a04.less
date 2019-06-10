@@ -1,0 +1,1164 @@
+@roseRed:#d13142;
+@red:#f00;
+@blue:#387ef5;
+@PaleOrange:#ffae5e;
+@black:#fff;
+@gray:lighten(#000,60%);
+@lightGray:lighten(#000,62.6%);
+@primary:#13815e;
+@aided:#474747;
+@white:#fff;
+@yellow:#ffdf1b;
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000,@inner) {
+    box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+  }
+.red{
+    color: @red;
+}
+.PaleOrange{
+    color:@PaleOrange !important;
+}
+.blue{
+    color: @blue;
+}
+.black{
+    color: @black;
+}
+.gray{
+    color: @gray;
+}
+.lightGray{
+    color: @lightGray !important;
+}
+body{
+    background: @aided;
+    color: #ccc;
+}
+a{
+    color: @yellow;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    color: #111;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #eee;
+}
+.tabs {
+    border-color: #b2b2b2;
+    background-color: #f8f8f8;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+}
+.tabs .tab-item .badge {
+    background-color: #444;
+    color: #f8f8f8
+}
+.icon-radio-no{
+    color: #d3d3d3;
+}
+.icon-radio-yes{
+    color: #23cb15;
+}
+.icon-qq{
+    color: #4cafe9;
+}
+.icon-wechat{
+    color: #3baf34;
+}
+.icon-weibo{
+    color: #ea5d5c;
+}
+.icon-qzone{
+    color: #f5c01c;
+}
+.icon-promotion,.icon-favorite,.icon-download{
+    color: @white;
+}
+.layermchild {
+    h3{
+        background: #13815e;
+    }
+}
+//取消按钮添加样式
+.layerConfirm2 .layermbtn span[type="0"]{
+    border:1px solid  @primary;
+    color:  @primary;
+    background: @white;
+}
+.layerConfirm2 .layermbtn span[type="1"]{
+    border:1px solid  @primary;
+}
+.layerConfirm2 .layermbtn span[type="0"]:hover{
+    color: @white;
+    background:  @primary;
+}
+.layermbtn span[type="1"]{
+    background:  @primary;
+}
+.layermbtn span[type="0"]:hover, .layermbtn span[type="1"]:hover {
+    background: lighten(@primary,5%);
+}
+// 主框架皮肤样式
+.centerBox{
+    background: @aided;
+}
+.header{
+    background: @primary;
+    a{
+        &:active .icon-home{
+            color: @white;
+        }
+    }
+    i.icon-arrows-left{
+        color: @white;
+    }
+}
+.header-text.titile{
+    h1{
+        color: @white;
+    }
+}
+.hea-left{
+    a{
+        color: @white;
+        &.actived,&:active{
+            opacity: 0.7;
+        }
+    }
+    .icon-menu{
+        &.actived,&:active {
+            opacity: 0.7;
+        }
+    }
+}
+.hea-right{
+    a{
+        color: @white;
+    }
+}
+.hea-user{
+    .icon-account:active,span:active{
+        opacity: 0.7;
+    }
+}
+.hea-left,.hea-right{
+    a.deepred{
+        &.actived,&:active{
+            opacity: 0.7;
+        }
+    }
+    a span{
+        &.actived,&:active{
+            opacity: 0.7;
+        }
+    }
+}
+.banner{
+    background: #474747;
+}
+.yo-gonggao{
+    background-color: #333;
+    filter: alpha(Opacity=75);
+    -moz-opacity: 0.75;
+    opacity: .75;
+    #affiche{
+        color: @white;
+    }
+}
+.quickNav{
+    ul{
+        border-top:.0625rem solid @primary;
+        background: @primary;
+        li{
+            border-right:.0625rem solid #0b6b4d;
+            a{
+                color: @yellow;
+            }
+        }
+    }
+}
+.indexFot{
+    background: #303030;
+    a{
+        color: @white;
+        &:active{
+            // color: @roseRed;
+            background: #252525;
+        }
+    }
+}
+.fotMenu{
+    .copyright{
+        color: #343434;
+    }
+    i.icon-pc{
+        color: #343434;
+    }
+    .textbtn{
+        color: #757575;
+        background: #393939;
+    }
+}
+// 左、右侧边栏目
+.yo-left-menu, .yo-right-menu{
+    background: #333;
+}
+.yo-left-menu{
+    h1 {
+        color: @white;
+    }
+}
+.sideMenu {
+    border-top: 1px solid #4d4d4d;
+    li{
+        position: relative;
+        &:active{
+            &::before{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                display: block;
+                content: "";
+                width: 3px;
+                height: 50px;
+                background: #4ed3a6;
+            }
+        }
+    }
+    a {
+        border-bottom: 1px solid #4d4d4d;
+        color: #b0b0b0;
+        i {
+            color: #b0b0b0;
+        }
+        &:active {
+            background: #404040;
+            color: #fff;
+            i{
+                color: #4ed3a6;
+            }
+        }
+    }
+
+}
+.sideUser {
+    background:#14805e;
+}
+.isLogin {
+    .info {
+        color: @white;
+        .icon-f5account{
+            background: #0c6247;
+        }
+    }
+}
+.rightout {
+    a {
+        color: #cfe0db;
+        background:#0c6247;
+        .box-shadow(0, 3px, 4px, rgba(0, 0, 0, 0.32),inset);
+        &:active {
+            opacity: .7;
+            color: @white;
+        }
+    }
+}
+.yo-right-menu{
+    background: #666;
+    .rightMenu{
+        border-top-color: #626262;
+        a{
+            border-bottom-color: #626262;
+        }
+    }
+}
+// 登录、注册页
+.yo-login {
+    .yo-in-box {
+        background: #0e7759;
+        border:1px solid #024a36;
+        .border-radius(3px);
+        padding: 0px;
+        height: 34px;
+        margin-bottom: 6px;
+        input{
+            color: @yellow;
+            .placeholderStyle(#75a897, 0.95rem);
+            background: none;
+            height: 34px;
+            width: calc(~'100% - (30px * 2)');
+        }
+        i{
+            color: #75a897;
+            margin-top: 2px;
+            margin-left: 8px;
+            &.icon-remove{
+                margin-left: 3px;
+                margin-top: 6px;
+            }
+            &.eyes{
+                margin-top: 1px;
+                margin-left: 3px;
+            }
+            &.icon-verification-code{
+                margin-top: 2px;
+            }
+        }
+        img{
+            top: 2px;
+        }
+        img.iconImg{
+            left:4px;
+            width:30px;
+            top:2px;
+        }
+        input.spcInpt{
+            margin-left:30px;
+        }
+    }
+    a.yo-but{
+        background:#0c6247;
+        // .box-shadow(0, 3px, 4px, rgba(0, 0, 0, 0.32),inset);
+        color: #cfe0db;
+        &.actived,&:active{
+            opacity: .7;
+            color: @white;
+        }
+    }
+}
+.yo-fuzhu {
+    li{
+        a{
+            color: #777;
+            &.actived,&:active{
+                color: #ccc;
+            }
+        }
+    }
+}
+.thirdparty {
+    // background-color: @white;
+    fieldset {
+        border-top: 1px solid #777;
+    }
+    legend {
+        color: #777;
+    }
+    &:active fieldset{
+        border-top-color: #ccc;
+    }
+    &:active legend{
+        color: #ccc;
+    }
+    i{
+        background: #fff;
+        border-radius: 50px;
+        width: 42px;
+        height: 42px;
+        display: inline-block;
+        line-height: 0px;
+        &::before{
+            margin: -1px 0 0 -1px;
+        }
+    }
+}
+// 注册
+.progressbar{
+    li{
+        color: #333;
+        &.buz {
+            span{
+                color: #999;
+            }
+        }
+        &.hui.tiao,&.hui span{
+            background: #666;
+        }
+        &.hui span,&.hui p{
+            color: #999;
+        }
+        &.org span,&.org.tiao{
+            background: #13815e;
+            color: #ffdf1b;
+        }
+        &.org{
+          p{
+            color: #ffdf1b;
+          }
+        }
+    }
+}
+.yo-register{
+    background: #575757;
+   // border: .025rem solid #575757;
+    .gxxy{
+        a{
+            color: @red;
+        }
+   }
+}
+.inpu-box{
+    p{
+        color: #eee;
+    }
+    input,select{
+        border: 1px solid #ddd;
+    }
+}
+.input-two{
+    .PaleOrange;
+}
+.yo-anOne{
+    color: @white;
+    background-color: @primary;
+    &.actived,&:active{
+        opacity: 0.7;
+    }
+}
+.yo-anOne.canClick{
+    background-color: @primary;
+}
+.yo-anOne.notClick{
+    background-color: @aided;
+}
+.error_msg{
+    background:  @primary;
+    color: @white ;
+    &:before{
+        border-color:  @primary transparent;
+    }
+}
+.item{
+    border-color:none;
+    background-color:none;
+}
+.checkbox input:after, .checkbox-icon:after {
+    border: 1px solid @white;
+    border-top: 0;
+    border-right: 0;
+}
+.league-list input:checked:before, .checkbox input:checked+.checkbox-icon:before {
+    background: #e71516;
+    border-color: #e71516;
+}
+.reg-suctips{
+    h1{
+        color: #48a835;
+    }
+    p{
+        color: #343434;
+    }
+}
+.yo-anniu-one{
+    button,a{
+        &.firstc{
+            border-color:  @primary;
+            color:  @primary;
+            background: none;
+            &.actived,&:active{
+                background:  @primary;
+                color: @white;
+            }
+        }
+        &.lastc{
+            border-color:  @primary;
+            background-color:  @primary;
+            color: @white;
+            &.actived,&:active{
+                background: #d83637;
+            }
+        }
+    }
+}
+.yo-anniu-message{
+    a{
+        border-color:  @primary;
+        background-color:  @primary;
+        color: @white;
+        &.actived,&:active{
+            background: #d83637;
+        }
+    }
+}
+.sendEmail{
+  background: #ececec;
+}
+// 浮动页（ 包含部分弹框、搜索页、详情页）
+.floatPages {
+    background: #474747;
+  }
+  .searchBox {
+    ul {
+      li {
+        a {
+          color: #343434;
+        }
+        &.active a, &:active a {
+          color: @white;
+        }
+      }
+      &.searchNav1 {
+        li {
+          a {
+            border: 1px solid #ddd;
+          }
+          &.active a, &:active a {
+            background:  @primary;
+            border: 1px solid  @primary;
+          }
+        }
+      }
+      &.searchNav2 {
+        border-top: 1px solid #ddd;
+        li {
+          a {
+            background: #ececec;
+          }
+          &.active a, &:active a {
+            background: #ff9b39;
+          }
+        }
+      }
+    }
+  }
+
+  .searchBoxInput {
+    background: #ececec;
+    i{
+        color: #c3c3c3;
+    }
+  }
+  .shareBox {
+    .shareBox-one {
+        background: @white;
+        h4{
+            color: #343434;
+        }
+    }
+    .shareBocCen{
+      a{
+        span{
+          color: #999;
+        }
+      }
+    }
+    .social-share {
+        a{
+            span{
+                color: #999;
+            }
+        }
+    }
+    .social-share-icon {
+        color: #666;
+        &::before{
+            display: none;
+        }
+    }
+      .wechat-qrcode {
+          border: 1px solid #eee;
+          color: #666;
+          background-color: @white;
+          box-shadow: 0 2px 10px #aaa;
+        h4 {
+            background-color: #f3f3f3;
+            color: #777
+        }
+        &:after {
+            border-color: @white transparent transparent transparent
+        }
+    }
+    .shareBoxBot{
+      background: @white;
+      .yo-cancel {
+        color: #999;
+        border:1px solid #b5b5b5;
+      }
+    }
+  }
+  .gameNotice{
+    background: @white;
+    .noticeTitle{
+      border-bottom: 1px solid #eee;
+    }
+    .noticeBut{
+        .yo-anTwo{
+            background:#13815e;
+            color: @white;
+            &.actived,&:active{
+                opacity: .7;
+            }
+        }
+    }
+  }
+  .popMessages{
+    .messTop{
+      background: @primary;
+      color: @white;
+    }
+    a i{
+        color: #0c6247;
+    }
+    .messCent{
+      background:@white;
+      color: #343434;
+    }
+    .messBot{
+      background: @white;
+      span{
+        color: @white;
+      }
+    }
+  }
+  .news-time {
+    color: #999;
+  }
+// 会员中心
+.yo-user-jbbg{
+    .linear-gradient( #0c6247 0%, #14805e 100%);
+}
+.user-banner{
+	background: url('/static/@{folderV}/local/skin_op/user-banner-bg.svg');
+	background-size: cover;
+    .tx {
+        img{
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+    }
+    .bt{
+        color: @white;
+    }
+}
+.yo-but-bar{
+    a{
+        background-color: rgba(12,98,71,0.4);
+        color: @white;
+        &.actived,&:active{
+            background: #307861;
+        }
+    }
+    .yo-zhye-but{
+        background: rgba(10,81,59,0.4);
+    }
+}
+.yo-user-nav{
+    li{
+        background: #575757;
+        border-bottom:1px solid #4d4d4d;
+        border-left:1px solid #4d4d4d;
+        i{
+            color: #b0b0b0;
+        }
+        a{
+            color: #b0b0b0;
+            &.actived,&:active{
+                background: #404040;
+                color: #fff;
+                i{
+                    color: #4ed3a6;
+                }
+            }
+        }
+
+    }
+    #messageCount{
+        background: @yellow;
+        color: #107052;
+    }
+}
+.secondForm{
+    .depTips{
+        background: none;
+    }
+}
+.formIput{
+    border-bottom: 1px solid #4d4d4d;
+    background:#575757;
+    color: #eee;
+    .typeinput{
+        border: none;
+        background: none;
+        .placeholderStyle;
+        background-clip: padding-box;
+    }
+}
+.secondForm4{
+    .formIput.timeButton{
+        button{
+            background: #ececec;
+        }
+        button.active{
+            background: #f7bd74;
+            color: @white;
+        }
+    }
+}
+.newMessages{
+    h3{
+        color: #e71516;
+    }
+}
+.messDetails{
+    h1{
+        color: @yellow;
+    }
+    p{
+        color: #ccc;
+    }
+}
+.yo-dele{
+    background: @white;
+}
+.platformTips{
+    color:#f00;
+}
+.yo-toggle input:checked + .track {
+  border-color: #e1e5e9;
+  background-color: #4cd964;
+}
+.yo-toggle.dragging .handle {
+  background-color: #f2f2f2 !important;
+}
+.yo-toggle.toggle-light input:checked + .track {
+  border-color: #ddd;
+  background-color: #ddd;
+}
+.yo-toggle.toggle-balanced input:checked + .track {
+  border-color: #33cd5f;
+  background-color: #33cd5f;
+}
+.yo-toggle .track {
+  border: solid 2px #e6e6e6;
+  background-color: @white;
+}
+.yo-toggle .handle {
+  background-color: @white;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .35), 0 1px 1px rgba(0, 0, 0, .15);
+}
+.yo-toggle input:checked + .track .handle {
+  background-color: @white;
+}
+.yo-toggle input:disabled + .track {
+  opacity: .6;
+}
+.right-nav-bar-type-btn .yo-toggle.yo-toggle-positive input:checked + .track {
+  border-color: #e1e5e9;
+  background-color: #5dcb4e;
+}
+.platformList{
+    dd:nth-child(even){
+        .formIput{
+            background:#4d4d4d ;
+        }
+    }
+    .itemNeir{
+        color: #ccc;
+    }
+}
+.icon-refresh{
+    color: @lightGray;
+}
+
+// deposit存款样式
+.onlineMenu{
+    background: #575757;
+    ul{
+        li{
+            a{
+                background: #0d9972;
+                color: #c6ece2;
+                border: 1px solid #08815e;
+                border-left: 0px;
+            }
+            &:first-child a {
+                border-left: 1px solid #08815e;
+            }
+        }
+        &.firstStage{
+            li{
+                &:active a,&.active a{
+                    border-color:  #0e4f3c;
+                    background-color:  #0e4f3c;
+                    color: @yellow;
+                }
+            }
+        }
+        &.secondStage{
+            li{
+
+                &:active a,&.active a{
+                    border-color: #10654c;
+                    background: #10654c;
+                    color: @yellow;
+                }
+            }
+        }
+    }
+}
+.paymentMain{
+    // background: #F3F3F3;
+    -webkit-overflow-scrolling: touch;
+}
+.yo-deposit{
+    // background: #F3F3F3;
+}
+.item-input{
+    background:#575757;
+    color: #eee;
+    .typeinput{
+        border-color: #474747;
+        background: #474747;
+        color: #eee;
+    }
+    .typeselect{
+        border: 1px solid #474747;
+        background: #474747;
+        color: #eee;
+    }
+}
+.depTips{
+    background: #575757;
+}
+.specialbox{
+    .Tspe{
+        background: none;
+    }
+}
+.yo-headline2{
+    color: #fff;
+    .saomaTxt{
+        color: #eee;
+    }
+    &::before{
+        background: #00c98a;
+    }
+}
+.payitembox, .payitembox2{
+    background: #575757;
+}
+.paytype{
+    dd{
+        border-bottom: 1px solid #4d4d4d;
+        .txt-list{
+            color: #eee;
+        }
+        .paybankName{
+            color: #aaa;
+        }
+        .radio_span{
+            .icon-arrows-right{
+                color: #d3d3d3;
+            }
+        }
+    }
+}
+.bankCard{
+    dd{
+        background: #575757;
+        border: 1px solid #6e6d6d;
+        .cardMain{
+            border-top: 1px dashed #6e6d6d;
+            border-bottom: 1px dashed #6e6d6d;
+            background: #474747;
+        }
+        .cardTouchArea{
+            background:#474747;
+        }
+        &:active,&.active{
+            border: 1px solid #4fb83d;
+        }
+    }
+}
+.bankDepOthey{
+    .paytype{
+        background: #575757;
+    }
+}
+.explain{
+    color: #999;
+}
+.TipsWindown{
+    .shadeIn{
+        background: rgba(0,0,0,.6);
+    }
+}
+.selBankBox{
+    background: #575757;
+    h1{
+        color: @yellow;
+        border-bottom:1px solid #434343;
+        background: #13815e;
+    }
+    dl{
+        dt{
+            border:1px solid #f3f0f0;
+            border-top:none;
+            border-width:0 0 1px 0;
+            border-color:#434343;
+        }
+    }
+}
+.selBankBox.time{
+    .modelContent{
+       .isSelected{
+           background-color: #ececec;
+       }
+    }
+    h1{
+        .allButton{
+            background: #f02030;
+        }
+        .cancelButton{
+             background: #969696;
+        }
+    }
+}
+.specialbox2{
+  .remaining-sum-text{
+    color: #F9AC53;
+  }
+  .all-take-out{
+    background-color: #FF9B39;
+    color: @white;
+  }
+}
+.showmsg{
+    background: @white;
+    color: #F9AC53;
+    .alldra{
+        a{
+            color: #908EF1;
+        }
+    }
+}
+
+
+// record记录 明细页面
+.stripedMenu{
+    ul.newRecordUl{
+        background: #0e684c;
+        li{
+            a{
+                color: #85958d;
+                border-bottom:2px solid #0e684c;
+            }
+            &.active a, &:active a{
+                color: @yellow;
+                border-bottom:2px solid @yellow;
+            }
+        }
+    }
+}
+ul.subNav{
+    border-bottom: 1px solid #ececec;
+    li{
+        &:last-child{
+            border-left:1px solid #ececec
+        }
+        &.active a, &:active a{
+            color: #444;
+            border-bottom:none;
+            background: #fafafa;
+        }
+    }
+}
+.messaList{
+    dd{
+        border-bottom:1px solid #4d4d4d;
+        background: #575757;
+        &.actived,&:active{
+          border-color: #4d4d4d;
+          background-color: #525252;
+        }
+    }
+}
+.promotionList {
+  dt {
+    border:1px solid #f3f0f0;
+    border-top:none;
+  }
+}
+.recordList{
+    dd{
+        border-bottom:1px solid #4d4d4d;
+        background: #575757;
+        &.actived,&:active{
+            border-color: #4d4d4d;
+            background-color: #525252;
+        }
+    }
+    dd.newRecordsBody{
+         border-bottom: 1px dashed #999;
+    }
+    dt{
+        border:1px solid #f3f0f0;
+        border-top:none;
+    }
+    dd.newRecordsTitle{
+      background: #ececec;
+      border-bottom: 1px solid #bbb;
+    }
+    p{
+        color: #ccc;
+    }
+}
+.hea-user{
+  .sxzhuc{
+    font-size:14px;
+  }
+}
+a.my-favorite,a.promotion,a.lately-browse{
+  font-size:12px!important;
+}
+.recordTitle{
+    color: #eee;
+}
+.recordTitle.red{
+  color: red;
+}
+.item-time{
+    color:@lightGray;
+}
+.msDelete{
+    color:@red;
+}
+
+// 电子游戏 红色的线
+.egameNav{
+  background: #585858;
+  .activeHide{
+    display: none;
+    border-top:1px solid red;
+  }
+  li{
+    a{
+      color: #808080;
+      border-bottom: 2px solid #aaa
+    }
+    &:last-child {
+      a{
+        color: #808080;
+        border-bottom: 2px solid #aaa
+      }
+    }
+  }
+  li.active{
+    a{
+      color: #fff;
+    }
+    span.redLine{
+      border-top: 4px solid #fff;
+    }
+  }
+}
+/**  投注记录页面分页样式
+ **  @kollen  *************Start****************/
+.yoFooter.total {
+    border-top: 1px solid #eee;
+    border-bottom-width: 0;
+    background-position: top;
+    background: @white;
+}
+.yoFootNav{
+    .fot{
+        color: @white;
+    }
+    .fotLeft {
+        span{
+            color: #343434;
+        }
+    }
+    .fotRight{
+        color:#1b1818;
+    }
+    .fotTitle{
+        color: @white;
+    }
+}
+.yoPaging {
+    background: #000;
+    .detailedFoot{
+        color: @white;
+        background: #f0960c;
+        border: 3px solid #171717;
+    }
+}
+dd.chooseDate{
+  background: #ececec;
+  .formIput{
+      background: #474747;
+      span.V-line{
+          background:#4ed3a6;
+      }
+  }
+}
+.formIput .itemNeir.red{
+    color:#f00;
+}
+.recordList{
+    .notDataShow{
+        p{
+            color: #b1b1b1;
+        }
+    }
+    .newRecordsBody{
+        span.blue{
+            color: #2400fc;
+        }
+        ul.historyLineThrough{
+            li{
+                span{
+                    text-decoration-color: red;
+                }
+            }
+        }
+    }
+}
+/********** 投注记录页面分页样式 End **************/
+
+/**  支付改版页面样式调整
+ **  @kollen  *************Start****************/
+ul.payListUl{
+    .payListLi.active{
+        background: #474747;
+    }
+    li{
+        span{
+            color: #fff;
+        }
+    }
+}
+.quickElect{
+    justify-content: center !important;
+     span{   
+        background: #575757;
+        color: #aaa;
+     }
+     .active{
+         background: #13815e;
+     }
+}
+.yo-pad10.sureBtn{
+    background: #575757;
+}
+ /************ End ****************************/
+
+
+

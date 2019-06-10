@@ -1,0 +1,572 @@
+.pane{
+    width: 100%;
+    height: 100%;
+}
+// #paymentRecharge img {
+//     -webkit-user-select:auto;
+// 	-khtml-user-select:auto;
+// 	-moz-user-select:auto;
+// 	-ms-user-select:auto;
+// 	user-select:auto;
+// 	-webkit-user-drag:auto;
+// 	pointer-events:auto;
+//     user-select:all;
+//     -webkit-user-drag:auto;
+//     pointer-events:auto;
+//     -webkit-touch-callout:default;
+// }
+.menu-content {
+  -webkit-transform: none;
+  transform: none;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+}
+.menu-animated {
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+}
+.header{
+    height: 44px;
+    z-index: 9;
+    padding: 5px;
+    right: 0;
+    left: 0;
+    background: -webkit-linear-gradient(#d83442, #c62c41, #b82541);
+    background: -moz-linear-gradient(#d83442, #c62c41, #b82541);
+    background: -o-linear-gradient(#d83442, #c62c41, #b82541);
+    background: linear-gradient(#d83442, #c62c41, #b82541);
+    .center{
+        width:calc(~'100% - 10px');
+        margin: 0 5px;
+        position: relative;
+    }
+    .icon-arrows-left{
+        margin-left: -10px;
+        margin-top: -5px;
+    }
+}
+.hea-left,.hea-right{
+    width: 35%;
+    position: absolute;
+    top: 5px;
+    z-index: 2000;
+    a.deepred{
+        &.actived,&:active{
+            color: #d86877;
+        }
+    }
+    a span{
+        &.actived,&:active{
+            color:#f4d5d9;
+        }
+    }
+}
+.hea-left{
+    left: 0px;
+    a{
+        .fontSize(18px);
+        color: #fff;
+        vertical-align: middle;
+        line-height: 34px;
+        &.actived,&:active{
+           color: #e496a0;
+        }
+    }
+    .icon-menu{
+        &.actived,&:active {
+            background: #db6d79;
+            &::before,&::after{
+                background: #db6d79;
+            }
+        }
+    }
+}
+.hea-right{
+    right: 0px;
+    a{
+        .fontSize(18px);
+        color: #fff;
+        vertical-align: middle;
+        line-height: 34px;
+        float: right;
+    }
+
+}
+.hea-left{
+    .icon-house{
+        margin-top: -6px;
+        margin-left: -3px;
+    }
+}
+.hea-right{
+    .icon-house{
+        margin-top: 1px;
+        margin-right: -2px;
+    }
+    .icon-search{
+         margin-top: 5px;
+         margin-right: 8px;
+    }
+}
+.header-text.titile{
+    width: 100%;
+    text-align: center;
+    margin-top: -5px;
+    height: 44px;
+    h1{
+        display: block;
+        line-height: 44px;
+        color: #fff;
+        .fontSize(@f16);
+    }
+    img{
+        display: block;
+        height: 44px;
+        margin: 0 auto;
+    }
+}
+.hea-menu {
+    height: 34px;
+}
+.hea-user{
+    a{
+        .clearfix;
+    }
+    span,
+    i{
+        display: block;
+        float: right;
+    }
+    .icon-user{
+        margin-top: 5px;
+    }
+    .icon-setup{
+        margin-top: 1px;
+        margin-right: -3px;
+    }
+    .icon-user:active,span:active{
+        opacity: 0.5;
+        color: #e496a0;
+    }
+    .sxzhuc{
+        width: 46px;
+        text-align: right;
+    }
+}
+.userICO{
+    float: right;
+    width: 45px;
+    height: 34px;
+    margin-right: -10px;
+    .icon-user{
+        margin-right: 12px;
+    }
+}
+.banner{
+    width: 100%;
+    background: #fff;
+    height: 156px;
+    img{
+        width: 100%;
+        height: 155px;
+    }
+}
+.yo-gonggao{
+    height: 30px;
+    position: absolute;
+    top: 126px;
+    width: 100%;
+    background-color: #333;
+    filter: alpha(Opacity=75);
+    -moz-opacity: 0.75;
+    opacity: .75;
+    .icon-sound{
+        display: block;
+        margin: 7px;
+        .floatL;
+    }
+    #affiche{
+        color: #fff;
+        .fontSize(@f12);
+        .floatL;
+        width:calc(~"100% - 20px - 18px");
+        height: 30px;
+        line-height: 30px;
+    }
+}
+.quickNav{
+    ul{
+        width: 100%;
+        border-top:.0625rem solid #ececec;
+        #display-fix > .flex-container;
+        #display-fix > .flex-nowrap;
+        #display-fix > .justify-content;
+        background: #fff;
+        li{
+            flex: 1;
+            width: calc(~"33.333% - .0625rem");
+            border-right:.0625rem solid #ececec;
+            text-align: center;
+            margin:5px 0;
+            a{
+                line-height:24px;
+                color: #343434;
+                font-size: 0.9rem;
+                display: block;
+                i{
+                    vertical-align: middle;
+                    margin-right:8px;
+                }
+            }
+            &:last-child{
+                border-right:0px;
+            }
+            a.actived,a:active{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+.indexGame{
+    dl{
+        width: 100%;
+        .clearfix;
+    }
+    dd{
+        border-bottom: .0625rem solid #d9dcdf;
+        border-right: .0625rem solid #d9dcdf;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background: white;
+        margin-top: 0;
+        display: block;
+        float: left;
+        a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            word-wrap:break-word;
+            width: 100%;
+            height: 100%;
+        }
+        i.icon-fire,i.icon-hot,i.icon-gamefree{
+            position: absolute;
+            // z-index: 2; // 和首页加载效果有冲突 ZXTGB-1631
+            top: 0px;
+            right: 0px;
+            margin: 0px;
+        }
+        i.icon-love{
+            position: absolute;
+            top: 8px;
+            left: 6px;
+        }
+        .gameImg{
+            margin: 11px auto 1px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        span{
+            line-height: 15px;
+            font-size: 12px;
+            height: 30px;
+            color: #343434;
+            text-decoration: none;
+            display: block;
+            width: 94px;
+            margin: 0 auto;
+            padding: 0 10px;
+            margin-bottom: .25rem;
+        }
+        &:active{
+            background: #eee;
+        }
+    }
+}
+.indexFot{
+    background: #303030;
+    z-index: 5;
+    ul{
+        height: 51px;
+        #display-fix > .flex-container;
+        #display-fix > .flex-nowrap;
+        #display-fix > .justify-content;
+        li{
+            flex: 1;
+            text-align: center;
+        }
+        a{
+            padding-top: 4px;
+            display: block;
+            color: #fff;
+            .fontSize(@f12);
+            &:active{
+                // color: @roseRed;
+                background: #252525;
+            }
+            i{
+                display: block;
+                margin: 0 auto 1px;
+            }
+        }
+    }
+}
+.fotMenu{
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.8rem;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 100%;
+    .wrapper_in{
+        margin: 2rem auto;
+        width: calc(~'100% - 30px');
+        height: 100%;
+        padding: 0 15px;
+        position: relative;
+    }
+    .copyright{
+        font-size: .7rem;
+        color: #aaa8a9;
+    }
+    .textbtn{
+        .border-radius(1.5rem);
+        color: #fff;
+        vertical-align: middle;
+        font-size: 1rem;
+        padding: 0.2rem 0.7rem;
+        margin-left: 0.3rem;
+        .linear-gradient( #cecdcd, #aaa8a9);
+    }
+}
+.footMove{
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 51px;
+}
+
+.mengceng {
+    position: absolute;//fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    // pointer-events:none;
+}
+
+.favoriteList{
+    .indexGame;
+    dd{
+        &.indexFavorite0{
+            .gameImg2{
+                margin: 11px auto 1px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+.promotionList{
+    .recordList;
+    dt{
+        background: #fff;
+        border-top: 0px;
+    }
+    .promotionListImg{
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+    }
+    div{
+      word-wrap: break-word;
+    }
+    p{
+      overflow: auto;
+      text-overflow: unset;
+      white-space: unset;
+      a {
+		display: inline-block;
+	  }
+    }
+    span.prompTitle{
+        vertical-align: middle;
+        max-width: calc(~'100% - 80px');
+        display: inline-block;
+        overflow: hidden;
+    }
+    .promoConten{
+        margin-top:10px;
+        border-top:1px solid #f3f0f0;
+        padding-top:10px;
+        line-height: 24px;
+        .fontSize(@f14);
+        padding-bottom: .7rem;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+}
+// 个人消息
+.lottery-wf{
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+ [modal]{
+  .yo-icon{
+    position: absolute;
+    left: 0;
+    top: 12px;
+  }
+//   .yo-anniu-one{
+//     margin: 0 auto;
+//     position: fixed;
+//     bottom: 1rem;
+//     width: 95%;
+//   }
+ }
+.news-time {
+  color: #999;
+  margin: 10px 0;
+  text-align: right;
+}
+
+.mu-drawer{
+    height: 100%;
+}
+// MG幸运之龙 擂台赛
+.MGxyzl{
+    position: fixed;
+    bottom: 56px;
+    right: 6px;
+    z-index: 99999;
+    img.jiangjin{
+        height: 93px;
+    }
+    .MGpor{
+        a{
+            display: block;
+        }
+        position: relative;
+        .MGclose{
+            position: absolute;
+            top: -10px;
+            right: 0;
+            background: url('@{imgUrl}/active/cancel.png') no-repeat;
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+        }
+        .ogImg,.mgImg{
+           width: 67px;
+           height: 67px;
+           position: absolute;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .mgImg{
+          top: -67px;
+          left: -12px;
+        }
+        .ogImg{
+          top: 3px;
+          left: -68px;
+        }
+    }
+}
+.MgLtsTk{
+    .gameNotBox;
+}
+.MgLtsBox{
+    .gameNotice;
+    background: url('@{imgUrl}/active/mgActivityDetail.jpg') no-repeat;
+    background-size: cover;
+    width: 322px;
+    height: 200px;
+    position: relative;
+    .MgLtsClose{
+        position: absolute;
+        top: -13px;
+        right: 10px;
+        display: block;
+        // background: url(../../../../static/local/img/MGxyzl/cancel2.png) no-repeat;
+        // background-size: cover;
+        width: 14px;
+        height: 14px;
+        font-size: 33px;
+        color:#000;
+        opacity: .4;
+    }
+    .MgButJoin{
+        width: 98px;
+        height: 30px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        margin-top: 161px;
+        margin-left: 41%;
+        border-radius: 60px;
+    }
+    .MgButJoin.join{
+         background: #bb1835;
+         border: 2px solid #80071f;
+     }
+    .MgButJoin.sort{
+         background: #3330b1;
+         border: 2px solid #380b6b;
+     }
+    p{
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        position: relative;
+        top: -64px;
+        left: 22px;
+    }
+}
+
+// PP电子过关斩将锦标赛
+.PPggzj{
+    position: fixed;
+    bottom: 55px;
+    right: 2px;
+    z-index: 99999;
+    img.jiangjin{
+        height: 108px;
+    }
+    .PPpor{
+        a{
+            display: block;
+        }
+        position: relative;
+        .PPclose{
+            position: absolute;
+            top: -5px;
+            right: 5px;
+            background: url('@{imgUrl}/active/cancel.png') no-repeat;
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

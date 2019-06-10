@@ -1,0 +1,826 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Microsoft Yahei',-apple-system,Helvetica Neue,Roboto,Segoe UI,sans-serif;
+    // -webkit-touch-callout: none; 放开长按复制功能
+    // any-property单个用法
+    .any-property(text-size-adjust, none);
+    .any-property(font-smoothing, antialiased);
+    -webkit-tap-highlight-color: transparent;
+    cursor: url('@{imgUrl}/finger.png');
+    font-size: 14px;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body, .app, .home{
+    width: 100%;
+    height: 100%;
+}
+.public-header, .public-footer{
+    position: fixed;
+    left: 0px;
+    width: 100%;
+}
+.public-header{
+    height: 44px;
+    top: 0px;
+    z-index: 9;
+}
+.main-box{
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    // position: relative;
+    // z-index: 2;
+}
+// 首页架构
+.index-main{
+    padding-top: 44px;
+    padding-bottom: 50px;
+}
+// 游戏中心架构
+.game-main{
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+.appMain{
+    height: 100%;
+}
+// 详情页-架构
+.details-main{
+    padding-top: 44px;
+    padding-bottom: 20px;
+}
+// 详情页-滑动
+.float-main{
+    height: 100%; // OT-4430
+}
+// 内容页-有按钮-架构
+.common-main{
+    padding-top: 44px;
+    padding-bottom: 65px;
+}
+// 内容页-双头部-无页脚-架构
+.inside-main{
+    padding-top:96px;
+    // padding-bottom:  20px;
+}
+// 交易记录-双头部-有页脚-架构
+.bettingMain{
+    padding-top:96px;
+    padding-bottom:  60px;
+}
+// 投注记录-单头部-总计-
+.bettingList-main{
+    padding-bottom: 40px;
+}
+.padding-bottom-0{
+    padding-bottom: 0;
+}
+.no-position{
+    position: static!important;
+}
+// 头部样式
+.header-content{
+    position: relative;
+    .head-left,.head-right{
+        position: absolute;
+        top: 5px;
+        z-index: 2000;
+        height: 34px;
+        line-height: 34px;
+    }
+    .head-left{
+        left: @padVal;
+        i{
+            font-size: 24px;
+            &.icon-back{
+                margin-left: -12px;
+            }
+        }
+    }
+    .head-right{
+        right: @padVal;
+        text-align: right;
+        i{
+            font-size: 20px;
+        }
+    }
+    .head-title{
+        height: 44px;
+        font-size: 18px;
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(center);
+        #display-fix > .align-center(center);
+        img.logo{
+            height: 36px;
+        }
+    }
+    .trial-game{
+        display: inline-block;
+        font-size: 12px;
+        padding: 0 @padVal;
+        height: 24px;
+        line-height: 24px;
+        .border-radius(30px);
+    }
+}
+// 通用页脚
+.public-footer{
+    height: 50px;
+    bottom: 0px;
+    z-index: 8;
+    width: 100%;
+    #display-fix > .flex-container;
+    #display-fix > .align-center(center);
+}
+// 内容页-页脚
+.common-footer{
+    height: 55px;
+}
+// 内容页-页脚-按钮
+.but-footer{
+    width: 100%;
+    #display-fix > .flex-container;
+    #display-fix > .flex-wrap(normal);
+    #display-fix > .justify-content(center);
+}
+
+// 首页页脚样式
+.index-footer {
+    width: 100%;
+    ul{
+        width: 100%;
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(center);
+    }
+    li{
+        flex: 1;
+        text-align: center;
+    }
+    a{
+        display: block;
+        font-size: 12px;
+        i{
+            font-size: 22px;
+        }
+        span{
+            display: block;
+        }
+    }
+}
+
+// 主页背景图
+.indexBody{
+    width: 100%;
+}
+
+// 公用标题样式
+.public-title{
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    h1{
+        margin: 0px;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    &:before{
+        content: '';
+        display: block;
+        width: 3px;
+        height: 9px;
+        position: absolute;
+        left: 0px;
+        top: 11px;
+    }
+    .jiantou{
+        float: right;
+        display: block;
+        i {
+            display:inline-block;
+        }
+    }
+}
+
+.anime-rotate{
+    .any-property(transform; translateX(0px) rotateX(-180deg));
+}
+
+
+
+// 通用表单项
+.yo-form-item{
+    padding: 0 @padVal;
+    // height: 50px;
+    min-height:50px;
+    margin-bottom: 1px;
+    #display-fix > .flex-container;
+    #display-fix > .flex-wrap(normal);
+    #display-fix > .justify-content(space-between);
+    #display-fix > .align-center(center);
+    .title{
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .title-img, .con-cen{
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(flex-start);
+        #display-fix > .align-center(center);
+    }
+    .con-txt{ // 内容靠右
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(flex-end);
+        #display-fix > .align-center(center);
+        // height:50px;
+        span{
+            word-break: break-word;
+        }
+    }
+    .con-title{
+      width: calc(~'100% - 190px');
+    }
+    .con-cen{ // 内容靠左
+        width: calc(~'100% - 110px');
+    }
+    // 右边内容固定宽度，类似备注
+    .secure-cen{
+        width: 75%;
+    }
+    .num-txt{
+        font-size: 16px;
+    }
+    i.icon-next{
+        font-size: 20px;
+    }
+    .select-item{
+        i.icon-pull{
+            font-size: 12px;
+            color: #CACED4;
+            margin-left: 8px;
+        }
+    }
+    input{
+        &[disabled]{
+            background: #eee;
+        }
+    }
+
+}
+.weak-txt{
+    font-size: 12px;
+}
+.yo-form-content{
+    padding: 0 @padVal @padVal2;
+    .form-title{
+        line-height: 30px;
+        height: 30px;
+        padding-top: 4px;
+    }
+    h6.form-title{
+        font-weight: normal;
+    }
+    p.form-title{
+        font-size: 12px;
+    }
+}
+// 立即充值金额输入框-通用
+.feed-in-sum{
+    .clearfix;
+    padding:14px 0 10px;
+    .icon-mony, input, .fix-txt{
+        display: block;
+        float: left;
+    }
+    .icon-mony{
+        font-size: 30px;
+        margin-left: -6px;
+    }
+    input{
+        width: calc(~'100% - (80px + 30px)');
+        font-size: 30px;
+        font-weight: normal;
+        height: 36px;
+        line-height: 40px;
+        margin-top: 4px;
+        margin-left: 10px;
+        color: #343434;
+        &[disabled], &.disabled, &:disabled{
+            color: #343434 !important;
+            -webkit-text-fill-color:#343434;
+	        -webkit-opacity:1;
+            opacity: 1.0 !important;
+            filter:Alpha(opacity=1);
+        }
+        &::-moz-placeholder{
+            -webkit-text-fill-color:#D2D2DB;
+            transform: translate(0, -5px);
+        }
+        &:-ms-input-placeholder {
+            -webkit-text-fill-color:#D2D2DB;
+            transform: translate(0, -5px);
+        }
+        &::-webkit-input-placeholder {
+            -webkit-text-fill-color:#D2D2DB;
+            transform: translate(0, -5px);
+        }
+    }
+    .fix-txt{
+        float: right;
+        font-size: 24px;
+        margin-top: 9px;
+    }
+}
+// 快选金额
+.fast-Select-sum{
+    .clearfix;
+    width: 100%;
+    margin-top: 15px;
+    ul{
+        width: calc(~'100% + 10px');
+        margin-left: -5px;
+    }
+    li{
+        display: block;
+        float: left;
+        line-height: 52px;
+        width: calc(~'33.333333% - 10px');
+        margin: 0 5px 10px 5px;
+        &:nth-child(3n+0){
+            margin-right: 0px;
+        }
+    }
+}
+
+// 公用表单-input输入框
+.input-{
+    .y(@any){
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        font-weight: normal;
+    }
+    &sty1{
+        .y(sty1);
+        border:none;
+        background: none;
+        font-size: 18px;
+    }
+    &sty2{
+        .y(sty2);
+        border:none;
+        background: none;
+        height: 30px;
+        line-height: 31px;
+        padding-left: 5px;
+    }
+}
+
+// 公共一行表单样式 加右箭头 加 input-width-60 right-arrow 两个类
+.form-item{
+    padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 1px;
+    label{
+        font-size: 16px;
+        width: 30%;
+        float: left;
+    }
+    input{
+        border:none;
+        width: 70%;
+        height: 30px;
+        float: left;
+        font-size: 12px;
+        margin-top: 10px;
+        padding-left: 8px;
+        &[disabled]{
+            background: #eee;
+        }
+    }
+    .disc{
+        text-security: disc;
+        -webkit-text-security: disc;
+        -mox-text-security: disc;
+    }
+    .input-width-60{
+        width: 60%;
+    }
+    .ellipsis{
+        text-overflow: ellipsis;
+    }
+    .input-width-30{
+        width: 30%;
+    }
+    .right-arrow{
+        font-size: 20px;
+        float: right;
+    }
+}
+.reg-item{
+  height: auto;
+  overflow: hidden;
+}
+// 底部占90%宽的一个按钮或者两个按钮时用，详情见注册页面的下一步按钮 确定按钮
+// 两个按钮时见注册成功页面用法
+.btn-wrap{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    .one-btn{
+        padding: 0;
+        width: 90%;
+        height: 40px;
+        line-height: 40px;
+        div{
+            line-height: 36px;
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            &.left{
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+        }
+    }
+}
+
+
+// 列表，统一样式
+// .yo-cell-row2 为2列 .yo-cell-row3 为3列  .yo-cell-row4 为4列 此类推
+.yo-cell{
+    &-box{
+        .cell-box{
+            height: 50px;
+            border-bottom: 1px solid #f8f8f8;
+            background:white;
+            text-align: center;
+            #display-fix > .flex-container;
+            #display-fix > .justify-content(center);
+            #display-fix > .align-center(center);
+            div{
+                word-break:break-word;
+                display:block;
+                -webkit-line-clamp:2;
+                -webkit-box-orient:vertical;
+                overflow:hidden;
+                padding: 0 4px;
+            }
+        }
+    }
+    &-row2{
+        .cell-box div{
+            width: calc(~'100% / 2');
+        }
+    }
+    &-row3{
+        .cell-box div{
+            width: calc(~'100% / 3');
+        }
+    }
+    &-row4{
+        .cell-box div{
+            width: calc(~'100% / 4');
+        }
+    }
+    &-row5{
+        .cell-box div{
+            width: calc(~'100% / 5');
+        }
+    }
+}
+.yo-select{
+  height: 34px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  width: 70%;
+  vertical-align: middle;
+  padding-left: .25rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 220px;
+  flex: 1 220px;
+  background: #fdfdfd;
+}
+
+
+.icon-run:before{
+    -webkit-animation:run 0.7s linear infinite;
+    animation:run 0.7s linear infinite;
+}
+@keyframes run{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+    }
+}
+
+.icon-transition {
+    display: block;
+    transform: rotateY(0deg);
+    transition: All 0.5s ease-in-out ;
+    &.overturn {
+        transform: rotateY(180deg);
+    }
+}
+
+.any-anime{
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+
+
+.lay-close-but{
+    position: absolute;
+    right: 0px;
+    top: -51px;
+    font-size: 24px;
+    i{
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 26px;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+        }
+    }
+}
+.not-title{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    .border-radius(4px 4px 0 0);
+}
+
+// 加载更多-不参与换肤
+.yo-more{
+    #display-fix > .flex-container;
+    #display-fix > .justify-content(center);
+    #display-fix > .align-center(center);
+    span{
+        display: block;
+        font-size:12px;
+        color:  #6F95F3;
+        &.moreline{
+            width:60px;
+            height: 1px;
+            margin-right: 8px;
+            .gradient(to left, rgba(111,149,243,1), rgba(111,149,243,0.22));
+        }
+        &:last-child{
+            margin-left: 8px;
+            margin-right: 0px;
+            .gradient(to right, rgba(111,149,243,1), rgba(111,149,243,0.22));
+        }
+    }
+}
+.gray-more{
+    span{
+        color:  #999;
+        &.moreline{
+            .gradient(to left, #999999, #F7F7F9);
+        }
+        &:last-child{
+            .gradient(to right, #999999, #F7F7F9 );
+        }
+    }
+}
+
+// 按钮加载效果-不参与换肤
+.btn-load{
+    display: block;
+    height: 40px;
+    padding-top: 8px;
+    img{
+        display: block;
+        height: 24px;
+        margin: 0 auto 0;
+    }
+}
+
+// 加载样式-不参与换肤
+.load-mengceng{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background:rgba(20,22,32,0.68);
+    width: 100%;
+    height: 100%;
+    z-index: 20181112;
+}
+.load-box{
+    width: 120px;
+    height: 120px;
+    .border-radius(10px);
+    position: relative;
+    top: 50%;
+    margin: -60px auto 0;
+    background: #fff;
+}
+.loading-animate{
+    width: 100%;
+}
+.loading-text{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+// 第一弹出的大图 带跳过按钮 -不参与换肤
+.guidePage {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+.viewpager, .viewpager img {
+    width: 100%;
+    height: 100%;
+}
+.skipButtom {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: block;
+    z-index: 100001;
+    a{
+        display: block;
+        float: right;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        .gradient(to left, #F3610C, #E9584D);
+        box-shadow: 0 4px 6px 0 #DA4533;
+        border-radius: 20px;
+        font-size: 16px;
+        color: #fff;
+        margin-right: 20px;
+    }
+}
+
+// 暂无数据
+.nodata-content{
+    width: 100%;
+    padding-top: 75px;
+    text-align: center;
+    img{
+        margin-top:20px;
+        width: 60%;
+    }
+    .text{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .btn-refresh{
+        line-height: 38px;
+        width: 40%;
+        margin-top:40px;
+        font-size: 16px;
+    }
+}
+// 浮动款的 暂无数据样式
+// top:60 适用于消息记录页面。
+.floatNoData{
+    position: absolute;
+    top: 60px;
+    z-index: 100;
+}
+
+
+// 公用tab切换，如：消息记录、交易记录
+.public-tab{
+    width: 100%;
+    height: 52px;
+    line-height: 50px;
+    margin-bottom: 1px;
+    ul{
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(space-around);
+    }
+    li{
+        float: left;
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+// 上拉刷新-下拉加载-固定架构
+.loadmore-box{
+    padding-top: 44px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    #display-fix > .flex-container;
+    #display-fix > .flex-direction-co;
+}
+.loadmore-content{
+    height: calc(~'100% - 80px');
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    .box-flex(0 1 auto);
+}
+
+
+
+//上拉刷新，下拉加载，统一box使用
+.more-list-box{
+    margin-top: 44px;
+    position: absolute;
+    width: 100%;
+    height: calc(~'100% - 44px');
+    overflow: hidden;
+    #display-fix > .flex-container;
+    #display-fix > .flex-direction-co;
+    
+}
+// 优惠加载更多box
+.promotion-more{
+    height: 100%;
+    padding-bottom: 70px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    .box-flex(0 1 auto);
+}
+
+.more-list-titile{
+    height: 52px;
+    .box-flex(0 0 52px);
+}
+.messageList-more{
+    .promotion-more;
+    height: calc(~'100% - 52px');
+    padding-bottom: 10px;
+}
+.history-more{
+    .promotion-more;
+    height: 100%;
+    padding-bottom: 10px;
+}
+.betting-more{
+    .promotion-more;
+    height: 100%;
+    // padding-bottom: 50px;
+}
+
+
+// 强制让 * 号 居中在文字中间  OT-5064 - Yolanda
+.red-star{
+    vertical-align: sub;
+}
+// 维护 消息， 个人消息 统一添加在这里
+#msgCount {
+  position: relative;
+  img{
+    position: absolute;
+    top: -4px;
+    left: 17px;
+  }
+}
+#msgCountP{
+  position: relative;
+  img{
+    position: absolute;
+    top: 1px;
+    left: 69px;
+  }
+}
+.maintainNotice{
+//  z-index: 19891013!important;
+}

@@ -1,0 +1,271 @@
+//统一登录弹框样式
+.zhezhao {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	#display-fix > .flex-container;
+	#display-fix > .flex-nowrap;
+	#display-fix > .justify-center; 
+	#display-fix > .align-center;
+	z-index: 1001;
+	background: rgba(0, 0, 0, .4);
+}
+.newLoginBox {
+	// position: relative;
+	// margin: 0 auto;
+	width: 480px;
+	min-height: 328px;
+	max-height: 800px;
+	background: #fff;
+	#display-fix > .flex-direction-co;
+ 	.border-radius(4px);
+}
+.newLoginTitle {
+	position: relative;
+	min-height: 59px;
+	text-align: center;
+	border-bottom: 1px solid #ced8da;
+	background: #f4f5f7;
+	color: #39565a;
+	font-size: 20px; 
+	.border-radius(4px 4px 0 0);
+	.box-flex(59px 1 auto);
+	span {
+		line-height: 59px;
+		height: 59px;
+		display: block;
+	}
+	a {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 21px;
+		width: 16px;
+		height: 16px;
+		margin-right: 10px;
+		.yo-pop-close {
+			background: url('@{imgUrl}/popLogin/chose.svg') no-repeat;
+			background-size: cover;
+			width: 16px;
+			height: 16px;
+			display: block;
+		}
+	}
+}
+.newLoginCent{
+  	padding: 20px 70px;
+	.logFromItem{
+		padding: 10px 0;
+		position: relative;
+		.clearfix;
+		.loginInput{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid #ced8da;
+			overflow: hidden;
+			position: relative;
+			z-index: 3;
+			.border-radius(4px);
+			.clearfix;
+			&:active,&:focus, &:visited {
+				border-color: #708dc8;
+				.box-shadow(0, 0, 4px, #708dc8);
+			}
+			input{
+				width:calc(~'100% - 40px');
+				padding:0 15px 0 20px;
+				height: 38px;
+				background: none;
+				border:none;
+				display: block;
+				.floatLf;
+			}
+			i.input-ico{
+				display: block;
+				.floatLf;
+				width: 38px;
+				height: 38px;
+				.border-radius(4px 4px 0 0);
+				.inputIco(@imgname){
+					background: #e7ebed url('@{imgUrl}/popLogin/@{imgname}.svg') no-repeat 9px center;
+					background-size: 20px 20px;
+				}
+				&.acc{
+					.inputIco(accountIco);
+				}
+				&.pswd {
+					.inputIco(pswdIco);
+				}
+				&.bank{
+					.inputIco(bankIco);
+				}
+				&.name{
+					.inputIco(nameIco);
+				}
+				&.yzm {
+					.inputIco(verifyIco);
+				}
+			}
+			&.input-yzm{
+				width:calc(~'70% - 18px') ;
+				.floatLf;
+			}
+		}
+		.codeImg{
+			width: 100px;
+			height: 40px;
+			.floatRi;
+			.border-radius(4px);
+		}
+	}
+	p{
+		color: #86959c;
+		font-size: 12px;
+		text-align: right;
+		a{
+	  		font-size: 12px;
+		}
+	}
+	.logfetPswd {
+		color: #86959c;
+	}
+	.loginBut {
+		background:#4071c0;
+		color: #fff;
+		font-size: 14px;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		margin: 10px 0;
+		display: block;
+		.border-radius(4px);
+	}
+	.logRei {
+		text-decoration: underline;
+		color: #4170c2;
+	}
+}
+.newLoginBot {
+	min-height: 20px;
+	background: #fff;
+	.border-radius(0 0 4px 4px);
+}
+
+.forgetBody{
+	.newLoginBox p{
+		text-align: left;
+	}
+	.textsz14{
+		a{
+			font-size: 14px;
+		}
+		font-size: 14px;
+		padding-bottom: 6px;
+		&:first-child{
+			padding-bottom: 6px;
+		}
+	}
+}
+input:-webkit-autofill {
+	background-color: none !important;
+	-webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0) inset !important;
+	box-shadow: 0 0 0px 1000px rgba(255,255,255,0) inset !important;
+}
+
+
+// 首次修改密码-弹框样式
+.changPassWord{
+	.newLoginBox;
+	width: 600px;
+	.newLoginTitle{
+		min-height: 46px;
+		span{
+			height: 46px;
+			line-height: 46px;
+		}
+	}
+	form{
+		padding-top: 20px;
+	}
+}
+.formItem {
+	.clearfix;
+	padding: 4px 0;
+	margin-bottom: 12px;
+	.formTile {
+	  display: block;
+	  width: 150px;
+	  text-align: right;
+	  height: 40px;
+	  line-height: 40px;
+	  .floatLf;
+	}
+	.formInline {
+	  display: block;
+	  margin-left: 160px;
+	  position: relative;
+	  padding: 2px 0;
+	  .el-input {
+		width: 292px;
+	  }
+	  .errMsg {
+		font-size: 12px;
+		max-width: 350px;
+	  }
+	}
+	.formInline2 {
+	  .inputText-2 {
+		width: 132px;
+	  }
+	  .selectSt-2 .el-input {
+		width: 76px;
+	  }
+	}
+	.securityCode {
+	  .el-input {
+		width: 180px;
+	  }
+	  img.code {
+		display: inline-block;
+		vertical-align: top;
+		height: 36px;
+		margin-left: 11px;
+		.border-radius(3px;)
+	  }
+	}
+}
+
+.securityLevel{
+	.clearfix;
+    span{
+		background: #e8ecef;
+		display: block;
+		width: 50px;
+		height: 10px;
+		margin: 15px 10px 0 0;
+		.border-radius(5px);
+		.floatLf;
+        &.hasColor{
+            background: #18B160;
+        }
+    }
+}
+.but{
+	display: inline-block;
+	white-space: nowrap;
+	padding: 12px 20px;
+	width: 140px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.but-primary{
+	color: #fff;
+    background-color: #69b3f8;
+    border-color: #69b3f8;
+}
+.errMsg .orange{
+	color: #f88311;
+}

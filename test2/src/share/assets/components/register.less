@@ -1,0 +1,526 @@
+@import "err.less";
+/* 注册页面 */
+.yel-fpcus {
+  	color: #ff0;
+}
+
+.yo-register {
+  	width: 100%;
+}
+.yo-reg-center {
+  margin: 0 auto;
+  padding: 1px;
+  background: #eee;
+}
+.yo-reg-center div[class*="yo-r-"] {
+  border-radius: 10px;
+  margin: 7px 15px;
+}
+.yo-r-main {
+  border: 1px solid #ecdf05;
+  padding-top: 20px;
+}
+.yo-r-top {
+  padding-top: 5px;
+}
+
+.yo-r-top h3 {
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 45px;
+  font-weight: normal;
+  border-bottom: 1px dashed rgba(255, 255, 255, .25);
+}
+
+.yo-r-top ol {
+  margin-left: 90px;
+  padding: 15px 0;
+}
+
+.yo-r-top ol li {
+  line-height: 30px;
+}
+
+.yo-r-main fieldset {
+  border: none;
+  border-top: 1px dashed rgba(137, 118, 75, .5);
+}
+
+.yo-r-main legend {
+    width: 135px;
+    height: 30px;
+    line-height: 31px;
+    margin-left: -2px;
+    background: url('@{imgUrl}/registerMember.png') no-repeat;
+    text-indent: 38px;
+    font-size: 16px;
+    color: #d2d2d2;
+    position: relative;
+    top: -1px;
+
+}
+
+.yo-r-main legend.r-dlsj,
+.yo-r-main legend.r-yhzl {
+  top: -2px;
+}
+
+.yo-r-main legend.r-dlsj {
+  background-position: 0 3px;
+}
+
+.yo-r-main legend.r-yhzl {
+  background-position: 0 -27px;
+}
+
+.yo-r-main legend.r-zhzc {
+  background-position: 0 -58px;
+}
+
+.yo-r-main legend.r-hyzl {
+  background-position: 0 -90px;
+}
+
+.yo-r-main legend.r-aqjc {
+  background-position: 0 -122px;
+}
+
+.reg-box {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.reg-box::after {
+  clear: both;
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.joinus-label {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 42px;
+  line-height: 42px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.joinus-label input {
+  margin-right: 10px;
+}
+
+.joinus-input {
+  display: block;
+  float: left;
+  width: 280px;
+  height: 42px;
+  background: #fff;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, .35);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0 6px;
+}
+
+.joinus-input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+.joinus-input:-moz-placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+.joinus-input::-moz-placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+.joinus-input:-ms-input-placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+.spec-div,
+.t-tipmsg {
+  float: left;
+  height: 42px;
+  line-height: 42px;
+  margin: 0 0 0 15px;
+  font-size: 12px;
+}
+
+.yo-c-link {
+  color: #d4ad29;
+  text-decoration: underline;
+}
+
+
+.radio-type label {
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+}
+
+.radio-type input {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -2px;
+  left: 0px;
+}
+
+.yo-pass-box {
+  float: left;
+  position: relative;
+}
+
+.yo-pass-box a{
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  display: block;
+  z-index: 12;
+  width: 25px;
+  height: 22px;
+  background-image: url('@{imgUrl}/registerMember.png');
+  }
+
+.yo-pass-box a.yo-mm-xs {
+  background-position: -4px -172px;
+}
+
+.yo-pass-box a.yo-mm-yc {
+  background-position: -38px -172px;
+}
+
+.yo-yzmbox {
+  float: left;
+  overflow: hidden;
+}
+
+.yo-yzmbox input {
+  float: left;
+  width: 172px;
+}
+
+.yo-yzmbox img {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  height: 42px;
+  border-radius: 3px;
+}
+
+.yo-agreement input {
+  width: 20px;
+  height: 20px;
+}
+
+.yo-agreement h6 {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(66, 64, 64, .5);
+  border-radius: 3px;
+  padding: 0 15px;
+  color: #848484;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.submit-box a.yo-sub-but {
+  display: block;
+  float: left;
+  width: 126px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  background-color: #907c57;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.submit-box a.yo-sub-but:hover {
+  background-color: #d4ad29;
+}
+
+.submit-box p {
+  float: left;
+  line-height: 42px;
+  color: #999;
+  margin-left: 40px;
+  font-size: 12px;
+}
+// 取款密码 自定义密码键盘
+.yo-keyboard {
+  position: absolute;
+  top: 42px;
+  left: 0px;
+  z-index: 22;
+  width: 252px;
+  background: #fff;
+  border-right: 1px solid #585858;
+  border-left: 1px solid #585858;
+  display: block;
+  .yo-shur {
+    height: 62px;
+    background-image: -webkit-linear-gradient(to right, #585858, #a0a0a0);
+    background-image: linear-gradient(to right, #585858, #a0a0a0);
+    overflow: hidden;
+    span {
+      display: block;
+      float: left;
+      background-color: #fff;
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 50%;
+      margin: 14px 14px 0;
+      border: 1px solid #fff;
+      text-align: center;
+      line-height: 32px;
+      font-size: 24px;
+      text-indent: 0;
+    }
+  }
+  .yo-number {
+    overflow: hidden;
+    span {
+      display: block;
+      float: left;
+      width: 25%;
+      border-bottom: 1px solid #eee;
+      border-left: 1px solid #eee;
+      text-align: center;
+      height: 62px;
+      line-height: 62px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #000;
+      &:active,&:focus {
+        background: #eee;
+      }
+    }
+    span.yo-k-qc {
+      width:50%;
+    }
+  }
+}
+
+.yo-r-bot {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.yo-r-bot h6 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 60px;
+  font-weight: normal;
+}
+
+.yo-r-bot ol {
+  opacity: .7;
+  margin-left: 90px;
+}
+
+.yo-r-bot li {
+  height: 26px;
+  line-height: 26px;
+}
+
+.yo-special .y-error-msg,
+.yo-special .y-warn-msg,
+.submit-box {
+  margin-left: 100px;
+}
+
+.yo-md-reg .yo-reg-center {
+  width: 960px;
+}
+
+.yo-md-reg .yo-rbox-cen {
+  margin-left: 170px;
+}
+
+.yo-md-reg .spec-div {
+  width: 250px;
+}
+
+.yo-sm-reg .yo-reg-center {
+  width: 720px;
+}
+
+.yo-sm-reg .spec-div {
+  width: 220px;
+}
+
+.yo-sm-reg .yo-rbox-cen {
+  margin-left: 30px;
+}
+
+.yo-sm-reg fieldset {
+  padding-top: 10px;
+}
+
+.yo-reg-center {
+  background-color: #191919;
+}
+
+/* 整体背景底色 */
+
+.yo-r-top {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+/* 第一部分文字背景底色 */
+
+.yo-r-bot {
+  background-color: rgba(45, 45, 45, 1.0);
+}
+
+/* 第三部分文字背景底色 */
+
+.joinus-label,
+.spec-div,
+.yo-r-top ol li,
+.yo-r-top h3,
+.yo-r-bot h6,
+.yo-r-bot ol li {
+  color: #fff;
+}
+
+/* 文字颜色 */
+
+/* 弹出层 */
+
+.yo-tc-body {
+  background: rgba(28, 29, 34, .7);
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  display: none;
+}
+
+.yo-tc-yhxy {
+  width: 545px;
+  height: 600px;
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 272px);
+  background: #fff;
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+.yo-t-title {
+  height: 76px;
+  line-height: 76px;
+  position: relative;
+}
+
+.yo-t-title h1 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #2c2e36;
+  text-indent: 40px;
+}
+
+.yo-t-title a{
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  text-indent: -100%;
+  background: url('@{imgUrl}/registerMember.png') no-repeat -92px -173px;
+}
+
+.yo-t-center {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  height: 400px;
+  padding: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.yhxy-c-text {
+  margin: 15px;
+}
+
+.yhxy-c-text h2 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+}
+
+.yhxy-c-text ul {
+  padding: 0px;
+  margin: 0px 0 0 20px;
+}
+
+.yhxy-c-text ul li {
+  line-height: 24px;
+  color: #2b2e38;
+}
+
+.yo-t-bot a{
+  display: block;
+  width: 455px;
+  height: 42px;
+  line-height: 42px;
+  margin: 22px auto 0;
+  background: #d4ad29 url('@{imgUrl}/registerMember.png') no-repeat;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-indent: 6em;
+  background-position: -110px -162px;
+}
+.reg-birthday{
+  div.el-date-editor{
+    width: 280px;
+    margin-left: 0;
+  }
+  p.t-tipmsg{
+    position: absolute;
+    top: 1px;
+    left: 381px;
+  }
+}
+
+
+.wechat1{
+  .y-error-msg{
+    width:300px;
+  }
+  .longtext{
+    line-height: 22px;
+  }
+}
+.yo-special {
+  .y-error-msg{
+    position: absolute;
+    left: 453px;
+  }
+}

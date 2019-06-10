@@ -1,0 +1,313 @@
+/**
+    全局 less 变量
+ */
+//  静态图片资源变量
+@imgUrl: '../../img/';
+
+@padVal: 10px;
+
+@padVal2: 8px;
+
+@boxType: 1;
+
+.magt10 {
+  margin-top: 10px;
+}
+
+;
+.yow {
+  padding: @padVal;
+  .clearfix;
+  .y(@any) {
+    .clearfix;
+  }
+  .y(content) {
+    padding-left: @padVal2;
+    padding-right: @padVal2;
+  }
+  .y(box) {
+    padding-left: @padVal+10px;
+    padding-right: @padVal+10px;
+  }
+  .y(@a) when (@boxType = 1) {
+    // .clearfix;
+  }
+  .y(relative) {
+    position: relative;
+  }
+  &-content {
+    .y(content);
+  }
+  &-box {
+    .y(box);
+  }
+  &-relative {
+    .y(relative);
+  }
+}
+
+// 固定定位-通用命名
+.fixed-box {
+  position: fixed;
+}
+
+// 左右浮动-通用命名
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right
+}
+
+//文字对齐
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.btn-box {
+  padding-top: 34px;
+  padding-bottom: 20px;
+}
+
+// 任何属性值兼容写法
+.any-property(@property; @value) {
+  -webkit-@{property}: @value; /* Safari 和 Chrome */
+  -moz-@{property}: @value; /* Firefox */
+  -ms-@{property}: @value; /* IE 9 */
+  -o-@{property}: @value; /* Opera */
+    @{property}: @value;
+}
+
+// 圆角边框 用法: .border-radius(5px)
+.border-radius (@radius) {
+  .any-property(border-radius, @radius);
+}
+
+// 盒子阴影 用法: .box-shadow(1px 0 1px #000)
+.box-shadow (@arguments) {
+  .any-property(box-shadow, @arguments);
+}
+
+// input框修改placeholder样式
+.placeholderStyle(@col,@siz) {
+  &::-moz-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+  &:-ms-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+  &::-webkit-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+}
+
+// 变化-值可以任意
+.transform(@val) {
+  .any-property(transform, @val);
+}
+
+// 动画-值可以任意
+.animation(@val) {
+  .any-property(animation, @val);
+}
+
+// 伸缩盒子-默认设置
+#display-fix {
+  .flex-container {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flexbox;
+    display: flex;
+  }
+  .flex-direction(@row) {
+    .any-property(flex-direction, @row);
+  }
+  .flex-direction-co {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .flex-wrap(@val) {
+    -webkit-flex-wrap: @val;
+    flex-wrap: @val;
+  }
+  .justify-content(@val) {
+    -webkit-justify-content: @val;
+    justify-content: @val;
+  }
+  .align-center(@val) {
+    -webkit-box-align: @val;
+    -webkit-align-items: @val;
+    -ms-flex-align: @val;
+    align-items: @val;
+  }
+  .align-stretch {
+    align-content: stretch;
+  }
+}
+
+// 伸缩分配
+.box-flex (@grow) {
+  -webkit-box-flex: @grow;
+  -webkit-flex: @grow;
+  -ms-flex: @grow;
+  flex: @grow;
+}
+
+// 使用border-box盒子模型
+.box-sizi {
+  .any-property(box-sizing, border-box);
+}
+
+// 渐变-任何开始值或结束值-双色渐变
+.gradient(@angle,@start,@stop) {
+  background: -webkit-linear-gradient(@angle, @start, @stop);
+  background: -moz-linear-gradient(@angle, @start, @stop);
+  background: -o-linear-gradient(@angle, @start, @stop);
+  background: linear-gradient(@angle, @start, @stop);
+}
+
+// 通用按钮样式设定
+.btn {
+  // 默认按钮为行内块
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(auto, 0, 10px, 14px, 22px, 30px);
+  // .user-select(none);
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      // .tab-focus();
+    }
+  }
+  
+  &:hover,
+  &:focus,
+  &.focus {
+    // color: @btn-default-color;
+    text-decoration: none;
+  }
+  
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    //   .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    // cursor: @cursor-disabled;
+    cursor: not-allowed;
+    // .opacity(.65);
+    // .box-shadow(none);
+  }
+  
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+}
+
+// Button 常用尺寸
+// --------------------------------------------------
+.button-size(@butW;@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  width: @butW;
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+
+.btn-lg {
+  .button-size(80%, 0, 20px, 14px, 36px, 30px);
+}
+
+.btn-sm {
+  // .button-size();
+}
+
+.btn-xs {
+  .button-size(auto, 0, 10px, 12px, auto, 30px);
+}
+
+.btn-teach {
+  .button-size(auto, 6px, 16px, 12px, auto, 2px);
+}
+
+// button 转换为块
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// 连着有两个块状 Button 添加距离
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// 特异性覆盖
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// 固定住页面
+.fixPage {
+  overflow: hidden;
+  body {
+    overflow: hidden;
+  }
+  .mainBox {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+  }
+}
+.pickBug {
+  .picker-item {
+    min-width: 12rem!important;
+  }
+  .picker-center-highlight{
+  
+  }
+  .picker-items{
+    //height: 100%;
+  }
+}
+
+
+.v-modal {
+  overflow: hidden;
+}

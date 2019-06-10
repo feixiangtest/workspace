@@ -1,0 +1,148 @@
+// 账户历史
+.yoHistory{
+  background: #fff;
+}
+.account-history-nav {
+  height: 3rem;
+  background: #eeeeee;
+  color: #0F0F0F;
+  border-bottom: 1px solid #bebebe;
+}
+.account-history-nav span {
+  display: block;
+  width: 33.3%;
+  height: 2rem;
+  float: right;
+  text-align: center;
+  margin-top: .8rem;
+}
+.account-history-minute li{
+  overflow: hidden;
+}
+.account-history-minute li span {
+  display: inline-block;
+  width: 33.3%;
+  height: 1.8rem;
+  float: left;
+  text-align: center;
+  margin-top: .8rem;
+  border-bottom: 1px dashed #0f0f0f;
+}
+ 
+// 即时注单
+#betRecord,#bettingLimit{
+  height: 100%;
+  position: relative;
+  .has-header{
+   background:#eeeeee;
+   height:calc(~'100% - 136px');
+   top: 92px;
+  }
+  .query-conditions{
+    height: 3rem;
+    background: white;
+    color: #0F0F0F;
+    border-bottom: 1px solid #bebebe;
+    padding: 0 18px;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content:center;
+    span{ 
+      width: 28%;
+      height: 1.8rem;
+      line-height: 1.8rem;
+      text-align: center;
+      margin-top: .8rem;
+      border: 1px solid #bebebe;
+      border-radius: 4px;
+      margin-left: 15px;
+    }
+    .selected {
+      background: #d83442;
+      color: #ffffff;
+    }
+  }
+  .hasCount{
+    height:calc(~'100% - 180px');
+  }  
+  .onFooter {
+      bottom: 0;
+  }
+}
+
+
+// 详细报表页面
+#detailRe{ 
+  .query-conditions{
+    height: 3rem;
+    background: white;
+    color: #0F0F0F;
+    border-bottom: 1px solid #bebebe;
+    padding: 0 18px;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content:space-between;
+    span{ 
+      width: 28%;
+      height: 1.8rem;
+      line-height: 1.8rem;
+      text-align: center;
+      margin-top: .8rem;
+      border: 1px solid #bebebe;
+      border-radius: 4px;
+    }
+    .selected {
+      background: #d83442;
+      color: #ffffff;
+    }
+  }
+  .forthwith-receipts-minute{
+    li{
+      overflow: hidden;
+      background:white;
+    }
+  }
+  .yo-receipts{
+    li span{
+      text-indent: 0rem;
+    }
+  }
+  
+  .onFooter {
+      bottom: 0;
+  }
+} 
+
+.total{
+    bottom: 44px;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    background-position: top;
+    height: 44px;
+    line-height: 44px;
+    background: #fff;
+    span,em{ 
+        margin: 0 5px;
+    }
+    .fotLeft,.fotRight{
+      width: 50%;
+      top: 0px;
+    }
+    .fotRight{
+      text-align: right;
+    }   
+}

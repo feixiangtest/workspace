@@ -1,0 +1,149 @@
+// 帮助中心样式
+.helpConBox {
+  padding-top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+// 帮助中心导航栏
+#memberMenu .helpMenu {
+  [role="menubar"]{
+    min-height: 400px;
+  }
+  h1 {
+    margin-bottom: 7px;
+  }
+  ul.el-menu {
+    border-right: none;
+    margin: 0 10px;
+    li {
+      padding-left: 0px;
+    }
+  }
+  .el-submenu ul.el-menu {
+    margin: 0;
+  }
+  .el-menu-item, .el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+  }
+  .el-submenu .el-menu-item {
+    padding: 0;
+    min-width: auto;
+  }
+}
+
+// 主页排版
+.helpHomeBox {
+  padding: 60px 30px;
+}
+
+.helpCategoryContainer {
+  margin-bottom: 30px;
+  padding-top: 3px;
+  .helpIcon {
+    width: 53px;
+    height: 53px;
+    margin-right: 3px;
+    .floatLf;
+    .border-radius(50%);
+    background: url('@{imgUrl}/hlep/helpIcon.jpg');
+    &.faqs {
+      background-position: 0 0;
+    }
+    &.rules {
+      background-position: 53px 0;
+    }
+    &.techIssues {
+      background-position: 114px 0;
+    }
+    &.payments {
+      background-position: 176px 0;
+    }
+  }
+  .helpCategoryTitle {
+    .floatLf;
+    padding-left: 5px;
+    padding-top: 3px;
+    .helpTitle {
+      display: block;
+      font-size: 15px;
+      height: auto;
+      line-height: 1.55;
+      width: 100%;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .helpBlurb {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.helpItem {
+  .paymentItem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  .border-radius(0px);
+  h2 {
+    font-size: 18px;
+  }
+  .payItemCont {
+    .textCont {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
+.helpSearch {
+  position: relative;
+  margin-left: -200px;
+  #display-fix > .justify-flex-start !important;
+  .helpSearCon {
+    .clearfix;
+    .memberHea .heaCon .nav;
+    .box-flex(0) !important;
+  }
+  .SearchInput {
+    width: 350px;
+    height: 36px;
+    line-height: 31px;
+    .border-radius(2px);
+    text-align: center;
+    margin-right: 10px;
+    position: relative;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 18px;
+      margin-top: -2px;
+    }
+    input {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      vertical-align: middle;
+      width: 190px;
+    }
+    .searcRecord {
+      width: 200px;
+      background: #dddddd;
+      position: absolute;
+      left: 90px;
+      top: 35px;
+      cursor: pointer
+    }
+  }
+}
+
+#memberHea .heaCon {
+  .helpSearch .helpSearCon button {
+    margin: 0px;
+  }
+}

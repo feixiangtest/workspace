@@ -1,0 +1,458 @@
+// 银行 交易
+.el-container{
+    padding: 15px 0;
+    .el-input{
+        width: 215px;
+    }
+    .el-form-item{
+        padding: 6px 0;
+    }
+}
+//额度转换
+.transformBox{
+    position: relative;
+    z-index: 10;
+    .transformBut{
+        position: absolute;
+        right: 72px;
+        top: 25px;
+        span{
+            display: block;
+        }
+        .yoIcon{
+            padding: 0 4px;
+            .border-radius(2px);
+            cursor: pointer;
+        }
+        .line{
+            height: 17px;
+            position: relative;
+            &::before,&::after{
+                content: "";
+                position: absolute;
+            }
+            &::before{
+                height: 1px;
+                width: 22px;
+                left: -11px;
+            }
+            &::after{
+                height: 17px;
+                width: 1px;
+                left: 10px;
+            }
+            &.lineDown::before{
+                bottom: 0px;
+            }
+        }
+    }
+}
+.lineConversion {
+    .memberInfo {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .overall{
+        padding: 6px 0;
+        font-size: 16px;
+        span{
+            display: inline-block;
+            padding: 4px 0;
+            vertical-align: middle;
+        }
+        span:first-child {
+            margin: 0 10px 0 20px;
+        }
+        .allGold{
+            font-size: 22px;
+        }
+        .refreshBut {
+            margin: 0 20px 0 15px;
+            cursor: pointer;
+        }
+    }
+    .platform dd{
+        width: 163px;
+    }
+    .ConverMain{
+        padding-left: 10px;
+    }
+}
+
+.lineConversion{
+    .c1{
+        margin: 0 15px 10px;
+        padding: 0 0 10px 4px;
+        // p{
+        //     color: @minor;
+        // }
+        h4{
+            // color: @orange;
+            font-size: 24px;
+            padding: 10px 0;
+            font-weight: normal;
+        }
+        .el-button{
+        width: 150px;
+        }
+    }
+
+    .demo-input-suffix{
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .subclick{
+        margin: 20px 0 ;
+        button{
+        margin-left:101px;
+        }
+        p{
+        margin: 14px 24px;
+        }
+    }
+}
+// 线上取款
+.onlineWithdrawals{
+  .c2{
+    text-align: right;
+    margin: 10px;
+  }
+
+  .c3{
+    text-align: left;
+  }
+  .t-tipmsg{
+    position: absolute;
+    top: 0px;
+    left: 286px;
+  }
+
+}
+
+.placelimt{
+  width:292px;
+  text-align: center;
+  margin-top: 4px;
+  line-height: 30px;
+}
+.drawErr{
+  position: absolute;
+  top: 11px;
+  left: 306px;
+  width: 256px;
+  color: red;
+}
+.pwErr{
+  position: absolute;
+  top: 11px;
+  left: 306px;
+  width: 256px;
+  &.red{
+    color: red;
+  }
+}
+.pwok{
+  color: green;
+}
+// 线上存款
+.onlineDeposit{
+    .payFieldset{
+        padding: 20px 0 10px;
+        .border-radius(0px);
+    }
+    legend{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0 10px;
+        margin-left: 20px;
+    }
+    .paymentImg{
+        padding-bottom: 10px;
+        dd{
+            width: 180px;
+            height: 100px;
+            img{
+                margin: 24px auto;
+            }
+        }
+    }
+    .lodingPic {
+        transition: All 1s ease-in-out;
+        -webkit-transition: All 1s ease-in-out;
+        -moz-transition: All 1s ease-in-out;
+        -o-transition: All 1s ease-in-out;
+        transform: rotate(720deg);
+        -webkit-transform: rotate(720deg);
+        -moz-transform: rotate(720deg);
+        -o-transform: rotate(720deg);
+        -ms-transform: rotate(720deg);
+    }
+}
+
+.paylistStyle{
+    dd{
+        .floatLf;
+        margin:0 10px 10px 0;
+        overflow: hidden;
+        .border-radius(4px);
+        img{
+            display: block;
+        }
+        &:nth-child(5n+0){
+            margin-right: 0px;
+        }
+        &:hover, &.cur{
+            cursor: pointer;
+        }
+        &.cur{
+            position: relative;
+            &::after{
+                font-family: 'element-icons2';
+                content:'\e651';
+                position: absolute;
+                right: -1px;
+                bottom:-2px;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.modeOfPayment{
+  padding-top: 10px;
+  .publicBox{
+      img{
+          max-width:940px;
+      }
+  }
+}
+
+.paymentItem{
+    margin-top: 10px;
+    .border-radius(4px);
+    cursor: pointer;
+    max-width: 944px;
+    overflow: hidden;
+    img{
+        max-width: 910px;
+    }
+    h2{
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px 15px;
+        line-height: 26px;
+        a.operation{
+            text-decoration: underline;
+            vertical-align: middle;
+        }
+        i.icon-pay{
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        span{
+            line-height: 26px;
+            vertical-align: middle;
+        }
+    }
+    .payImg img{
+        width: 100%;
+    }
+    .textCont{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+
+.publicPayMain{
+    .paymentItem;
+    h2{
+        font-size: 14px;
+    }
+}
+
+.bankList{
+    dl{
+        margin: 19px 0 0 9px;
+        dd{
+            margin-right: 8px;
+            width: 176px;
+            img{
+                margin:9px 0 9px 20px;
+            }
+        }
+    }
+}
+.affirmBut{
+    margin: 20px 0;
+    p{
+        font-size: 12px;
+        // color: @minor;
+        margin-top: 10px;
+    }
+}
+
+// 温馨提示
+.warmPrompt{
+    font-size: 12px;
+}
+
+// 线上存款--银行卡详情样式
+.companyBank{
+    padding: 20px;
+    .warmPrompt{
+        margin-left: 10px;
+    }
+    dl{
+        margin-left: 10px;
+        dd{
+            width: 420px;
+            padding: 5px 0;
+            margin-right: 40px;
+            &:nth-child(5n+0){
+                margin-right: 40px;
+            }
+            &:nth-child(2n+0){
+                margin-right:0px;
+            }
+        }
+        h6, p{
+            padding: 4px 20px 0;
+            font-weight: normal;
+        }
+        p{
+            padding-bottom: 4px;
+            padding-top: 0px;
+        }
+        .bankDetails{
+            padding: 6px 20px;
+            margin: 10px 0;
+            height: 122px;
+            table{
+                width: 100%;
+                height: 100%;
+                .detaTile{
+                    width: 90%;
+                    word-break: break-all;
+                    line-height: 20px;
+                }
+                em{
+                    font-style: normal;
+                }
+                .bankNumber{
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+}
+
+// 扫码支付样式
+.scanCode{
+    padding: 20px;
+    dl{
+        dd{
+            margin-left: 20px;
+            margin-bottom: 20px;
+            width: calc(~'50% - 30px');
+            text-align: center;
+            padding: 10px 0px;
+            &:nth-child(5n+0){
+                margin-right: 10px;
+            }
+            .QRcode{
+                width: 200px;
+                height: 200px;
+                vertical-align: middle;
+                display: inline-block;
+                img{
+                    background-size: 100% 100%;
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                }
+            }
+            i{
+                padding: 0 4px;
+                font-size: 18px;
+                vertical-align: top;
+                display: inline-block;
+            }
+        }
+    }
+    .warmPrompt{
+        margin-left: 20px;
+    }
+}
+// 取款密码 自定义密码键盘
+.yo-keyboard{
+    position: absolute;
+    top: 36px;
+    left: 0;
+    z-index: 22;
+    width: 254px;
+    .border-radius(2px);
+    .yo-shur{
+        height: 62px;
+        .border-radius(2px 2px 0 0);
+        overflow: hidden;
+        span{
+            display: block;
+            float: left;
+            width: 34px;
+            height: 34px;
+            border: none;
+            margin: 14px 14px 0;
+            text-align: center;
+            line-height: 32px;
+            font-size: 24px;
+            text-indent:0;
+            .border-radius(50%);
+        }
+    }
+    .yo-number{
+        overflow: hidden;
+        span{
+            display: block;
+            float: left;
+            width:25%;
+            text-align: center;
+            height: 62px;
+            line-height: 62px;
+            cursor: pointer;
+            font-size: 20px;
+            &.yo-k-qc{
+                width:50% ;
+            }
+        }
+    }
+}
+
+#bindPW{
+  position: relative;
+  .t-tipmsg{
+    left: 447px;
+    top: 3px;
+  }
+  .yo-keyboard{
+    top:42px;
+  }
+
+}
+
+
+// 操作说明轮播图
+.operationExplainBox{
+    height: 539px;
+    max-height: 539px !important;
+    .el-carousel__container{
+      height: 512px !important;
+      width: 685px;
+    }
+}
+.explainList{
+    width: 685px;
+    height: 512px;
+}

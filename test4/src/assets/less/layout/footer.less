@@ -1,0 +1,203 @@
+ 
+ 
+
+#betfooter {
+    height: 50px;
+    padding: 0;
+    position: fixed; // 默认使用固定定位，当输入框聚焦时使用absolute
+    bottom: 0;
+}
+
+#betfooter #mainFootersc,
+#betfooter #mainFooterChips,
+#betfooter #mainFooterqd {
+    width: 19%;
+    height: 48px;
+    display: inline-block;
+    top: 0;
+    font-size: 18px;
+}
+
+#betfooter #mainFootersc,
+#betfooter #mainFooterChips {
+    float: left;
+}
+
+#betfooter #mainFooterqd {
+    float: right;
+}
+
+[betFooterA] .cancelButton {
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    background: url('@{imgUrl}/yellow_button.png') no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 4px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+}
+
+[betFooterA] .mainFooterMoney {
+    background: url('@{imgUrl}/money.png') no-repeat;
+    background-size: 100% 100%;
+    color: #bebebe;
+    line-height: 18px;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+    margin-top: 4px;
+    height: 40px;
+    float: left;
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+[betFooterA] .confirm {
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    background: url('@{imgUrl}/red_button.png') no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 4px;
+    line-height: 40px;
+    text-align: center;
+    right: -4px;
+    float: left;
+}
+
+#betfooter #betInput {
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    background: url('@{imgUrl}/blue_button.png') no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 4px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#betfooter>div>a {
+    position: relative;
+}
+
+#betfooter #mainFooterje {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+}
+
+#chipDiv {
+    bottom: 46px;
+    height: 34px;
+    z-index: 11;
+    position: absolute;
+    background: rgba(203, 205, 207,.8);
+}
+/*
+  为什么会一直选中最后一个，不会根据浏览器选择？
+*/
+ 
+.bar_chip {
+    float: left;
+    top: -17px;
+    position: absolute;
+    width: 100%;
+}
+.bar_chip li {
+    width: 16%;
+    height: 53px;
+    display: inline-block;
+    margin: 0 1px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 98% 100%;
+    
+}
+.bar_chip a {
+    height: 50px;
+    line-height: 52px;
+    color: #0f0f0f;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: -1px;
+}
+.chip_click {
+  position: relative;
+  bottom: 7px;
+}
+.openLuzi{
+  width: 22px;
+  height: 43px;
+  background: #EC772F;
+  position: absolute;
+  top: -46px;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  font-size: 12px;
+  font{
+    display: inline-block;
+    float: left;
+    margin-top: -32px;
+    margin-left: 3px;
+  }
+  font:first-child{
+    margin-top: -11px;
+  }
+}
+.closeLuzi{
+  width: 22px;
+  height: 43px;
+  background: #EC772F;
+  position: absolute;
+  bottom: 46px;
+  right: 0;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,.5);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  font-size: 12px;
+  z-index: 2;
+  font{
+    display: inline-block;
+    float: left;
+    margin-left: 3px;
+    color: #fff;
+  }
+}
+.bar_chip .cm1 {
+    background-image: url('@{imgUrl}/footer/cm1.png');
+}
+.bar_chip .cm2 {
+    background-image: url('@{imgUrl}/footer/cm2.png');
+}
+.bar_chip .cm3 {
+    background-image: url('@{imgUrl}/footer/cm3.png');
+}
+.bar_chip .cm4 {
+    background-image: url('@{imgUrl}/footer/cm4.png');
+}
+.bar_chip .cm5 {
+    background-image: url('@{imgUrl}/footer/cm5.png');
+}
+.bar_chip .cm6 {
+    background-image: url('@{imgUrl}/footer/cm6.png');
+}
+.bar_chip .cm7 {
+    background-image: url('@{imgUrl}/footer/cm7.png');
+}
+.bar_chip .cm8 {
+    background-image: url('@{imgUrl}/footer/cm8.png');
+}
+.bar_chip .cm9 {
+    background-image: url('@{imgUrl}/footer/cm9.png');
+}

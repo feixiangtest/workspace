@@ -1,0 +1,367 @@
+// 登录、等单页面样式
+.login-box{
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
+}
+.login-logo{
+    height: 64px;
+    margin: 6.5% auto 10.5%;
+    img{
+        display: block;
+        margin: 0 auto ;
+        height: 64px;
+    }
+}
+.from-login{
+    padding: 15% 12% 0;
+    position: relative;
+}
+.login-item{
+    margin-bottom: 16px;
+    padding:4px 0 ;
+    .clearfix;
+    input{
+        height: 22px;
+        line-height: 22px;
+        padding-left: 10px;
+        width: calc(100% - (30px + 30px));
+        float: left;
+        background: none;
+        border:none;
+        margin-top: 2px;
+    }
+    i{
+        display: block;
+        float: left;
+        font-size: 20px;
+        &.icon-close{
+            font-size: 18px;
+            margin-left: 2px;
+        }
+    }
+    img{
+        display: block;
+        position: absolute;
+        width: 72px;
+        height: 30px;
+        right: 0;
+        top: -2px;
+    }
+}
+.log-forget{
+    display: block;
+    font-size: 12px;
+}
+.errText.log-forget{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -57px;
+}
+.login-but{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 20% 10% 6%;
+    font-size: 16px;
+    vertical-align: middle;
+    .border-radius(4px);
+}
+.login-disabled{
+    opacity: 0.53;
+}
+.login-tips {
+    line-height: 26px;
+    vertical-align: middle;
+    i{
+        font-size: 20px;
+        vertical-align: -2px;
+    }
+}
+// 漂浮详情页
+.float-pages{
+    position: fixed;
+    width: 100%;
+    // min-height: 100%;
+    height: 100%; // OT-4430
+    top: 0;
+    left: 0;
+    z-index: 2018;
+    // overflow: scroll;
+  .message-detail{
+    .content{
+      word-wrap:break-word;
+    }
+    .message-header{
+      word-wrap:break-word;
+      h2.tit{
+        float: left;
+        width: calc(100% - 30px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+// 立即充值-扫码支付
+.scan-code-pay{
+    .scan-titile{
+        line-height: 24px;
+    }
+}
+.scan-code{
+    padding: 10px 0 0;
+    margin-top: 5px;
+    .QRcode{
+        text-align: center;
+        i{
+           display: inline-block;
+           vertical-align: middle;
+          &:before{
+            margin: 0px ;
+          }
+        }
+    }
+    .code{
+        width: 240px;
+        height: 200px;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        .border-radius(2px);
+        img{
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            max-width: 200px;
+            max-height: 200px;
+        }
+    }
+}
+.recharge-text-box{
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+    img{
+        max-width: 100%;
+    }
+    table{
+        max-width: 100%;
+        td{
+            white-space:normal;
+            word-break:break-all;
+            word-wrap:break-word;
+        }
+    }
+}
+
+// 立即充值-银行卡、微信、支-信息卡
+.paylist-style{
+    dd{
+        overflow: hidden;
+        .border-radius(2px);
+        position: relative;
+        &:hover, &.cur{
+            cursor: pointer;
+        }
+        &::after{
+            font-family: 'memberFont';
+            content:'\e81a';
+            position: absolute;
+            right: -1px;
+            top:-2px;
+            font-size: 17px;
+        }
+    }
+}
+.company-bank{
+    padding: 0 @padVal;
+    .warmPrompt{
+        margin-left: 10px;
+    }
+    dl{
+        dd{
+            width: 100%;
+            margin-top: 10px;
+        }
+        h6, p{
+            padding: 0 8px;
+            font-weight: normal;
+            line-height: 28px;
+        }
+        .bankDetails{
+            padding:0 8px;
+            table{
+                width: 100%;
+                .detaTile{
+                    width: 90%;
+                    word-break: break-all;
+                    line-height: 20px;
+                }
+                em{
+                    font-style: normal;
+                }
+                td{
+                    padding: 4px 0;
+                }
+            }
+        }
+
+    }
+}
+
+// 支付方式-选择
+.yo-mask-layer{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 201;
+}
+.mask-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(20,22,32,0.68);
+    opacity: 0.6;
+    z-index: 2017;
+}
+.pay-header-logo{
+  width:24px;
+  height:24px;
+}
+
+.pay-header-smlBtn{
+    width:19px;
+    height:17px;
+}
+.layer-pay-box{
+    width: 100%;
+    height: 330px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 20181;
+    .pay-box-titile, dd, dd h2{
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(space-between);
+        #display-fix > .align-center(center);
+    }
+    dd >h2{
+      display: inline-block;
+      line-height: 40px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      .pay-header-logo{
+        position: relative;
+        top:7px;
+        margin-right: 2px;
+      }
+    }
+    .pay-box-titile{
+        padding: 0 @padVal;
+        height: 44px;
+        font-size: 16px;
+    }
+    dd{
+        padding: 0 @padVal;
+        margin-bottom: 1px;
+        height: 40px;
+    }
+    .pay-box-content{
+        overflow: scroll;
+        position: relative;
+        max-height: 286px;
+    }
+}
+
+// 交易记录-快选时间
+.fast-sel-time{
+    ul{
+        height: 50px;
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap(normal);
+        #display-fix > .justify-content(space-around);
+        #display-fix > .align-center(center);
+    }
+}
+// 来往记录
+.record-list{
+    dd{
+        height: 60px;
+        margin-bottom: 1px;
+        .list-tit{
+            height: 30px;
+            #display-fix > .flex-container;
+            #display-fix > .flex-wrap(normal);
+            #display-fix > .justify-content(space-between);
+            #display-fix > .align-center(center);
+            h3{
+                font-size: 16px;
+                font-weight: normal;
+            }
+            span{
+                font-size: 12px;
+            }
+        }
+        p{
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.bet-list-title{
+    .box-flex(0 0 40px);
+}
+.bet-list-style{
+    font-size: 12px;
+}
+.betting-foot{
+    height: 40px;
+    padding: 0 @padVal;
+    font-size: 16px;
+    #display-fix > .flex-container;
+    #display-fix > .flex-wrap(normal);
+    #display-fix > .justify-content(space-between);
+    #display-fix > .align-center(center);
+    .box-flex(0 0 40px);
+}
+
+// 手机客户端下载说明
+.game-explain{
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 20181213;
+    background: #fff;
+    .icon-close{
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 2;
+        font-size: 24px;
+        color: rgba(255,255,255,.5);
+    }
+    img{
+        width: 100%;
+    }
+    .mint-swipe, .mint-swipe-items-wrap{
+        .border-radius(0);
+        box-shadow:none;
+        background: #fff;
+    }
+}

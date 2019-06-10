@@ -1,0 +1,193 @@
+.quickNav{
+    ul{
+        width: 100%;
+        border-top:.0625rem solid #ececec;
+        #display-fix > .flex-container;
+        #display-fix > .flex-nowrap;
+        #display-fix > .justify-content;
+        background: #fff;
+        li{
+            flex: 1;
+            width: calc(~"33.333% - .0625rem");
+            border-right:.0625rem solid #ececec;
+            text-align: center;
+            margin:5px 0;
+            a{
+                line-height:24px;
+                color: #343434;
+                font-size: 0.9rem;
+                display: block;
+                i{
+                    vertical-align: middle;
+                    margin-right:3px;
+                    margin-top: -2px;
+                    font-size: 25px;
+                    display: inline-block;
+                }
+            }
+            &:last-child{
+                border-right:0px;
+            }
+            a.actived,a:active{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+.indexGame{
+    dl{
+        width: 100%;
+        .clearfix;
+    }
+    dl.homeGame{
+        border-top: 1px solid #d9dcdf;
+    }
+    dd{
+        border-bottom: .0625rem solid #d9dcdf;
+        border-right: .0625rem solid #d9dcdf;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background: white;
+        margin-top: 0;
+        display: block;
+        float: left;
+        a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            word-wrap:break-word;
+            width: 100%;
+            height: 100%;
+        }
+        i.Image-fire,i.Image-hot,i.Image-gamefree{
+            position: absolute;
+            // z-index: 2; // 和首页加载效果有冲突 ZXTGB-1631
+            top: 0px;
+            right: 0px;
+            margin: 0px;
+        }
+        i.icon-love{
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            .fontSize(12px);
+            color: #eb2f38;
+        }
+        .gameImg{
+            margin: 11px auto 1px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        span{
+            line-height: 15px;
+            font-size: 12px;
+            height: 30px;
+            color: #343434;
+            text-decoration: none;
+            display: block;
+            width: 94px;
+            margin: 0 auto;
+            padding: 0 10px;
+            margin-bottom: .25rem;
+        }
+        &:active{
+            background: #eee;
+        }
+    }
+}
+.favoriteList{
+    .indexGame;
+    dd{
+        &.indexFavorite0{
+            .gameImg2{
+                margin: 11px auto 1px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1080px) and (max-width: 2000px) {
+    .indexGame,.favoriteList{
+        dd{
+            width: calc(100% / 8);
+            &:nth-child(8n+0){
+                border-right: 0px;
+                padding-right: 1px;
+            }
+        }
+    }
+    .indexGame dd .gameImg,
+    .favoriteList dd .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg2{
+        width: 68px;
+        height: 68px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+    .indexGame,.favoriteList{
+        dd{
+            width: calc(100% / 5);
+            &:nth-child(5n+0){
+                border-right: 0px;
+                padding-right: 1px;
+            }
+        }
+    }
+    .indexGame dd .gameImg,
+    .favoriteList dd .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg2{
+        width: 76px;
+        height: 76px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .indexGame,.favoriteList{
+        dd{
+            width: calc(100% / 4);
+            &:nth-child(4n+0){
+                border-right: 0px;
+                padding-right: 1px;
+            }
+        }
+    }
+    .indexGame dd .gameImg,
+    .favoriteList dd .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg2{
+        width: 46px;
+        height: 46px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 359px) {
+    .indexGame,.favoriteList{
+        dd{
+            width: calc(100% / 3);
+            &:nth-child(3n+0){
+                border-right: 0px;
+                padding-right: 1px;
+            }
+        }
+    }
+    .indexGame dd .gameImg,
+    .favoriteList dd .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg,
+    .favoriteList dd.indexFavorite0 .gameImg2{
+        width: 52px;
+        height: 52px;
+    }
+
+}
+

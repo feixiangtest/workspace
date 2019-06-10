@@ -1,0 +1,361 @@
+
+// 注册页样式
+.reg-header{
+    #display-fix > .flex-container;
+    #display-fix > .justify-content(center);
+    .item{
+        position: relative;
+        padding-top: 8px;
+        height: 75px;
+        width: 30%;
+        text-align: center;
+        .circle{
+            position: relative;
+            z-index: 3;
+            font-size: 16px;
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 32px;
+            text-align: center;
+        }
+        .circle2{
+            border-width: 2px!important;
+        }
+        .text{
+            font-size: 12px;
+            padding-top: 8px;
+        }
+        .line{
+            position: absolute;
+            
+            width: 100%;
+            top:25px;
+            z-index: 2;
+            .line-gray{
+                float: left;
+                width: 50%;
+                height:1px;
+            }
+            .line-trans{
+                float: left;
+                width: 50%;
+                height:1px;
+            }
+        }
+    }
+}
+.padding-top-0{
+    padding-top: 0!important;
+}
+.reg-box2{
+    text-align: center;
+    img{
+        margin-top:20%;
+        margin-bottom: 10px;
+        width: 200px;   //ART-68
+    }
+    .text{
+        text-align: center;
+        h3{
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        p{
+            line-height: 32px;
+            font-size: 14px;
+        };
+    }
+}
+// 开户协议页面
+.agreement-box{ //ART-68
+    width: 100%;
+    .tips{
+       font-size: 14px;
+       padding: 12px 0 5px;
+    }
+    ul{
+        li {
+            text-align: justify;
+            position: relative;
+            line-height: 15px;
+            font-size: 12px;
+            padding: 5px 0 5px 10px;
+            span{
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
+// 绑定银行卡页
+.page-picker-wrapper{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    z-index: 20;
+    .picker-toolbar{
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+        button{
+            line-height: 40px;
+            padding: 0 15px;
+        }
+    }
+}
+.mask{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.bank-list{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    .search{
+        position: relative;
+        padding: 6px 15px;
+        .icon-search{
+            position: absolute;
+            left: 24px;
+            top:11px;
+            font-size: 12px;
+        }
+        .title{
+            width: 88%;
+            height: 28px;
+            border:none;
+            font-size: 12px;
+            padding-left: 30px;
+            border-radius: 4px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    .bank{
+        overflow: scroll;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        li{
+            margin-top:1px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            padding: 0 15px;
+        }
+    }
+}
+
+.card-box{
+    position: relative;
+    padding: 0 15px;
+    .add-card{
+        text-align: center;
+        button{
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+    }
+    h3{
+        position: absolute;
+        font-size: 16px;
+        top:50px;
+        padding-left: 30px;
+    }
+    span{
+        position: absolute;
+        font-size: 12px;
+        top:75px;
+        padding-left: 30px;
+    }
+    p{
+        position: absolute;
+        font-size: 16px;
+        top:130px;
+        padding-left: 30px;
+    }
+    img{
+        width: 100%;
+    }
+    .img-mask{
+        position: absolute;
+        bottom: 25px;
+        height: 36px;
+        width: 120%;
+        margin-left: -20px;
+        z-index: 1;
+    }
+    .text-tips{
+        position: absolute;
+        bottom: 114px;
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 0.46px;
+        text-align: center;
+        line-height: 38px;
+    }
+}
+
+// 个人设置页面
+.prompt{
+    padding:15px 15px 0;
+    .padding-left-0{
+        padding-left: 0;
+    }
+}
+.set-item{
+    input{
+        border: none;
+        text-align: right;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+// 消息记录页面
+.messageList{
+    .message-item{
+        padding: 0 20px;
+        height: 106px;
+        .title-item{
+            height: 36px;
+            line-height: 36px;
+            .title{
+                width: 100%;
+                overflow: hidden;
+                font-size: 16px;
+                .right-arrow{
+                    // margin-top: 8px;
+                    float: right;
+                    font-size: 20px;
+                }
+            }
+            .tit{
+                float: left;
+                width: calc(100% - 30px);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .content-item{
+            .content{
+                line-height: 36px;
+                font-size: 14px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .time{
+                line-height: 30px;
+                font-size: 12px;
+                display: block;
+            }
+
+        }
+    }
+    .message-item2{
+        height: 70px;
+    }
+    .message-detail{
+        padding: 0 20px 0;
+        .personmsg{
+            padding-bottom: 45px;
+        }
+        .message-header{
+            h2{
+                font-size: 18px;
+                line-height: 24px;
+                // overflow: hidden;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
+                padding-top: 10px;
+                font-weight: normal;
+            }
+            .time{
+                font-size: 12px;
+                line-height: 35px;
+            }
+        }
+        .content{
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            line-height: 24px;
+            // text-align: justify; // 因影响英文显示，遂去掉左右对其
+            padding-top: 8px;
+        }
+        
+    }
+}
+
+.reg-step1,.reg-step2{
+  .form-item{
+    position: relative;
+    .width35{
+        width: 35%;
+    }
+    .very-temp-class{
+        float:right;
+        width: 30%;
+        height:40px;
+        margin-top:5px;
+    }
+  }
+  .birthday-mask {
+    position: absolute;
+    height: 50px;
+  }
+  .prompt{
+    margin-bottom: 2rem;
+  }
+}
+.error_msg{
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  margin-left:10px;
+  text-align: left;
+  padding:3px 6px;
+  line-height: 22px;
+  .border-radius(5px);
+  z-index: 8;
+  color: #fff;
+  &:before{
+    position: absolute;
+    content: "" ;
+    display: block;
+    border-width:  8px 8px 0 ;
+    border-style: solid;
+    bottom: -7px;
+    z-index: 10;
+    right: 10px;
+  }
+}
+.error_msg2{
+    text-align: left;
+    line-height: 30px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+}

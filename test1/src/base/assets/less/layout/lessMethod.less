@@ -1,0 +1,133 @@
+/**
+    全局 less 变量
+ */
+@fl:left;
+@fr:right;
+@f12:12px;
+@f14:14px;
+@f16:16px;
+@f100:100px;
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+}
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+}
+
+.linear-gradient(@top, @bottom){
+  background: @top; /* Old browsers */
+  background: -moz-linear-gradient(top,  @top 0%, @bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @top 0%,@bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  @top 0%,@bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  @top 0%,@bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  // background: -moz-radial-gradient(@positionOrAngle,@shapeOrSize, @color_stop1,@color_stop2,@color_stop13);
+}
+.linear-gradient2(@angle, @start, @middle, @stop){
+  background: -webkit-linear-gradient(@angle,@start,@middle,@stop);
+  background: -moz-linear-gradient(@angle,@start,@middle,@stop);
+  background: -o-linear-gradient(@angle,@start,@middle,@stop);
+  background: linear-gradient(@angle,@start,@middle,@stop);
+}
+.placeholderStyle(@col:#aaa,@siz:14px){
+  &::-moz-placeholder{
+    color: @col;
+    font-size: @siz;
+  }
+  &:-ms-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+  &::-webkit-input-placeholder {
+    color: @col;
+    font-size: @siz;
+  }
+}
+.fontSize(@f12){
+  font-size: @f12;
+}
+#display-fix{
+  .flex-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .flex-direction {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .flex-direction-co{
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .flex-nowrap {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .justify-content {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .justify-flex-start{
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  .justify-center{
+    -webkit-justify-content: center;
+    justify-content:center;
+  }
+  .align-center{
+    -webkit-box-align: center;
+    -webkit-align-items:center;
+    align-items:center;
+  }
+  .align-stretch{
+    align-content:stretch;
+  }
+}
+.box-flex (@grow){
+  -webkit-box-flex:@grow;
+  -webkit-flex:@grow;
+  -ms-flex:@grow;
+  flex:@grow;
+}
+
+.clearfix{
+  &:after,&:before{
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.hide{
+  display: none;
+}
+.box-sizi{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

@@ -1,0 +1,229 @@
+/* 
+*浮动文案开始
+*/
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 1000;
+} 
+ /* 底部文案 */
+.maintainNotice {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+}
+.wet-pbet {
+  width: 200px;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  background: #00543d;
+  padding: 3px;
+  z-index: 9999;
+}
+.wet-pbet .titlewei4 {
+  width: 200px;
+  height: 25px;
+  background: #003224;
+  .titleText{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 165px;
+    float:left; 
+    line-height:25px; 
+    padding-left:10px; 
+    font-size:12px; 
+    color:#FFFFFF
+  }
+}
+.wet-pbet .condng {
+  width: 190px;
+  background: #fff;
+  padding: 5px;
+  line-height: 20px;
+  color: #000000;
+  font-size: 12px;
+} 
+/* 首次显示的文案 */
+.popupNotice {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+}
+.popupNotice .close {
+  background: orange;
+  color: green;
+  border-radius: 12px;
+  line-height: 20px;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  font-size: 18px;
+  padding: 1px;
+  cursor: pointer;
+}
+.popupNotice .close::before {
+  content: "\2716";
+}
+/* place the button on top-right */
+.popupNotice .close {
+  top: -10px;
+  right: -10px;
+  position: absolute;
+}
+/* 登录广告样式 */
+.loginLogoBox {
+  width: 512px;
+  height: 542px;
+  padding: 6px;
+  background: white;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1001;
+}
+.loginLogoBox .imgBox {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+.loginLogoBox .botBox {
+  height: 28px;
+  position: relative;
+  width: 500px;
+}
+.loginLogoBox .botBox #cboxClose {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(https://otpuatm203.39otgame.com/common/js/colorbox/images/controls.png)
+    no-repeat -25px 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+}
+.loginLogoBox .botBox #cboxClose:hover {
+  background-position: -25px -25px;
+}
+/* 文案结束 */
+
+ /* 站点浮动图 */
+.floatComponent {
+  position: absolute;
+  z-index: 999;
+  .floatBar {
+    a{
+      img{
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+// 首页弹出广告样式
+.advertsCont{
+    margin: 15px 20px;
+    padding-right: 10px;
+    height: calc(~'100% - (50px + 46px + 30px)');
+    overflow-x: hidden;
+    overflow-y: auto;
+    line-height: 22px;
+    scrollbar-face-color: #8a9599;
+		scrollbar-shadow-color: #d0d8db;
+		scrollbar-highlight-color: #d0d8db;
+		scrollbar-3dlight-color: #d0d8db;
+		scrollbar-darkshadow-color: #d0d8db;
+		scrollbar-track-color: #d0d8db;
+		scrollbar-arrow-color: #d0d8db;
+}
+.advertsCont::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #d0d8db;
+}
+.advertsCont::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background-color: #d0d8db;
+}
+.advertsCont::-webkit-scrollbar-thumb {
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, .3);
+    background-color: #8a9599;
+}
+.advertsCont.noLineHeight{
+  line-height: normal;
+}
+// 首页点击最新消息弹出 历史消息
+.advertsCont.popNewsList{
+    height: calc(~'100% - (50px + 26px)');
+}
+.popNewsList{
+    dd{
+        border-bottom: 2px solid #e9ebed;
+        margin-bottom: 10px;
+        span{
+          font-size: 14px;
+          color: #b1b1b1;
+        }
+        p{
+          font-size: 14px;
+          color: #343434;
+          line-height: 22px;
+          padding:10px 0;
+        }
+        &:last-child{
+          border:none;
+        }
+    }
+}
+
+//
+//手机端提示框
+.iealertMain {
+	font-family: Arial, Helvetica, sans-serif, Verdana, "SimSun", "Microsoft YaHei", "SimHei", "STHeiti";
+	color:white;
+	width: 100%;
+	z-index: 9999;                                      /*设置浮动层次*/
+	overflow: visible;
+	position: fixed;
+	line-height:normal;
+	top: 0px;                                           /* 其他浏览器下定位，在这里可设置坐标*/
+	_position: absolute;                                /*IE6 用absolute模拟fixed*/
+	// _top: expression(documentElement.scrollTop + "px"); /*IE6 动态设置top位置*/
+	/* documentElement.scrollTop 设置浮动元素始终在浏览器最顶，可以加一个数值达到排版效果 */
+	background-color:gold;
+	height: 25px;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 2px;
+	#iealertX{
+		cursor: pointer; 
+		position:absolute;
+		top: 0px;
+		right: 5px;
+	}
+	a{
+    display: block;
+		font-size: 18px;
+	}
+}

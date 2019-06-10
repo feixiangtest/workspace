@@ -1,0 +1,127 @@
+/* LESS Document */
+@font-face {
+    font-family: 'element-icons2';
+    src: url('/resource/share/RESOURCE_VERSION/font/element-icons2.eot');
+    src: url('/resource/share/RESOURCE_VERSION/font/element-icons2.eot') format('embedded-opentype'),
+        url('/resource/share/RESOURCE_VERSION/font/element-icons2.woff') format('woff'),
+        url('/resource/share/RESOURCE_VERSION/font/element-icons2.ttf') format('truetype'),
+        url('/resource/share/RESOURCE_VERSION/font/element-icons2.svg#element-icons2') format('svg');
+    font-weight:400;
+	font-style:normal
+  }
+.el-icon-account,
+.el-icon-bankInfo,
+.el-icon-convert,
+.el-icon-correctFull,
+.el-icon-correctSmall,
+.el-icon-dealRecord,
+.el-icon-games,
+.el-icon-messages,
+.el-icon-plaintFull,
+.el-icon-plaintPierced,
+.el-icon-purse,
+.el-icon-refreshs,
+.el-icon-trumpet,
+.el-icon-wallet{
+    font-family:element-icons2 !important;
+}
+.el-icon-account:before{
+    content:"\e647";
+}
+.el-icon-bankInfo:before{
+    content:"\e648";
+}
+.el-icon-convert:before{
+    content:"\e649";
+}
+.el-icon-correctFull:before{
+    content:"\e650";
+}
+.el-icon-correctSmall:before{
+    content:"\e651";
+}
+.el-icon-dealRecord:before{
+    content:"\e652";
+}
+.el-icon-games:before{
+    content:"\e653";
+}
+.el-icon-messages:before{
+    content:"\e654";
+}
+.el-icon-plaintFull:before{
+    content:"\e655";
+}
+.el-icon-plaintPierced:before{
+    content:"\e656";
+}
+.el-icon-purse:before{
+    content:"\e657";
+}
+.el-icon-refreshs:before{
+    content:"\e658";
+}
+.el-icon-trumpet:before{
+    content:"\e659";
+}
+.el-icon-wallet:before{
+    content:"\e660";
+}
+
+
+.icon-pay{
+    //background-image: url('/resource/core/images/icon-pament.png');
+    //background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+    &.icon-weChat{
+        background-position: 0 0;
+    }
+    &.icon-alipay{
+        background-position: 0 -27px;
+    }
+    &.icon-qqpay{
+        background-position: 0 -54px;
+    }
+    &.icon-bankpay{
+        background-position: 0 -81px;
+    }
+    &.icon-qq{
+        background-position: 0 -108px;
+    }
+    &.icon-baidu{
+        background-position: 0 -135px;
+    }
+    &.icon-jd{
+        background-position: 0 -162px;
+    }
+    &.icon-ylbank{
+        background-position: 0 -189px;
+    }
+}
+
+.el-icon-rotation{
+    -webkit-animation:rotating 0.7s linear infinite;
+    animation:rotating 0.7s linear infinite
+}
+@-webkit-keyframes rotating{
+    0%{
+        -webkit-transform:rotateZ(0);
+        transform:rotateZ(0)
+    }
+    100%{
+        -webkit-transform:rotateZ(360deg);
+        transform:rotateZ(360deg)
+    }
+}
+@keyframes rotating{
+    0%{
+        -webkit-transform:rotateZ(0);
+        transform:rotateZ(0)
+    }
+    100%{
+        -webkit-transform:rotateZ(360deg);
+        transform:rotateZ(360deg)
+    }
+}

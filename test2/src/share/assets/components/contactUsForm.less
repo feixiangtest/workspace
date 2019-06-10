@@ -1,0 +1,95 @@
+//统一联络我们表单样式
+hr.bkLine{
+    width: 100%;
+    margin: 20px 0 20px 0px;
+    height: 1px;
+    border: none; 
+    background-color: #AAAAAA;
+}
+.contactUsForm{
+	font-family: Microsoft YaHei;
+	color: #343434;
+	font-weight: normal;
+	.contactFormItem{
+		margin-bottom: 10px;
+		position: relative;
+		height: 44px;
+		span{
+			display: block;
+			float: left;
+			width: 100px;
+			height: 42px;
+			line-height: 42px;
+			text-align: right;
+			font-size: 14px;
+		}
+	}
+	.inputCont{
+		margin-left:0px;
+		font-family: Microsoft YaHei;
+		display: block;
+		float: left;
+		width: 280px;
+		height: 42px;
+		background: #fff;
+		box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, .35);
+		border: none;
+		font-size: 14px;
+		text-indent: 10px;
+		outline: none;
+		.border-radius(2px);
+		.placeholderStyle;
+		&:focus{ 
+			border: 1px #ECDF05 solid; 
+			height: 40px;
+			width: 278px;
+		}
+	}
+	p.warnMsg{
+		font-family: Microsoft YaHei;
+		color: #e71516;
+		float: left;
+		height: 42px;
+		font-size:12px;
+		line-height: 42px;
+		margin: 0 0 0 0px;
+		text-indent: 20px;   
+	}
+	textarea{
+		margin-left:0px;
+		font-family: Microsoft YaHei;
+		box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, .35);
+		width: 280px;
+		height: 140px;
+		padding: 10px;
+		border-radius: 2px;
+		font-size: 12px;
+		border: none;
+		outline: none;
+		.placeholderStyle;
+	}
+	.h170 {
+		height: 170px;
+	}
+	.subButton{
+		padding-left: 100px;
+		input{
+			margin-left:0px;
+			font-family: Microsoft YaHei;
+			border-radius: 2px;
+			cursor: pointer;
+			width: 126px;
+			height: 42px;
+			background: #907C57;
+			font-size: 14px;
+			color: #343434;
+			border: none;
+			&:hover {
+				background: #D4AD29;
+			}
+			&.clearAll {
+				margin-left: 26px;
+			}
+		}
+	}
+}

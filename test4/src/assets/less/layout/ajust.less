@@ -1,0 +1,56 @@
+/**
+     集中处理 兼容问题
+ */
+// iphone5
+@media only screen and (max-width: 374px) {
+  .yo-navName [navName="1"] {
+    width:26%;
+    margin-left:0;
+  }
+  .yo-navName [navName="2"] {
+    width: calc(~'52% + 4px');
+  }
+  .yo-navName [navName="3"]{
+    margin-right:0;
+  }
+  .lhc-bet-li {
+    b{
+      font-size: 12px;
+    }
+    dl{
+      width: 31%;
+    }
+  }
+
+  .bar_chip a{
+    font-size: 12px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+  .LotteryTypes{
+      .shadeIn{
+          .selLotteryType{
+              // background: #f0f;
+          } 
+      }
+  }
+}
+// @media screen and (orientation: landscape) and (max-width: 568px)
+@media screen and (orientation: landscape) and (max-width: 767px){
+/*横屏 css*/
+  .LotteryTypes{
+      .shadeIn{
+          .selLotteryType{
+              dl{
+                  max-height: 180px;
+                  dt{
+                      height: 36px;
+                      line-height: 36px;
+                  }
+              }
+          } 
+      }
+  }
+}

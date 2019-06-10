@@ -1,0 +1,477 @@
+/* 赛车动画 */
+@imgUrl:'/static/lt_h5_v3/local/img';
+/* begin 背景区域*/
+// .topbg{
+//   overflow: hidden;
+//   background: url('@{imgUrl}/raceAnimate/topbg.jpg') repeat-x;
+//   height: 119px;
+//   position: absolute;
+//   top: 70px;
+//   z-index: 5;
+// }
+/* end 背景区域*/
+
+.background-dbsf { // 背景图等比缩放
+  background-position: 50% 50%;
+  background-origin: content-box;
+  background-size: contain;
+}
+.animate-area{
+  overflow: hidden;
+  // position: absolute;-------
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+/* begin 跑道区域*/
+.runway{
+  background: url('@{imgUrl}/raceAnimate/road.jpg') repeat-x;
+  position: absolute;
+  height: 100%;
+  z-index: 5;
+  .background-dbsf;
+}
+.way-cd{
+  width: 5500px;
+  right: 0;
+}
+.runway .endLine{
+  background: url('@{imgUrl}/raceAnimate/line.png') repeat-y;
+  background-size: contain;
+  transform: rotate(12deg);
+  position: absolute;
+  bottom: 0.4vh;
+  left: 30vw;
+  z-index: 6;
+  width: 1vh;
+  height: 75%;
+}
+.runway .startLine{
+  background: url('@{imgUrl}/raceAnimate/line.png') repeat-y;
+  background-size: contain;
+  transform: rotate(12deg);
+  position: absolute;
+  bottom: 0.4vh;
+  right: 20vw;
+  z-index: 6;
+  width: 1vh;
+  height: 75%;
+}
+/* end 跑道区域*/
+
+/* begin 挥旗区域*/
+.flag-part {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  .flag-gif {
+    position: absolute;
+    top: -1800px;
+    right: -5700px;
+  }
+  .animate-flag {
+    animation: smooth-flag 1.5s;
+  }
+  .animate-flag2 {
+    animation: smooth-flag 1.2s;
+  }
+}
+/* end 挥旗区域*/
+
+/* begin 跑道的赛车区域*/
+.carArea{
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  bottom: 5px;
+}
+.carArea .car{
+  z-index: 10;
+  height: 40px;
+  .car-vague {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: -1;
+  }
+}
+.carArea .car1{
+  position: absolute;
+  bottom: 274px;
+  right: 122px;
+  // >img {
+  //   height: 30px;
+  //   width: 130px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 18px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car2{
+  position: absolute;
+  bottom: 253px;
+  right: 125px;
+  // >img {
+  //   height: 31px;
+  //   width: 131px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 18px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car3{
+  position: absolute;
+  bottom: 235px;
+  right: 124px;
+  // >img {
+  //   height: 32px;
+  //   width: 135px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 18px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car4{
+  position: absolute;
+  bottom: 212px;
+  right: 125px;
+  // >img {
+  //   height: 34px;
+  //   width: 140px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 19px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car5{
+  position: absolute;
+  bottom: 189px;
+  right: 126px;
+  // >img {
+  //   height: 36px;
+  //   width: 144px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 20px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car6{
+  position: absolute;
+  bottom: 162px;
+  right: 126px;
+  // >img {
+  //   height: 38px;
+  //   width: 150px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 21px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car7{
+  position: absolute;
+  bottom: 134px;
+  right: 128px;
+  // >img {
+  //   height: 40px;
+  //   width: 155px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 22px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car8{
+  position: absolute;
+  bottom: 103px;
+  right: 130px;
+  // >img {
+  //   height: 42px;
+  //   width: 160px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 24px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car9{
+  position: absolute;
+  bottom: 66px;
+  right: 131px;
+  // >img {
+  //   height: 46px;
+  //   width: 168px;
+  // }
+  .car-wheel {
+    position: absolute;
+    width: 26px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+.carArea .car10{
+  position: absolute;
+  bottom: 22px;
+  right: 135px;
+  .car-wheel {
+    position: absolute;
+    width: 26px;
+  }
+  .wheel-flag1 {
+    left: 17px;
+    bottom: 2px;
+  }
+  .wheel-flag2 {
+    right: 12px;
+    bottom: 2px;
+  }
+}
+
+.car .car-wheel{
+  position: absolute;
+  .wheel {
+    position: absolute;
+    display: none;
+  }
+}
+.car .car-wheel .car-fast{
+  display: none;
+  position: absolute;
+}
+.car .car-after{
+  position: absolute;
+  z-index: -1;
+  display: none;
+  > img {
+    position: absolute;
+  }
+}
+/* end 跑道的赛车区域*/
+
+/* begin 红绿灯*/
+.runway-light{
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  bottom: 5px;
+}
+.runway-light .traffic-lights {
+  background: url('@{imgUrl}/raceAnimate/trafficLights.png') no-repeat;
+  height: 50%;
+  width: 50%;
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+  .background-dbsf;
+}
+.runway-light .light{
+  width: 50px;
+  height: 50px;
+  > img {
+    position: absolute;
+  }
+}
+.runway-light .red-light{
+  position: absolute;
+  display: none;
+}
+.runway-light .yellow-light{
+  position: absolute;
+  display: none;
+}
+.runway-light .green-light{
+  position: absolute;
+  display: none;
+}
+/* end 红绿灯*/
+
+/* begin 赛车动画结束之后的开奖动画区域 */
+.open-award-part{
+  width: 100%;
+  height: 100%;
+  display: none;
+  > img {
+    position: absolute;
+  }
+}
+.winner-area{
+  position: relative;
+  width: 100%;
+  height: 33.3%;
+}
+.winner-area .shape{
+  height: 80%;
+  width: 50%;
+  position: absolute;
+}
+.winner-area .winner-car{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.winner-area .winner-car1{
+  background: url('@{imgUrl}/raceAnimate/awardCar1.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car2{
+  background: url('@{imgUrl}/raceAnimate/awardCar2.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car3{
+  background: url('@{imgUrl}/raceAnimate/awardCar3.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car4{
+  background: url('@{imgUrl}/raceAnimate/awardCar4.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car5{
+  background: url('@{imgUrl}/raceAnimate/awardCar5.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car6{
+  background: url('@{imgUrl}/raceAnimate/awardCar6.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car7{
+  background: url('@{imgUrl}/raceAnimate/awardCar7.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car8{
+  background: url('@{imgUrl}/raceAnimate/awardCar8.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car9{
+  background: url('@{imgUrl}/raceAnimate/awardCar9.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-car10{
+  background: url('@{imgUrl}/raceAnimate/awardCar10.png')no-repeat;
+  background-size: 100% 100%;
+}
+.winner-area .winner-font{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  font-size: 34px;
+  font-style: italic;
+  // -webkit-text-fill-color: #5954a2;
+  -webkit-text-stroke-color: #00f8ff;
+  -webkit-text-stroke-width: 5px;
+}
+/*赛车滑入动画*/
+.winner-area .animate-car{
+  animation: smooth-car 0.2s;
+  position: absolute;
+  right: 0;
+}
+/*背景条形状滑入动画*/
+.winner-area .animate-shape{
+  animation: smooth-shape 0.2s;
+  position: absolute;
+  left: 0;
+}
+@keyframes smooth-flag {
+  from {
+    transform: rotate(-7deg);
+    top: -130vw;
+    right: -2200px;
+  }
+  to {
+    transform: rotate(-60deg);
+    top: 0;
+    right: 520vw;
+  }
+}
+@keyframes smooth-car {
+  from {right: -100%;}
+  to {right: 0;}
+}
+@keyframes smooth-shape {
+  from {left: -100%;}
+  to {left: 0;}
+}
+/* end 赛车动画结束之后的开奖动画区域 */

@@ -1,0 +1,39 @@
+/* LESS Document */
+@import "layerBase.less";   // 设置可通用样式
+
+@chiefly:     #557fde;    // 主要颜色
+@white:       #ffffff;    // 白色
+@hoverText:   #5E73A5;    // tab hover文本颜色
+
+.laymshade {
+    background-color: rgba(0, 0, 0, .4);
+}
+.layermchild {
+	background-color: @white;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	h3{
+		color: #666 !important;
+		background: #f6f6f6;
+	}
+}
+.layermbtn span{
+	&[type="0"] {
+		color: @chiefly;
+		background: @white;
+		border:1px solid @chiefly;
+		&:hover {
+			background: darken(@hoverText,2%);
+			border-color: darken(@hoverText,2%);
+			color:@white ;
+		}
+	}
+	&[type="1"] {
+		color: @white;
+		background: @chiefly;
+		border:1px solid @chiefly;
+		&:hover {
+			background: darken(@hoverText,2%) !important;
+			border-color: darken(@hoverText,2%) !important;
+		}
+	}
+}

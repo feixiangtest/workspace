@@ -1,0 +1,166 @@
+.yo-main{
+    padding: 4px 0 0;
+    width: 100%;
+}
+.logo{
+    margin: 8px auto;
+    width: 128px;
+    max-height: 160px;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+.yo-login {
+    margin-top: 14%;
+    .getSpace {
+        padding: 0 55px;
+    }
+    .yo-in-box {
+        position: relative;
+        height: 43px;
+        padding-top: 16px;
+        margin: 0 auto;
+        background-size: 22px 22px;
+        background-position: 1px 16px ;
+        background-repeat: no-repeat;
+        .fontSize(@f16);
+        .clearfix;
+        img{
+            display: block;
+            position: absolute;
+            width: 72px;
+            height: 30px;
+            right: 0;
+            top: 8px;
+        }
+        input{
+            height: 22px;
+            line-height: 22px;
+            padding-left: 10px;
+            width: calc(~"100% - (24px * 2)");
+            font-size: 0.95rem;
+            .floatL;
+        }
+        i{
+            display: block;
+            .floatL;
+            &.icon-menber-myaccount,&.icon-password,&.icon-verification-code{
+                .fontSize(20px);
+                &:before{
+                    margin: 0px;
+                }
+            }
+            &.icon-verification-code{
+                .fontSize(22px);
+                margin-top: -4px;
+            }
+            &.eyes{
+                .fontSize(22px);
+                margin-top: -4px;
+                &:before{
+                    margin: 0px;
+                }
+            }
+        }
+        img.iconImg{
+            left: -5px;
+            top: 16px;
+            width: 30px;
+        }
+        input.spcInpt{
+           margin-left: 20px;
+        }
+    }
+    a.yo-but{
+        display: block;
+        width: calc(~"100% - (50px) *2");
+        margin: 10px auto;
+        height: 33px;
+        line-height: 33px;
+        .border-radius(1.1rem);
+        text-align: center;
+    }
+    p.red{
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+.yo-fuzhu {
+    margin: 34px auto;
+    overflow: hidden;
+    width:calc(~"100% - (50px) *2");
+    ul{
+        padding: 5px 0;
+        width: 100%;
+        #display-fix > .flex-container;
+        #display-fix > .flex-direction;
+        #display-fix > .justify-content;
+    }
+    li{
+        display: inline-block;
+        a{
+            display: block;
+            height: 20px;
+            line-height: 20px;
+        }
+        i{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            margin-top: -5px;
+            &:before{
+                margin-left: 0px;
+            }
+        }
+    }
+}
+.thirdparty { 
+    height:300px;
+    padding: 64px 15px 0;
+    display: block;
+    fieldset {
+        display: inline-block;
+        width: 100%;
+        border: none;
+    }
+    legend {
+        text-align: center;
+        padding: 0 10px;
+    }
+    a.wechat {
+        display: block;
+        margin: 10px auto 0;
+        font-size: 46px;
+        text-align: center;
+    }
+}
+/*****适应iPhone5****/
+@media only screen and (max-width: 374px) {
+	.logo{
+		margin-top:0px;
+		margin-bottom: 6px;
+	}
+    .yo-login {
+        margin-top: 0;
+    }
+	.yo-login .getSpace{
+    	 padding:0 40px;
+    }
+    .yo-login a.yo-but{
+    	width:calc(~"100% - (32px) *2");
+    	margin:20px 32px 0;
+    }
+    .yo-fuzhu ul li a{
+        .fontSize(@f12);
+    }
+    .yo-fuzhu{
+        width:calc(~"100% - (32px) *2");
+    	margin:20px 32px 0;
+	}
+	.thirdparty{
+		font-size: 0.95rem;
+        padding-top: 30px;
+	}
+}

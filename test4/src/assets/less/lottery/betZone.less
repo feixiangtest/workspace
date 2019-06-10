@@ -1,0 +1,265 @@
+.list {
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    &:last-child {
+        margin-bottom:0px;
+    }
+} 
+.bet-list .item {
+    padding: 5px !important;
+}
+.bet-list .item-accordion {
+    background: #fff;
+}
+.lhc-bet-li {
+    padding: 1px 0;
+    margin-left: 6px;
+    dl {
+        display: inline-block;
+        width: 23%;
+        margin: 3px 3px;
+        border: 1px solid #b0b0b0;
+        background: linear-gradient(#ffffff, #e2e2e2);
+        border-radius: .5rem;
+        padding: 1px 0;
+        position: relative;
+        height: 56px;
+        text-align: center;
+        &.on {
+            background: linear-gradient(#fcda51, #ffa800);
+        }
+    } 
+    dt {
+        padding: 4px 0;
+        font-weight: bold;
+    } 
+} 
+.bet-list {
+    .item.item-stable {
+        border-color: #fad0d0;
+        background-color: #fef1f1;
+        color: #e71516;
+        position: relative;
+    }
+    .icon {
+        margin-right: 10px;
+        background-color: #e71516;
+        color: #fef1f1;
+        padding: 0 4px;
+        border-radius: 4px;
+    } 
+}
+.bet-li {
+    padding: 1px 0;
+    margin-left: 6px;
+    dl {
+        display: inline-block;
+        width: 22.5%;
+        margin: 3px 3px;
+        border: 1px solid #b0b0b0;
+        background: linear-gradient(#ffffff, #e2e2e2);
+        border-radius: .5rem;
+        padding: 1px 0;
+        position: relative;
+        height: 57px;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        &.on {
+            background: linear-gradient(#fcda51, #ffa800);
+        }
+    }
+    dt {
+        padding: 4px 0;
+        font-weight: bold;
+        i {
+            margin-right: 1px;
+            &.fruit{
+                margin-top: -3px;
+                margin-bottom: -8px;
+            }
+        }
+    }
+    dd{
+        padding-bottom: 2px;
+    }
+    dt,dd {
+        line-height: 1.42857;
+    }
+    dt.zhengMa{
+        line-height: 3;
+    }
+    .yo-lianma-dl{
+        min-height: 36px;
+        span i{
+            &.fruit{
+                margin-top: 2px;
+                margin-bottom: 0px;
+            }  
+        }
+    }
+}
+/*SSC*/
+.betItemWidth {
+    width: 31% !important;
+}
+.betItemHeight {
+    height: 45px !important;
+}
+.betItemHeightType {
+    height: 45px !important;
+}
+/*KL8*/
+.babyblueball-sm {
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: black;
+    font-style: normal;
+    text-align: center;
+    background: url('@{imgUrl}/ball-sm.png')
+}
+.babyblueball_1 {
+    background: url('@{imgUrl}/ball-sm.png') no-repeat 0 -90px;
+}
+.babyblueball_2 {
+    background: url('@{imgUrl}/ball-sm.png') no-repeat 0 -30px;
+}
+/*selected*/
+.betOn {
+    background: linear-gradient(#fcda51, #ffa800);
+}
+.betOff {
+    background: linear-gradient(#ffffff, #e2e2e2);
+}
+/*CQXYNC*/
+.fruitItem>dl {
+    padding: 2px 0 0 0 !important
+}
+.fruitItem>dl>dt {
+    padding: 0 !important
+}
+.bet_disabled {
+    opacity: .4;
+}
+.bet_abled{
+    opacity: 1;
+}
+ 
+.yo-tema-all{
+     width: calc( ~"100vw - 23vw - 20px");
+}
+.yo-qiu-item{ 
+    position: relative; 
+    width:calc( ~"33.333% - 4% - .126rem"); 
+    margin: .9rem 2% 0; 
+    text-align: center; 
+    border: .063rem solid #ccc; 
+    border-radius:.5rem;
+    ul{ 
+        width: 100%;
+        li{ 
+            line-height: 24px;
+        }  
+    }
+    li:hover,li.cur{ 
+        background: #428bca; 
+        color: #fff;
+    }  
+}
+.qiu-titlt{ 
+    position: relative;
+    &::after{
+        position: absolute; 
+        top:.5rem; 
+        right:.63rem; 
+        content: ""; 
+        display: block; 
+        border-width:  6px 6px 0; 
+        border-style: solid; 
+        border-color: #666 transparent; 
+    }
+    .son-qiu{ 
+        display: block;  
+        line-height: 1.386rem; 
+        margin: .26rem ; 
+        margin-left:.5rem  
+    }  
+}  
+.yo-hi-xiala{ 
+    display: block; 
+    height: 106px; 
+    overflow-x: auto;
+    position: absolute; 
+    background: #fff; 
+    width: 100%; 
+    border: .063rem solid #ccc; 
+    border-radius:.5rem; 
+    padding: 4px 0;  
+}
+.lhc-bet-li b{  font-weight: normal;}
+.bet-li dt i {margin: 0 1px 0 0;}
+
+
+
+
+
+#pageTop{
+    // box-sizing:content-box;
+    .yoHea{
+        flex:0 0 44px;/* 头、脚尺寸固定，不放大、不缩小 */
+        position: fixed;
+        z-index: 80;
+        width: 100%;
+        height: 44px;
+        .yoHeader{
+            position: static;
+        }
+    }
+    #navName{
+        flex:0 0 36px;/* 头、脚尺寸固定，不放大、不缩小 */
+        height: 36px;
+        // position: static;
+    }
+    #betfooter{
+        flex:0 0 50px;/* 头、脚尺寸固定，不放大、不缩小 */
+        height: 50px;
+        // position: static;
+    }
+}
+.yoFlexbox{
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -mz-flexbox; 
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-content:space-between;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    // height: 100%;
+}
+.yoCenterCon{
+    width: 100%;
+    flex:1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 81px;
+    bottom: 50px;
+    position: absolute;
+    height: calc(~'100% - (81px + 50px)');
+}
+.yotou22{
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.yoPagefix{
+    padding: 0px;
+}

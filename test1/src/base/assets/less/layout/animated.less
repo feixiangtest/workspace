@@ -1,0 +1,57 @@
+.animated {
+  animation-duration: 300ms;
+  animation-fill-mode: both
+}
+
+
+.fadeInUpBig {
+  animation-name: fadeInUpBig
+}
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100%,0)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 1;
+    transform: translate3d(0,-100%,0)
+  }
+
+  to {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+.fadeInDownBig {
+  animation-name: fadeInDownBig;
+  display: block;
+}
+
+//
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0,2000px,0)
+  }
+}
+
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig;
+  display: block;
+}
+

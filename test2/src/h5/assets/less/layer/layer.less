@@ -1,0 +1,132 @@
+/* LESS Document */
+/* layer弹层 基本样式样式 */
+.layermbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 19891014;
+}
+.laymshade,
+.layermmain {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.laymshade {
+    pointer-events: auto;
+    overflow: hidden;
+}
+
+.layermmain {
+    display: table;
+    font-family: Helvetica, arial, sans-serif;
+    pointer-events: none;
+	.section {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+.layermchild {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    display: inline-block;
+    text-align: left;
+    font-size: 14px;
+    pointer-events: auto;
+	transition: all .18s;
+    -webkit-transition: all .18s;
+    position: relative;
+    border-radius: 4px;
+	width: 300px;
+	min-height: 120px;
+	background-color: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.layermchild h3{
+	display: none;
+}
+.layermchild h4{
+	min-height: 50px;
+	line-height: 30px;
+	border-bottom: 1px solid #EFEFF2;
+	font-size: 18px;
+	color: #343434;
+	font-weight: normal;
+	padding: 10px 20px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.layermcont {
+	line-height: 24px;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 0 15px 0;
+	margin: 15px 0;
+	max-height: 200px;
+	// min-height: 71px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	text-align: center;
+	word-break: break-all;
+	color: #343434;
+	.yo-tancen{
+		display: table;
+		width: 100%;
+		text-align: center;
+		min-height: 70px;
+		p{
+			vertical-align: middle;
+    		display: table-cell;
+		}
+		img{
+			max-width:100%;
+		}
+	}
+}
+
+.layermbtn {
+    width: 100%;
+    height: 39px;
+	line-height: 39px;
+	border-top:1px solid #EFEFF2;
+	text-align: center;
+	border-radius: 0 0 4px 4px;
+	span{
+		display: block;
+		font-size: 16px;
+		line-height: 38px;
+		border-radius: 0 0 4px 4px;
+		&+span{
+			border-left:1px solid #EFEFF2;
+		}
+		&:hover, &:active{
+			background: darken(#fff,2%);
+		}
+    }
+}
+
+.laymshade {
+    background-color:rgba(56,56,56,0.68);
+}
+.layerConfirm{
+	.layermbtn{
+		overflow: hidden;
+	}
+	.layermbtn span{
+		width: 50%;
+		float: left;
+	}
+}
+
+.layermcont .yo-tancen #mobAdContent p{
+	display: block;
+}

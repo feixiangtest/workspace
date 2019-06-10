@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="color-blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>alone</title>
+  <!--日志监控插件-->
+  <script type="text/javascript" src="/resource/share/catchListen.js"  crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      var IEvar = '9'
+      var IEnum = navigator.userAgent.toLowerCase()
+      // 检验是不是IE9 localstorage 只适用于IE9及以上
+      if (IEnum.indexOf('msie') > -1) {
+        if (Number(IEnum.match(/msie ([\d.]+)/)[1]) < IEvar) {
+          // location.href = '/updateBrowser.html'
+          alert('您的浏览器太旧或者开启了隐私模式/无痕模式，无法浏览网页，请更换浏览器或使用常规模式，给您带来的不便，表示抱歉！！')
+          window.opener = null
+          window.open('', '_self', '')
+          window.close()
+        }
+        return false
+      }
+      // Promise是否能用
+      if (typeof (Promise) === 'undefined') {
+        document.write('<script src="/resource/share/es6-promise.auto.min.js"><\/script>')
+      }
+    })()
+  </script>
+  <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/layer.m.js"></script>
+  <script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/other/_.js" id="_js"></script>
+  <link type="text/css" rel="stylesheet" href="/resource/share/RESOURCE_VERSION/css/reset.css">
+  <link type="text/css" rel="stylesheet" href="/resource/share/RESOURCE_VERSION/css/layerBlue.css">
+</head>
+<body id="appBody">
+<div id="app" style="height: 100%;width: 100%">
+  <router-view></router-view>
+</div>
+<script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/request.js"></script>
+<script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/common.js"></script>
+<script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/requestUrl.js"></script>
+<script type="text/javascript" src="/resource/share/RESOURCE_VERSION/js/self/myLayer.js"></script>
+</body>
+</html>

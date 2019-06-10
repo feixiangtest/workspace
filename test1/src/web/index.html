@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <title></title>
+    <!--日志监控插件-->
+    <script type="text/javascript" src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/js/common/catchListen.js"></script>
+    <script>
+      (function () {
+        // 日志监控初始化数据
+        window._initCL('GH5')
+      })()
+    </script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'yofont';
+        src: url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.eot?58017590');
+        src: url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.eot?58017590#iefix') format('embedded-opentype'),
+        url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.woff2?58017590') format('woff2'),
+        url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.woff?58017590') format('woff'),
+        url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.ttf?58017590') format('truetype'),
+        url('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/font/yofont.svg?58017590#yofont') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      /* */
+      body{
+        margin: 0;
+        padding: 0;
+        background: #ececec;
+      }
+      /* loading 加载效果 */
+      #gavinPlay{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        background:url("CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/loading.svg") center no-repeat;
+        background-size:cover;
+        /* 随便设置宽高值，测试 */
+        width:70px;
+        height:70px;
+        margin-left: -35px;
+        margin-top: -35px;
+        /* 设置默认样式，开启3d硬件加速 */
+        -webkit-transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+        transform:translate3d(0,0,0);
+        /* 设置动画，animation:动画名称 动画播放时长单位秒或微秒 动画播放的速度曲线linear为匀速 动画播放次数infinite为循环播放; */
+        -webkit-animation:play 0.9s linear infinite;
+        -moz-animation:play 0.9s linear infinite;
+        animation:play 0.9s linear infinite;
+      }
+      #gavinText{
+        color: #f45c03;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin-top: -9px;
+        font-size: 12px;
+        position: absolute;
+      }
+      @-webkit-keyframes play{
+        0%  {
+          /*顺时针旋转*/
+          -webkit-transform:rotate(0deg);
+        }
+        100% {
+          /*顺时针旋转*/
+          -webkit-transform:rotate(360deg);
+        }
+      }
+      @-moz-keyframes play{
+        0%  {
+          -moz-transform:rotate(0deg);
+        }
+        100% {
+          -moz-transform:rotate(360deg);
+        }
+      }
+      @keyframes play{
+        0%  {
+          transform:rotate(0deg);
+        }
+        100% {
+          transform:rotate(360deg);
+        }
+      }
+      #preApp {
+        width: 100%; height: 100%;
+      }
+    </style>
+    <script>
+      (function () {
+        // 设置标题头
+        // document.title = window.location.host
+        var IEvar = '9'
+        var IEnum = navigator.userAgent.toLowerCase()
+        // 检验是不是IE9 localstorage 只适用于IE9及以上
+        if (IEnum.indexOf('msie') > -1) {
+          if (Number(IEnum.match(/msie ([\d.]+)/)[1]) < IEvar) {
+            // location.href = '/updateBrowser.html'
+            alert('您的浏览器太旧或者开启了隐私模式/无痕模式，无法浏览网页，请更换浏览器或使用常规模式，给您带来的不便，表示抱歉！！')
+            window.opener = null
+            window.open('', '_self', '')
+            window.close()
+          }
+          return false
+        }
+        window[ addEventListener ? 'addEventListener' : 'attachEvent' ](addEventListener ? 'load' : 'onload', function () {
+          setTimeout(function () {
+            try {
+              window.localStorage.setItem('T', '1')
+              window.localStorage.removeItem('T')
+            } catch (e) {
+              alert('您的浏览器太旧或者开启了隐私模式/无痕模式，无法浏览网页，请更换浏览器或使用常规模式，给您带来的不便，表示抱歉！！！')
+              window.opener = null
+              window.open('', '_self', '')
+              window.close()
+            }
+          }, 0)
+        })
+        // 自定义写入文档流，有localStorage本地缓存功能
+        window._dinWriteFile = function (url) {
+          if (!url) {
+            return
+          }
+          var name = url.split('/')[url.split('/').length - 1]
+          var isDebug = localStorage.getItem('debug') === 'true'
+          if (localStorage.getItem(name) && !isDebug) {
+            document.write('<script id="' + name + '">' + localStorage.getItem(name) + '<\/script>') // 取缓存
+          } else {
+            document.write('<script id="' + name + '" src="' + url + '"><\/script>')
+            !isDebug && setLocalStorage(url, name) // 请求资源保存到localStorage
+          }
+          if (!isDebug) {
+            var nameArr1 = name.split('?')
+            var nameArr2 = nameArr1[0].split('.')
+            for (var key in localStorage) { // 清理localStorage该文件的缓存
+              if (key === name) {
+                continue
+              }
+              var keyArr1 = key.split('?')
+              var keyArr2 = keyArr1[0].split('.')
+              // 兼容xxx?_=1 xxx?_=2  与 xxx.1.js xxx.2.js
+              if (keyArr1[0] === nameArr1[0] ||
+          (nameArr2.length === keyArr2.length && keyArr2.length >= 3 && nameArr2[0] === keyArr2[0] &&
+            nameArr2[nameArr2.length - 1] === keyArr2[keyArr2.length - 1])) {
+                delete localStorage[key]
+              }
+            }
+          }
+          // 设置本地缓存
+          function setLocalStorage (url, key) {
+            setTimeout(function () {
+              var ajax = new XMLHttpRequest()
+              ajax.open('get', url)
+              ajax.send()
+              ajax.onreadystatechange = function (xml) {
+                if (ajax.readyState === 4 && ajax.status === 200) { // 资源请求成功
+                  localStorage.setItem(key, ajax.responseText) // 设置本地缓存
+                }
+              }
+            }, 10 * 1000) // 10秒钟之后再次请求资源保存到localStorage
+          }
+        }
+        // Promise是否能用
+        if (typeof (Promise) === 'undefined') {
+          window._dinWriteFile('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/js/common/es6-promise.auto.min.js')
+        }
+        // fetch是否能用
+        if (typeof (fetch) === 'undefined') {
+          window._dinWriteFile('CDNURL_VARIABLE/static/RESOURCE_VERSION/local/js/common/fetch.min.js')
+        }
+      })()
+    </script>
+    <script>
+      (function () {
+        if (!window._fileMapInfo || !window._fileMapInfo.url || !window._fileMapInfo.fileName) { // 开发环境或者异常情况
+          var timestamp = new Date().getTime() // 时间戳
+          window._fileMapInfo = {
+            fileName: 'FileMap.js?_=' + timestamp, // 增加?_= 时间戳是为了刷新缓存，否则只要本地有该文件的缓存，就不会再取最新的文件
+            url: '/static/RESOURCE_VERSION/FileMap.js?_=' + timestamp
+          }
+        }
+        window._dinWriteFile(window._fileMapInfo.url) // 加载fileMap.js
+      })()
+    </script>
+    <script>
+      (function () {
+        // 需要加载的js、css文件，如果文件内容有改变，必须要改变名，可通过?_=11加参数的方式来刷新localStorage缓存，如：share.css?_=1
+        // isDynamicCDN 是否自动追加当前站点的CDN（打包时配置的CDN），默认false
+        // isSync是否同步，如果layer.m.js与jquery.share.min.js文件都配置了isSync:true，则这两个文件相对之间必须按顺序加载并执行，默认false
+        var loadFiles = [{
+          fileType: 'css', url: '/static/RESOURCE_VERSION/share/share.css', isDynamicCDN: true, isSync: false // 分享插件css
+        }, {
+          fileType: 'css', url: '/static/RESOURCE_VERSION/local/css/common/muse-ui.css', isDynamicCDN: true
+        }, {
+          fileType: 'css', url: '/static/RESOURCE_VERSION/local/css/common/mint-style.css', isDynamicCDN: true
+        }, {
+          fileType: 'css', url: '/static/RESOURCE_VERSION/local/css/common/index.css?_=1', isDynamicCDN: true
+        }, {
+          fileType: 'css', url: '/static/RESOURCE_VERSION/local/css/common/layer.css', isDynamicCDN: true
+        }, {
+          fileType: 'js', url: '/static/RESOURCE_VERSION/local/js/common/jquery.forms.js', isDynamicCDN: true
+        }, { // 登陆MD5加密插件，目前只有登录使用（window._md.hex_md5），可使用js在线解密工具查看源码（https://tool.lu/js/）
+          fileType: 'js', url: '/static/RESOURCE_VERSION/local/js/common/md5.js', isDynamicCDN: true
+        }, {
+          fileType: 'js', url: '/static/RESOURCE_VERSION/share/jquery.share.min.js', isDynamicCDN: true, isSync: true // 分享插件js
+        }, {
+          fileType: 'js', url: '/static/RESOURCE_VERSION/local/js/common/layer.m.js', isDynamicCDN: true, isSync: true
+        }]
+        window._asyncLoadFiles = [] // 异步加载的文件
+        window._syncLoadFiles = [] // 同步加载的文件
+        for (var i = 0; i < loadFiles.length; i++) {
+          var o = loadFiles[i]
+          if (o.isSync === true) {
+            window._syncLoadFiles.push(o)
+            // 是否非线上模式
+            if (window.FileMap._isPro !== true) {
+              document.write('<script src="' + o.url + '"><\/script>')
+            }
+          } else {
+            window._asyncLoadFiles.push(o)
+          }
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="new_loading" style="display:none;">
+      <div id="gavinPlay"></div>
+      <div id="gavinText">正在进入</div>
+    </div>
+    <!-- 如果是去后端拿数据，则进行load, 样式用的是 index.html -->
+    <div id="third_loading" class="mengceng leftMengceng" style="background:none;display:none" >
+      <div  class="lds-css ng-scope" >
+        <div class="yo-jiazai">
+          <div class="lds-ellipsis">
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+          </div>
+          <span style="position: relative;top:-40px;left:108px;font-size:16px;color:#FFFFFF">加载中...</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var location = window.location.href
+        if (location.indexOf('thirdPartyJump') <= 0) {
+          document.getElementById('new_loading').style.display = 'block'
+        } else {
+          document.getElementById('third_loading').style.display = 'block'
+        }
+      })()
+    </script>
+    <div id="app" style="width: 100%;">
+      <router-view></router-view>
+    </div>
+    <script>
+      // localStorage本地缓存
+      (function () {
+        window.FileMap.addLoadTask(window._asyncLoadFiles)
+        // 是否线上模式
+        if (window.FileMap._isPro === true) {
+          var baseFile = window.FileMap.getLoadWebpackTask('app')
+          // localStorage本地存储 —— 加载webpack打包之后的vue基本文件
+          window.FileMap.addLoadTask(window._syncLoadFiles.concat(baseFile))
+        }
+      })()
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics 埋点-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130356487-1"></script>
+    <script>
+      (function () {
+        window.dataLayer = window.dataLayer || []
+        function gtag () {
+          window.dataLayer.push(arguments)
+        }
+        gtag('js', new Date())
+        gtag('config', 'UA-130356487-1')
+        window._ga_is_created = false
+        window._dinWarmUp = function (a, b, c, d, e, f) {
+          var lHost = location.host
+          // 域名包含以下关键字信息，不做埋点
+          var keywordArr = ['10.21.11', ':3100', 'localhost', 'dev', 'sit', 'uat', 'bwt', 'try1024']
+          for (var i = 0; i < keywordArr.length; i++) {
+            if (lHost.toLowerCase().indexOf(keywordArr[i]) >= 0) {
+              return
+            }
+          }
+          if (window.ga) {
+            if (!window._ga_is_created) {
+              window._ga_is_created = true
+              window.ga('create', 'UA-130356487-1', {'cookieDomain': 'none'})
+            }
+            window.ga(a, b, c, d, e, f)
+          }
+        }
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,452 @@
+.user-banner{
+    text-align: center;
+    .tx {
+        padding-top: 20px;
+        img{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 5px;
+            .border-radius(40px);
+        }
+    }
+    .bt{
+        padding: 5px 0px 25px 0px;
+        .fontSize(@f16);
+        p{
+            line-height: 20px;
+            text-align: center;
+            span{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+.yo-but-bar{
+    .clearfix;
+    a{
+        display: block;
+        width: 50%;
+        .floatL;
+        height: 55px;
+        line-height: 55px;
+    }
+    .yo-zhye-but{
+        line-height: 1.2;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        .money{
+            .fontSize(18px);
+        }
+    }
+}
+.yo-user-nav{
+    ul{
+        #display-fix > .flex-container;
+        #display-fix > .flex-wrap;
+        #display-fix > .justify-center;
+        width: 100%;
+    }
+    li{
+        display: block;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:33.33333%;
+        &&:nth-child(4n+0){
+            border-left:none;
+        }
+        a{
+            display: block;
+            padding: 18px 10px;
+            position: relative;
+        }
+        i{
+            display: block;
+            .fontSize(30px); 
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    }
+    #messageCount{
+        position: absolute;
+        top: 20px;
+        right: 42px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+.conver{
+  .depositMain{
+    margin-bottom: 3rem;
+  }
+}
+.secondForm{
+    .depTips{
+        background: none;
+        margin: 0px;
+    }
+}
+.formIput{
+    .item-input;
+    position: relative;
+    .typeinput{
+        border: none;
+        padding-left: 15px;
+        .placeholderStyle;
+      background-clip: padding-box;
+      height: 30px;
+      line-height: 30px;
+    }
+    .specialbox .Tspe{
+        right: -20px;
+        img{
+            height: 100%;
+        }
+    }
+    .paybankName{
+        text-align: right;
+        flex: 1;
+        line-height: 33px;
+        padding-right: 35px;
+    }
+    .radio_span{
+        position: absolute;
+        right: 0px;
+        top: 8px;
+    }
+    .itemNeir{
+        .floatR;
+        text-align: right;
+        flex: 1;
+        padding:7px 8px 7px 10px;
+        line-height: 21px;
+    }
+    .banktitle{
+        padding: 7px 10px 7px 0;
+        .fontSize(@f16);
+    }
+}
+.secondForm2{
+    dd{
+       &:nth-child(3n+0){
+           margin-bottom: 10px;
+       }
+    }
+}
+.secondForm4{
+    .formIput {
+        .itemTxt{
+            width: auto;
+        }
+        .itemTxt.longText{
+            width: 96px;
+        }
+    }
+    .formIput.timeButton{
+        margin-bottom: 30px;
+        padding: 10px;
+        button{
+            border-radius: 4px;
+            border: 0;
+            padding: 7px 10px;
+            margin: 0 6px;
+            background: #ececec;
+            // font-size: 12px;
+        }
+        button.active{
+            background: #ff9b39;
+            color: #fff;
+        }
+    }
+}
+.secondForm-new5{
+    dd{
+        &:nth-child(3n+0){
+           margin-bottom: 0px;
+        }
+    }
+}
+.secondForm-new5.recordList2{
+    dd{
+        div{
+            padding-right:10px;
+        }
+    }
+}
+.input-two{
+    text-align: right;
+    flex:1;
+    padding-right: 8px;
+    .fontSize(@f16);
+    .border-radius(2px);
+}
+.messaList{
+    .recordList;
+    dd{
+        padding: 12px 8px;
+        span{
+            line-height: 12px;
+
+        }
+    }
+}
+.mint-loadmore{
+  .msg-time{
+    margin: 0;
+    float: none;
+  }
+}
+.messDetails{
+    padding: 8px;
+    padding-bottom: 68px;
+    h1{
+        margin-top: 12px;
+        .fontSize(20px);
+        line-height: 20px;
+    }
+    .item-time{
+        display: block;
+        margin: 0px;
+        padding: 12px 0;
+        text-align: right;
+        line-height: 14px;
+    }
+    p{
+        line-height: 22px;
+    }
+}
+.yo-dele{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.platformTips{
+    text-align:center;
+    font-size:14px;
+    padding:10px;
+    margin-top:10px
+}
+.yo-toggle {
+  position: absolute;
+  display: inline-block;
+  padding: 5px;
+  pointer-events: auto;
+  z-index: 1;
+}
+.yo-toggle input {
+  display: none;
+}
+.yo-toggle .track {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 28px;
+  border-radius: 20px;
+  content: ' ';
+  cursor: pointer;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-property: background-color, border;
+  transition-property: background-color, border;
+  pointer-events: none;
+}
+.yo-toggle .handle {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  -webkit-transition: .3s cubic-bezier(0, 1.1, 1, 1.1);
+  transition: .3s cubic-bezier(0, 1.1, 1, 1.1);
+  -webkit-transition-property: background-color, transform;
+  transition-property: background-color, transform;
+}
+.yo-toggle .handle:before {
+  position: absolute;
+  top: -4px;
+  left: -21.5px;
+  padding: 18.5px 34px;
+  content: " ";
+}
+.yo-toggle input:checked + .track .handle {
+  -webkit-transform: translate3d(20px, 0, 0);
+  transform: translate3d(20px, 0, 0);
+  left: 18px;
+}
+.lodingpic{
+    animation: run .5s linear 0s infinite;
+}
+.lodingPic {
+    display: inline-block;
+    transition: All 1s ease-in-out;
+    -webkit-transition: All 1s ease-in-out;
+    -moz-transition: All 1s ease-in-out;
+    -o-transition: All 1s ease-in-out;
+}
+.lodingPic:hover {
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+}
+.platformList{
+    margin-bottom: 10px;
+    .formIput{
+        padding: 2px 0 2px 8px;
+        border-bottom:none;
+    }
+    .itemTxt{
+        flex:2;
+    }
+    .itemNeir{
+        flex:2;
+    }
+}
+.mint-loadmore{
+  min-height: 100%;
+}
+.mint-loadmore-bottom{
+  display: none;
+}
+.mint-loadmore-top{
+    text-align: center;
+    height: 60px;
+    margin-top: -60px;
+    i.icon-load-top{
+        display: block;
+        margin: 0 auto;
+        font-size: 18px;
+        height: 30px;
+    }
+    em{
+        .fontSize(@f16);
+        padding-bottom: 10px;
+        display: block;
+        margin: -12px auto 0;
+        height: 16px;
+    }
+
+}
+.din-form {
+  font-size: 16px;
+  margin-bottom: 0!important;
+  .din-title {
+    width: @f100;
+    word-wrap: break-word;
+  }
+  .din-content {
+    width: calc(~'100% - 100px');
+    margin: auto 5px;
+    word-wrap: break-word;
+  }
+  .pwd-see-div {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+  }
+  .pwd-see-img {
+    height: 18px;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+  }
+  .din-line {
+    padding: 0!important;
+    line-height:34px;
+    min-height:34px;
+  }
+  .din-input {
+    width: 100%;
+  }
+  .per-width-l {
+    width: 70%;
+  }
+  .per-width-r {
+    width: 30%;
+  }
+  .pr10 {
+    padding-right: 10px;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+}
+.din_error_msg:before {
+  right: auto!important;
+}
+.din-swipe {
+  width: 100%;
+  height: 100%;
+  .swipe-full {
+    width: 100%;
+    height: 100%;
+  }
+  .mint-swipe-item {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swipe-btn-mask {
+    width: 100%;
+    height: calc(~'100% - 44px');
+    position: absolute;
+    bottom: 0;
+    z-index: 10000;
+  }
+  .swipe-btn-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10000;
+    img {
+      position: relative;
+      left: 5px;
+      top: 5px;
+    }
+  }
+  .swipe-btn-area {
+    width: 30px;
+    position: absolute;
+    bottom: calc(~'50% - 44px');
+    z-index: 10000;
+  }
+  .swipe-btn-prev {
+    left: 10px;
+    img {
+      float: left;
+      margin: 10px;
+    }
+  }
+  .swipe-btn-next {
+    right: 10px;
+    img {
+      float: right;
+      margin: 10px;
+    }
+  }
+}
+#completeAccount{
+    .depTips{
+      padding-left: 12px;
+      font-weight: bold;
+      line-height: 34px;
+      font-size: 12px;    
+      margin-top: 0;
+      background: none;
+    }
+  }

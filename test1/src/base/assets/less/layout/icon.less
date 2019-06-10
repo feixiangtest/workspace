@@ -1,0 +1,222 @@
+.yo-Image{
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.Image-hot{
+    width: 36px;
+    height: 36px;
+    background-image: url('@{anyUrl}/img/game/icoHot.png');
+}
+.Image-gamefree{
+    width: 36px;
+    height: 36px;
+    background-image: url('@{anyUrl}/img/game/icoFree.png');
+}
+.Image-fire{
+    width: 36px;
+    height: 36px;
+    background-image: url('@{anyUrl}/img/game/icoFire.png');
+}
+.icon-realName{
+    width: 1rem;
+    height: 1rem;
+    // background-image: url('@{anyUrl}/img/common/realName.svg');
+}
+.icon-bankNum{
+    width: 1rem;
+    height: 1rem;
+    // background-image: url('@{anyUrl}/img/common/bankNum.svg');
+}
+.Image-kuai{
+    width: 20px;
+    height: 20px;
+    background-image: url('@{anyUrl}/img/member/kuai.png');
+}
+i[class*="icon-radio"]{
+    font-size: 22px;
+}
+.icon-arrows-top,.icon-arrows-bottom{
+    font-size: 24px;
+}
+// 自制图标
+.yo-zz-icon{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    &::before,&::after{
+        position: absolute;
+        content: "";
+        display: block;
+    }
+}
+.yico-arrow-down{
+    width: 9px;
+    height: 19px;
+    &::before, &::after{
+        border-style: solid;
+        border-width: 5px 5px 0;
+        right: -2px;
+    }
+    &::before{
+        border-color: #555 transparent ;
+        top: 6px;
+    }
+    &::after{
+        border-color: #fff transparent ;
+        top: 5px;
+    }
+}
+.yico-xiala{
+    width: 20px;
+    height: 16px;
+    &::before {
+        border-style: solid;
+        border-width: 5px 5px 0;
+        right: 1px;
+    }
+    &::before{
+        border-color: #999 transparent ;
+        top: 6px;
+    }
+}
+.disable-user-behavior {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  -ms-touch-action: none;
+  -ms-content-zooming: none
+}
+.example-content {
+  -webkit-transition: all .45s cubic-bezier(.23,1,.32,1);
+  transition: all .45s cubic-bezier(.23,1,.32,1)
+}
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'yofont';
+      src: url('@{anyUrl}/font/yofont.svg?58017590#yofont') format('svg');
+    }
+  }
+  */
+  .yo-icon:before,[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "yofont";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /*.icon-download:before {
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    background-image: url('@{anyUrl}/img/ico-download.svg');
+  }*/
+
+  .icon-withdrawal:before { content: '\e800'; } /* '' */
+  .icon-account:before { content: '\e801'; } /* '' */
+  .icon-arrows-bottom:before { content: '\e802'; } /* '' */
+  .icon-arrows-left:before { content: '\e803'; } /* '' */
+  .icon-arrows-right:before { content: '\e804'; } /* '' */
+  .icon-arrows-top:before { content: '\e805'; } /* '' */
+  .icon-balance:before { content: '\e806'; } /* '' */
+  .icon-betrecord:before { content: '\e807'; } /* '' */
+  .icon-browse:before { content: '\e808'; } /* '' */
+  .icon-bulb:before { content: '\e809'; } /* '' */
+  .icon-checked:before { content: '\e80a'; } /* '' */
+  .icon-chessgame:before { content: '\e80b'; } /* '' */
+  .icon-close:before { content: '\e80c'; } /* '' */
+  .icon-computer:before { content: '\e80d'; } /* '' */
+  .icon-fishing:before { content: '\e80e'; } /* '' */
+  .icon-favorite:before { content: '\e80f'; } /* '' */
+  .icon-favorite2:before { content: '\e810'; } /* '' */
+  .icon-forget:before { content: '\e811'; } /* '' */
+  .icon-free:before { content: '\e812'; } /* '' */
+  .icon-gameclient:before { content: '\e813'; } /* '' */
+  .icon-gift:before { content: '\e814'; } /* '' */
+  .icon-home:before { content: '\e815'; } /* '' */
+  .icon-house-h:before { content: '\e816'; } /* '' */
+  .icon-live:before { content: '\e817'; } /* '' */
+  .icon-load-top:before { content: '\e818'; } /* '' */
+  .icon-lottery:before { content: '\e819'; } /* '' */
+  .icon-love:before { content: '\e81a'; } /* '' */
+  .icon-megaphone:before { content: '\e81b'; } /* '' */
+  .icon-menber-myaccount:before { content: '\e81c'; } /* '' */
+  .icon-menu:before { content: '\e81d'; } /* '' */
+  .icon-message:before { content: '\e81e'; } /* '' */
+  .icon-myaccount:before { content: '\e81f'; } /* '' */
+  .icon-newmessage:before { content: '\e820'; } /* '' */
+  .icon-next:before { content: '\e821'; } /* '' */
+  .icon-notice:before { content: '\e822'; } /* '' */
+  .icon-online:before { content: '\e823'; } /* '' */
+  .icon-password:before { content: '\e824'; } /* '' */
+  .icon-pay:before { content: '\e825'; } /* '' */
+  .icon-pc:before { content: '\e826'; } /* '' */
+  .icon-pop-close:before { content: '\e827'; } /* '' */
+  .icon-prev:before { content: '\e828'; } /* '' */
+  .icon-promotion:before { content: '\e829'; } /* '' */
+  .icon-qq:before { content: '\e82a'; } /* '' */
+  .icon-query:before { content: '\e82b'; } /* '' */
+  .icon-qzone:before { content: '\e82c'; } /* '' */
+  .icon-radio:before { content: '\e82d'; } /* '' */
+  .icon-recharge:before { content: '\e82e'; } /* '' */
+  .icon-refresh:before { content: '\e82f'; } /* '' */
+  .icon-refresh2:before { content: '\e830'; } /* '' */
+  .icon-register:before { content: '\e831'; } /* '' */
+  .icon-remove:before { content: '\e832'; } /* '' */
+  .icon-search:before { content: '\e833'; } /* '' */
+  .icon-see:before { content: '\e834'; } /* '' */
+  .icon-seeing:before { content: '\e835'; } /* '' */
+  .icon-service:before { content: '\e836'; } /* '' */
+  .icon-service2:before { content: '\e837'; } /* '' */
+  .icon-service3:before { content: '\e838'; } /* '' */
+  .icon-setup:before { content: '\e839'; } /* '' */
+  .icon-setup-h:before { content: '\e83a'; } /* '' */
+  .icon-share:before { content: '\e83b'; } /* '' */
+  .icon-share2:before { content: '\e83c'; } /* '' */
+  .icon-smallbell:before { content: '\e83d'; } /* '' */
+  .icon-solt:before { content: '\e83e'; } /* '' */
+  .icon-sound:before { content: '\e83f'; } /* '' */
+  .icon-sports:before { content: '\e840'; } /* '' */
+  .icon-times:before { content: '\e841'; } /* '' */
+  .icon-topup:before { content: '\e842'; } /* '' */
+  .icon-transaction:before { content: '\e843'; } /* '' */
+  .icon-transaction2:before { content: '\e844'; } /* '' */
+  .icon-transfer-accounts:before { content: '\e845'; } /* '' */
+  .icon-transform:before { content: '\e846'; } /* '' */
+  .icon-verification-code:before { content: '\e847'; } /* '' */
+  .icon-weibo:before { content: '\e848'; } /* '' */
+  .icon-wechat:before { content: '\e849'; } /* '' */
+  .icon-f5account:before { content: '\e84a'; } /* '' */
+  .icon-download:before { content: '\e84b'; } /* '' */
+
+

@@ -1,0 +1,39 @@
+/* LESS Document */
+@import "layerBase.less";   // 设置可通用样式
+
+.laymshade {
+    background-color: rgba(0, 0, 0, .4);
+}
+.layermchild {
+	background-color: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	h3{
+		color:#767a80;
+		background: #e9ebed;
+	}
+	a {
+		.yo-pop-close {
+			background: url('/resource/share/RESOURCE_VERSION/imgs/popLogin/chose.svg') no-repeat;
+			background-size: cover;
+		}
+	}
+}
+.layermcont{
+	color:#333;
+}
+.layermbtn span{
+	&[type="0"] {
+		color: #333;
+		background: #d9d9d8;
+		&:hover {
+			background: #c9c9c8;
+		}
+	}
+	&[type="1"] {
+		color: #fff;
+		background: #69b3f8;
+		&:hover {
+			background: #94cbff;
+		}
+	}
+}

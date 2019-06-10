@@ -1,0 +1,280 @@
+// 登录页面样式---------------Yolanda
+.login-head{
+    height: 44px;
+    line-height: 44px;
+    text-align: right;
+    i{
+        width: 26px;
+        height: 26px;
+        display: block;
+        float: right;
+        margin: 10px 0 0;
+        .border-radius(50%);
+        &::before{
+            display: block;
+            margin: 3px auto 0;
+            font-size: 20px;
+        }
+    }
+}
+.login{
+    .login-logo{
+        width: 92px;
+        height: 92px;
+        margin: 16% auto 0;
+        .border-radius(50%);
+        .box-shadow(0 5px 2px 0 rgba(127,152,193,0.28));
+        padding: 1px;
+        text-align: center;
+        img{
+            width: 65px;
+            height: 65px;
+            margin-top: 12px;
+//          display: block;
+//          margin:10% auto;
+        }
+    }
+}
+.login-info{
+    padding: 46px 10% 0;
+    .login-item{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 28px;
+        position: relative;
+        overflow: hidden;
+        .clearfix;
+        .border-radius(30px);
+        .box-shadow(0 1px 4px 0 rgba(127,152,193,0.28));
+        i{
+            margin: 10px 5px 0 15px;
+            font-size: 20px;
+            display: block;
+            .float-l;
+            &::before{
+                display: block;
+                margin: 0px;
+            }
+        }
+        input{
+            border: none;
+            display: block;
+            height: 22px;
+            line-height: 22px;
+            text-indent: 10px;
+            margin-top: 9px;
+            width: calc(~'100% - 54px');
+            .float-l;
+        }
+        .code{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 100px;
+            height: 40px;
+            .border-radius(0 30px 30px 0);
+        }
+    }
+}
+.login-but{
+    padding-top: 26px;
+}
+//----------结束---登录页面样式
+
+// 修改picker插件样式---------------Yolanda
+.mask-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  // background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2007;
+  overflow: hidden;
+  .picker-tab {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  //  height: 260px;
+    z-index: 100;
+    .picker-toolbar{
+        height: 44px;
+    }
+    .pic-header {
+      height: 44px;
+      padding: 0 20px;
+      font-size: 16px;
+      #display-fix > .flex-container;
+      #display-fix > .justify-content(space-between);
+      #display-fix > .align-center(center);
+    }
+  }
+}
+//----------结束---修改picker插件样式
+
+// 公告管理样式---------------Yolanda
+
+.notice-tab{
+    margin-top: @padVal2;
+    ul{
+        padding: 0px;
+        margin: 0 @padVal2;
+        li{
+            width: 33.33333%;
+            margin: @padVal2 0;
+            &::after{
+                bottom: -@padVal2 - 1px;
+            }
+        }
+    }
+}
+.notice-list-box{
+    .cash-list-content;
+    height: calc(~'100% - 42px');
+}
+.notice-item {
+    margin-bottom: 1px;
+    padding-top: @padVal2;
+    .title {
+        height: 38px;
+        line-height: 38px;
+        h3{
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 260px;
+            font-weight: normal;
+            .float-l;
+        }
+        .arrow{
+            .float-r;
+            font-size: 18px;
+        }
+    }
+    .content {
+        padding-top: @padVal2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 32px;
+        width: 303px;
+        .time {
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+}
+.notice-detail-box {
+    padding: 8px 20px 0;
+    min-height: 100%;
+    min-height: calc(~'100vh - 44px');
+    position: relative;
+    .title{
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 14px;
+        .time{
+            font-size: 12px;
+            line-height: 32px;
+        }
+    }
+    .content{
+        margin-top: 6px;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 20px;
+        word-wrap: break-word;
+    }
+}
+//----------结束---公告管理样式
+
+// 会员单选列表样式
+.mint-radio-label{
+    margin-left:0px !important;
+}
+
+// 加载样式
+.load-mengceng{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background:rgba(20,22,32,0.68);
+    width: 100%;
+    height: 100%;
+    z-index: 20181112;
+}
+.load-box{
+    width: 120px;
+    height: 120px;
+    .border-radius(10px);
+    position: relative;
+    top: 50%;
+    margin: -60px auto 0;
+}
+.loading-animate{
+    width: 84px;
+    height: 84px;
+    margin: 0 auto;
+}
+.loading-gif{
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.loading-text{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+// 暂无数据
+.err-main-box{
+    width: 100%;
+    height: 100%;
+    .no-data{
+        margin-top: 27%;
+        .img-box{
+            width: 162px;
+            margin: 0 auto 0;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        p{
+            line-height: 30px;
+            text-align: center;
+            margin-top: 10%;
+        }
+    }
+}
+
+
+// 安全码
+.legend-input input{
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+
+// 清除安卓不支持fixed
+.claer-fixed-box{
+    .home{
+        position: absolute;
+    }
+    .public-header, .index-header{
+        position: static;
+    }
+    .mainBox{
+        height: calc(~'100% - 44px');
+        padding: 0px;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}

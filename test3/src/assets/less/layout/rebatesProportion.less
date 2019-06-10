@@ -1,0 +1,41 @@
+// 列表，滑块列表统一样式
+// .yo-cell-row2 为2列 .yo-cell-row3 为3列  .yo-cell-row4 为4列 此类推
+.yo-cell{
+    &-box{
+        .cell-box{
+            height: 48px;
+            text-align: center;
+            #display-fix > .flex-container;
+            #display-fix > .justify-content(center);
+            #display-fix > .align-center(center);
+            div{
+                word-break:break-all;
+                display:-webkit-box;
+                -webkit-line-clamp:2;
+                -webkit-box-orient:vertical;
+                overflow:hidden;
+                padding: 0 4px;
+            }
+        }
+    }
+    &-row2{
+        .cell-box div{
+            width: calc(~'100% / 2');
+        }
+    }
+    &-row3{
+        .cell-box div{
+            width: calc(~'100% / 3');
+        }
+    }
+    &-row4{
+        .cell-box div{
+            width: calc(~'100% / 4');
+        }
+    }
+    &-row5{
+        .cell-box div{
+            width: calc(~'100% / 5');
+        }
+    }
+}

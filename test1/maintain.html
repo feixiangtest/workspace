@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--general setting-->
+
+    <meta charset="utf-8">
+    <meta name="generator" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>系统维护中</title>
+    <link rel="stylesheet" href="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/css/common/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/css/common/style.css" type="text/css">
+    <script src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/js/common/jquery.min_1.8.2.js"></script>
+    <script src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/js/common/config.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="text-center">
+                <img id="myImage" src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/bg_Maintain_h5.png" alt="" width="100%">
+            </div>
+        </div>
+    </header>
+
+    <div class="info text-center">
+        <img src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/text_Maintain_h5.png" alt="" width="60%">
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container text-center">
+            <img src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/tri.png" alt="">
+            <p>网站例行维护中</p>
+            <p>维护时间至北京时间</p>
+            <p id="maintainDateTxt"></p>
+            <a id="onlineService" href="javascript:void(0)"><img src="CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/call-center.png" alt="联系在线客服">在线客服</a>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript">
+    // 根据配置项切换不同的logo
+    var element = document.getElementById('myImage')
+    if (platformType == 0) {
+      element.src = 'CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/bg_OPlogo_h5.png'
+    } else {
+      element.src = 'CDNURL_VARIABLE/static/RESOURCE_VERSION/local/img/maintain/bg_Maintain_h5.png'
+    }
+    $.ajax({
+      type: 'POST',
+      url: 'api/wap/wapIndex/getMsgCount',
+      async: false,
+      dataType: 'json',
+      success: function (res) {
+        // 发个请求判断是否在维护
+        if (res.status !== '6') {
+          // 如果没有维护就跳转到首页
+          window.location.href = '/'
+        } else {
+          $('#maintainDateTxt').html(res.data.endTime)
+          $('#onlineService').attr('href', res.data.onlineservice === undefined ? '' : res.data.onlineservice.junctionSim)
+          if (res.data.onlineservice === undefined) {
+            $('#onlineService').removeAttr('href')
+          }
+        }
+      }
+    })
+  </script>
+
+</html>

@@ -1,0 +1,910 @@
+
+.change(
+    @a0:#e2e2e2, // 注册页面圆圈 border 颜色
+    @a1:#FC8253,
+    @a2:#ffb227,
+    @a3:#FC5353,
+    @a4:#F33030,
+    @a5:#48C36F,
+    @a6:#D2D2DB,
+    @a7:#EFEFF2,
+    @a8:#CACED4,
+    @a9:#35DA9B,
+    @a10:#E1E4E9,
+    @a11:#FFB823,
+    @a12:#6F95F3,
+    @a13:#5E73A5,
+    @a14:#7889F5,
+    @a15:#DBAD53,
+    @a16:#FCD790,
+    @a17:#ffaa2a,
+    @bgColor: #f4f4f4, // 添加银行卡页 选择省市控件 背景色
+    @maskColor: rgba(20,22,32,0.68), // 遮罩层半透明黑色
+    @a18:#ff674a,
+    @a19:#c6c5c5,  // 消息页 消息详情页 时间文字颜色
+    @a20:#D8852F,
+    @a21:#EAB857,
+    @a22:#E8E8E8,
+    @a23:#000000) {
+    @chiefly:     @a1;     // 主要颜色
+    @minor:       @a2;     // 次要颜色
+    @highColor:   @a3;     // 高亮颜色-文本
+    @highColor2:  @a4;     // 高亮颜色-重点*
+
+    @white:       #ffffff;    // 白色
+    
+    @assist1:     @a5;     // 辅助颜色1-银行卡-选中
+    @assist2:     @a6;     // 辅助颜色2-页脚tab
+    @assist3:     @a7;     // 辅助颜色3-表单-按下
+    @assist4:     @a8;     // 辅助颜色4-银行卡-未选中
+
+    @formButHove: @a9;     // 表单控件-滑块-高亮
+    @formBut:     @a8;    // 表单控件-滑块-正常
+
+    @deepText:    #343434;    // 标题文本
+    @subText:     #666666;    // 次要文本
+    @ligText:     #999999;    // 轻文本
+
+    @highText:    @a11;    // 重要文本-高亮
+    @tipsText:    @a12;    // 提示文本-高亮（链接文本）
+
+    @pickerBut:   @a13;    // picker-按钮-文本
+    @pickerCent:darken(@mainBody,10%); // picker-中心-背景
+    // @hoverText:   #5E73A5;    // tab hover文本颜色
+
+    @defaultBut:   @chiefly;    // 默认按钮（主要颜色）
+    @primaryBut:  @a14;    // 特别按钮
+    @disableBut:  #DCDCDC;    // 禁用按钮
+
+    @loginBut:    @a15;    // 登录按钮-渐变1
+    @loginBut2:   @a16;    // 登录按钮-渐变2
+    @loginBut3:   @a20;    // 登录按钮-hover-渐变1
+    @loginBut4:   @a21;    // 登录按钮-hover-渐变2
+
+    @headBj1:      @a17;        // 头部导航-背景-渐变1
+    @headBj2:      @a18;        // 头部导航-背景-渐变2
+
+    @inpuColor:   #C3C3C3;    // input边框-正常
+    @inpuBorColor:@tipsText;    // input边框-高亮（提示文字）
+
+    @layerTitleBj:#ECECEC;    // 弹框提示-标题背景
+
+    @mainBody:    #f7f7f9;    // 内容页-body背景色
+
+    @btnBgColor: #DCDCDC; // 修改密码按钮颜色
+
+    .tips-txt{ // 高亮提示-文字颜色
+        color: @highText !important;
+    }
+    .grey-txt{ // 灰色文本--弱文字
+        color: @ligText !important;
+    }
+    .red-txt{ // 灰色文本--弱文字
+        color: red !important;
+    }
+    .high-red{ // 高亮颜色-重点*
+        color: @highColor2 !important;
+    }
+    .dis-text{ // 白色文本
+        color: @white !important;
+    }
+    // 白色背景
+    .nullBg{
+        background-color: @white;
+    }
+    .float-pages, .yo-form-item, .yo-form-content, .scan-code, .fast-sel-time{
+        .nullBg;
+    }
+    .yo-form-item{
+        i.icon-next{
+            color: @assist2;
+        }
+        span{
+            color: @subText;
+        }
+        .disc {
+            text-security: disc;
+            -webkit-text-security: disc;
+            -mox-text-security: disc;
+        }
+    }
+    // 通用浅灰背景
+    .common-body, .bgcolor-main{
+        background-color: @mainBody;
+    }
+    // 通用深色背景
+    .grey-cont{
+        background: #e5e5e5;
+    }
+    // 主页背景图
+    .indexBody{
+        background: #fbfbff;
+        background-image: url('@{colorUrl}/index-bj.png');
+        background-position: center -20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    // 默认头部背景
+    .hea-default-col{
+        .gradient(to right,@headBj1,@headBj2);
+    }
+    .head-left, .head-title, .head-right{
+        color: @white
+    }
+    .colorBlack{
+        color: @a23!important
+    }
+    // 免费试玩-头部-按钮
+    .trial-game{
+        background: rgba(255,255,255,.29);
+        color: @white;
+    }
+    .public-footer{
+        .nullBg;
+        .box-shadow(0 1px 6px 0 rgba(181,180,186,0.28));
+        .index-footer{
+            a{
+                color: #ACACC2;
+                &.cur, &:active{
+                    color: @chiefly;
+                }
+            }
+        }
+    }
+    .input-sty1, .input-sty2{
+        .placeholderStyle(@ligText,12px);
+    }
+    // 首页推荐、游戏大厅、优惠活动、我的 相关页面样式
+    .index-notice{
+        color: @ligText;
+    }
+    // 首页副导航
+    .index-nav{
+        a{
+            color: darken(@subText,8.2%);
+        }
+    }
+    // 公用标题样式
+    .public-title{
+        h1{
+            color: darken(@subText,15%);
+        }
+        &:before{
+            background: darken(@chiefly,3%);
+        }
+    }
+    // 公用tab切换，如：消息记录、交易记录
+    .public-tab{
+        .nullBg;
+        li{
+            color: @ligText;
+            &.active, &:active{
+                color: @chiefly;
+                border-bottom: 2px solid @chiefly;
+            }
+        }
+    }
+    // 登录页面-----------------------
+    .loginBody{
+        .nullBg;
+        background-image: url('@{colorUrl}/login-bj.png');
+        background-position: center -20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      .public-footer{
+        display: none;
+      }
+    }
+    .login-item{
+        border-bottom: 1px solid @assist2;
+        input{
+            color: @deepText;
+            .placeholderStyle(#D2D2DB,12px);
+        }
+    }
+    .login-item i, .login-tips i{
+        color: @assist2;
+    }
+    .log-forget{
+        color: @chiefly;
+    }
+    .login-but{
+        color: @white;
+        box-shadow: 0 3px 7px 0px lighten(@loginBut2,5%);
+        .gradient(to right,@loginBut,@loginBut2);
+        // &:active{
+        //     box-shadow:0 0px 0px 0px transparent;
+        //     .gradient(to right,@loginBut3, @loginBut4);
+        // }
+    }
+    .login-tips, .login-tips a, .input-sty1, .scan-titile{
+        color: @subText;
+    }
+    // -----------------------end
+    // 游戏大厅-----------------------
+    .game-menu{
+        .nullBg;
+        li{
+            border:1px solid @assist2;
+            color: @assist2;
+            .nullBg;
+            &.cur, &:active{
+                background: @chiefly;
+                border-color: @chiefly;
+                color:@white;
+            }
+        }
+    }
+    .game-inbox{
+        dd{
+            .nullBg;
+        }
+        h3{
+            color: @deepText;
+        }
+        span{
+            color: @ligText;
+        }
+    }
+    // -----------------------end
+    // 切换PC端
+    .window-to-pc{
+        a{
+            color: @tipsText;
+        }
+        p{
+            color: @assist2;
+        }
+    }
+    // 优惠活动-----------------------
+    .promo-item{
+        .promo-title, .promo-main{
+            .nullBg;
+        }
+        .promo-title h4{
+            color: @deepText;
+        }
+    }
+    .details-main{
+        .pro-main-titile h1{
+            color: @deepText;
+        }
+        .pro-main-cent{
+            color: @subText;
+        }
+    }
+    .promo-hover:active{
+        background: @assist3;
+    }
+    // -----------------------end
+
+    // 修改mint-ui插件样式
+    .mint-switch-core{
+        border-color: @a10;
+        background: @formBut;
+    }
+    .mint-switch-core:before{
+        background: @formBut;
+    }
+    .mint-switch-input:checked+.mint-switch-core{
+        background: @formButHove;
+        border-color: @formButHove;
+    }
+    .mint-checkbox-input:checked+.mint-checkbox-core{
+        background-color: @formButHove !important;
+        border-color: @formButHove !important;
+    }
+    .mint-checkbox-input:checked+.mint-checkbox-core-yellow{
+        background-color: @chiefly !important;
+        border-color: @chiefly !important;
+    }
+    // 通用表单项
+    .yo-form-item{
+        .title{
+            color: @deepText;
+        }
+    }
+    // 立即充值金额输入框-通用
+    .feed-in-sum{
+        border-bottom: 1px solid @mainBody;
+        input{
+            background: none;
+            border:none;
+            .placeholderStyle(@assist2,14px);
+        }
+    }
+    // 扫码支付
+    .scan-code{
+        .code{
+            border:2px solid @assist2;
+            &.cur{
+                border-color: @assist1;
+            }
+        }
+        .QRcode i{
+            font-size: 24px;
+            color: @assist2;
+        }
+    }
+    // 立即充值-银行卡、微信、支-信息卡
+    .paylist-style{
+        dd{
+            .nullBg;
+            border:1px solid @formBut;
+            &:active, &.cur{
+                border-color: @assist1;
+            }
+            &::after{
+                color: @assist2;
+            }
+            &.cur{
+                &::after{
+                    color: @assist1;
+                }
+            }
+            .bankDetails{
+                background: #FBFAFA;
+                
+            }
+            h6, p , .bankDetails{
+                color: @deepText;
+            }
+            .copyTxt{
+                color: @chiefly;
+            }
+        }
+    }
+    // 支付方式-选择
+    .layer-pay-box{
+        background: @mainBody;
+        .pay-box-titile h5, dd h2{
+            color: @deepText;
+            font-weight: normal;
+        }
+        dd{
+            .nullBg;
+        }
+        .Cancel{
+            color: @subText;
+        }
+        .sure{
+            color: @pickerBut;
+        }
+    }
+    // 注册页样式
+    
+// 注册页样式
+.reg-header{
+    .item{
+        .circle{
+            .nullBg;
+            border: 1px solid @assist2;
+            box-shadow: 0 0 5px 5px @mainBody;
+            color: @assist2;
+        }
+        .circle2{
+            border-color:@a1;
+            color: @a1;
+        }
+        .text{
+            color: @ligText;
+        }
+        .text2{
+            border-color: @a1;
+            color: @deepText;
+        }
+        .line{
+            .line-gray{
+                background-color:@disableBut;
+            }
+            .line-trans{
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.form-item{
+    background-color: @white;
+    .very-temp-class{
+        background-color:@white;
+    }
+    label{
+        .red{
+            color: @a4;
+        }
+    }
+    .right-arrow{
+        color: @a6;
+    }
+}
+.reg-box{
+    .prompt{
+        span{
+            color: @a12;
+        }
+    }
+}
+.prompt{
+    color: @subText;
+}
+
+.reg-box2{
+
+    .text{
+        h3{
+            color: @ligText;
+        }
+        p{
+            color: @ligText;
+            a{
+                color: @a12;
+            }
+        };
+    }
+}
+.agreement-box{
+    .tips{
+       color: @deepText;
+    }
+    ul{
+        li {
+            color: @subText;
+            span{
+                color: @a1;
+            }
+            &:last-child{
+                color: @a1;
+            }
+        }
+    }
+}
+.btn-wrap{
+    background-color: @white;
+    .one-btn{
+        background-color: @a1;
+        color: @white;
+        div{
+            &.left{
+                background-color: @white;
+                color: @a1;
+            }
+            &.right{
+                color: @white;
+            }
+        }
+    }
+}
+.btn-bg{
+    background-color: @mainBody;
+}
+//添加银行卡页面
+.whiteBody{
+    background-color: @white !important;
+}
+.page-picker-wrapper{
+    background-color: @white;
+    .picker-toolbar{
+        background-color: @white;
+        color: @deepText;
+        button{
+            background-color: @white;
+            &.cancle{
+                color: @subText;
+            }
+            &.sure{
+                color: @a13;
+            }
+        }
+    }
+    .picker-items{
+        background-color: @bgColor;
+    }
+}
+.mask{
+    background-color: @maskColor;
+}
+
+.bank-list{
+    background-color: @mainBody;
+    .search{
+        background-color: @white;
+        .icon-search{
+            color: @ligText;
+        }
+        .title{
+            background-color: @a22;
+        }
+        span{
+            color: @a1;
+        }
+    }
+    .bank{
+        li{
+            background-color: @white;
+            color: @deepText;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+
+.card-box{
+    color:@white;
+    .add-card{
+        button{
+            background-color: @a1;
+            color:@white;
+        }
+    }
+    .img-mask{
+        background-color: @white;
+    }
+    .text-tips{
+        color: @a1;
+    }
+}
+.set-item:active{
+    background-color: @a7;
+}
+.set-item:active .userName{
+    background-color: @a7;
+}
+// 修改密码页确定按钮
+.btnBgColor{
+    background-color: @btnBgColor!important;
+    border-color:@btnBgColor!important;
+}
+
+// 消息记录页面
+.messageList{
+    
+    .message-item{
+        background-color: @white;
+        .title-item{
+            border-bottom: 1px solid @bgColor;
+            .title{
+                color: @deepText;
+                .right-arrow{
+                    color: @a6;
+                }
+            }
+        }
+        .content-item{
+            .content{
+                color: @subText;
+            }
+            .time{
+                color: @a19;
+            }
+
+        }
+    }
+    .message-detail{
+        .message-header{
+            border-bottom: 1px solid @bgColor;
+            h2{
+                color: @deepText;
+            }
+            .time{
+                color: @a19;
+            }
+        }
+        .content{
+            color: @subText;
+        }
+        
+    }
+    .btn-bg-white{
+        background-color: @white;
+    }
+}
+    // 我的个人中心
+    .basicsInfoBody{
+        background-image: url('@{colorUrl}/user-bj.png');
+        background-position: center -20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        .index-header{
+            background: url('@{colorUrl}/user-bj.png');
+            background-size: cover;
+        }
+    }
+    .user-info-box{
+        .info-box{
+            color: @white;
+            p{
+                opacity: 0.61;
+            }
+        }
+    }
+    .user-menu{
+        ul{
+            .nullBg;
+            .box-shadow(0 4px 6px 0 rgba(227,227,236,0.5));
+        }
+        li{
+            color: darken(@subText,8.3%);
+            &:active{
+                background: @assist3;
+            }
+            &::after{
+                background: @a10;
+            }
+        }
+    }
+    .user-item .yo-form-item{
+        &:active{
+            background: @assist3;
+        }
+    }
+    .user-item .title{
+        &.t-balance span{
+            background: #ffe6d3;
+            i{ color: #F7531A; }
+        }
+        &.t-bank span{
+            background: #e0eaff;
+            i{ color: #5990FF; }
+        }
+        &.t-deal span{
+            background: #fff6cc;
+            i{ color: #FFB800; }
+        }
+        &.t-news span{
+            background: #e7f9df;
+            i{ color: #98E57A; }
+        }
+        &.t-client span{
+            background: #ffdddd;
+            i{ color: #FF4F5A; }
+        }
+        .msgTips{
+            color: #fff;
+            background: #FF4F5A !important;
+        }
+    }
+
+    // 额度转换
+    .conversionBody{
+        background-image: url('@{colorUrl}/conversion-bj.png');
+        background-position: center 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        .public-header .hea-default-col{
+            background: url('@{colorUrl}/conversion-bj.png') !important;
+            background-size: cover !important;
+        }
+    }
+    .conversion-head p{
+        color: @white;
+    }
+    .conversion-platform{
+        .nullBg;
+        i.icon-transition{
+            color: @chiefly;
+        }
+    }
+    .con-platform-box{
+        h6{ color: @deepText; }
+        i{ color: @assist2; }
+    }
+    .plat-ref i{ color: @assist2; }
+    // 弹框按钮字体颜色
+    .layermbtn span{
+        color:  @chiefly;
+    }
+    // button 初始化---------------Yolanda
+    .button-variant(@color; @background; @border) {
+        color: @color;
+        background-color: @background;
+        border-color: @border;
+    }
+    @btn-default-color:              @chiefly;
+    @btn-default-bg:                 transparent;
+    @btn-default-border:             @chiefly;
+
+    @btn-primary-color:              @white;
+    @btn-primary-bg:                 @chiefly;
+    @btn-primary-border:             @chiefly;
+
+    @btn-gray-color:              @white;
+    @btn-gray-bg:                 @assist2;
+    @btn-gray-border:             @assist2;
+    
+    @btn-bule-color:              @white;
+    @btn-bule-bg:                 @tipsText;
+    @btn-bule-border:             @tipsText;
+
+    @btn-white-color:              @chiefly;
+    @btn-white-bg:                 @white;
+    @btn-white-border:             @white;
+
+    @btn-disabled-color:           @white;
+    @btn-disabled-bg:              @disableBut;
+    @btn-disabled-border:          @disableBut;
+    // 空心按钮
+    .btn-default {
+        .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+        border-width:1px;
+        border-style: solid;
+        &.cur, &:active{
+            color: @white;
+            background-color: @chiefly;
+                border-color: @chiefly;
+        }
+    }
+    // 实心按钮
+    .btn-primary {
+        .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+        &:active {
+            color: @btn-primary-color;
+            background-color: darken(@btn-primary-bg,5%);
+                border-color: darken(@btn-primary-bg,5%);
+        }
+    }
+    // 灰色按钮-
+    .btn-gray {
+        .button-variant(@btn-gray-color; @btn-gray-bg; @btn-gray-border);
+        &:active {
+            color: @btn-gray-color;
+            background-color: darken(@btn-gray-bg,5%);
+                border-color: darken(@btn-gray-bg,5%);
+        }
+    }
+    // 蓝色按钮-查看
+    .btn-bule {
+        .button-variant(@btn-bule-color; @btn-bule-bg; @btn-bule-border);
+        &:active {
+            color: @btn-bule-color;
+            background-color: darken(@btn-bule-bg,5%);
+                border-color: darken(@btn-bule-bg,5%);
+        }
+    }
+    // 白色按钮-退出登录
+    .btn-white{
+        .button-variant(@btn-white-color; @btn-white-bg; @btn-white-border);
+        .box-shadow(0 4px 6px 0 rgba(227,227,236,0.5));
+        &:active {
+            color: @btn-white-color;
+            background-color: darken(@btn-white-bg,2%);
+                border-color: darken(@btn-white-bg,2%);
+        }
+    }
+    // 禁用按钮
+    .btn-disabled{
+        .button-variant(@btn-disabled-color; @btn-disabled-bg; @btn-disabled-border);
+    }
+    
+    //快速取款
+    .bg-transparent{
+        background-color: transparent!important;
+    }
+    .bank-info{
+        .bank-name{
+            color: @subText;
+        }
+        .bank-code{
+            color: @ligText;
+        }
+    }
+    //取款密码
+    .cash-password{
+        .title{
+            color: @subText;
+        }
+        .password-hide{
+            color: @tipsText;
+        }
+        input{
+            border: 1px solid @inpuColor;
+            &:focus{
+                border: 1px solid @tipsText;
+            }
+        }
+    }
+    // 来往记录
+    .record-list{
+        dd{
+            .nullBg;
+            h3{
+                color: @deepText;
+            }
+            span{
+                color: @a19;
+            }
+        }
+        p{
+            span{
+                color: @highColor;
+            }
+            color: @subText;
+        }
+    }
+    .betting-foot{
+        color: @subText;
+        background: darken(@white,9.6%);
+    }
+    // 列表，统一样式---------------Yolanda
+    .yo-cell-box{
+        .cell-box{
+            color: @deepText;
+        }
+        .cell-item{
+            .nullBg;
+            border-bottom: 1px solid darken(@white,2.8%);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    //----------结束---列表，统一样式
+    // err tip
+    .error_msg{
+        background:  @a4;
+        color: @white ;
+        &:before{
+            border-color:  @a4 transparent;
+        }
+    }
+    
+    .error_msg2{
+        color: @a1;
+        background-color: @mainBody;
+    }
+    .lay-close-but{
+        color: @assist2;
+        i::after{
+            background: @assist2;
+        }
+    }
+    .not-title{
+        background-image: url('@{colorUrl}/notice-bj.jpg');
+        background-size: contain;
+        background-position: center;
+        color: @white;
+    }
+    //投注详情-开牌结果展示
+    .gameboxout .game-result-out{
+
+        .game-result{
+            color: @a1;
+            span{
+                color: @a1;
+            }
+        }
+    }
+
+    // 日期控件-修改
+    .ta_calendar td.first,
+    .ta_calendar td.today,
+    .ta_calendar td.last {
+        background: @chiefly;
+        color: @white;
+    }
+    .ta_calendar table th:first-child,
+    .ta_calendar table th:last-child{
+        color: @chiefly;
+    }
+    .ta_calendar table td{
+        &.ta_dateRangeSelected{
+            background: fade(@chiefly,40%);
+        }
+    }
+    .frm_btn {
+        .ta_btn {
+            .btn-default;
+            &.disabled, &[disabled] {
+                .btn-disabled;
+            }
+        }
+        .ta_btn_primary {
+            .btn-primary;
+        }
+    }
+    
+}
+
+

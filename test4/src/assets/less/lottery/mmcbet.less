@@ -1,0 +1,1053 @@
+// select {
+//   appearance: none;
+//   -moz-appearance: none;
+//   -webkit-appearance: none;
+// }
+.flex-box {
+  display: -webkit-box; /* iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* Firefox 19 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* Chrome */
+  display: flex; /* Opera 12.1, Firefox 20+ */
+}
+.flex-flow-row {
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.flex-justify-space {
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+}
+.foot-top li {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.miaomiaocai{
+    background: #292aa3 url('@{imgUrl}/mmc/bj.jpg') no-repeat center top;
+    background-size: contain;
+    min-height: 100%;
+    min-height: 100vh;
+    font-size: 0.5rem;
+    position: relative;
+    overflow-x: hidden;
+    text-align: center;
+    overflow-y: scroll;
+    .yo-mmc-cen{
+        display: inline-block;
+        padding-top: .16rem;
+        .yo-mmckaij {
+            width: 8.75rem;
+            height: 4.475rem;
+            margin: 0 auto 0!important;
+            background: url('@{imgUrl}/mmc/h5_kaij-bj.png') no-repeat center top;
+            background-size: 8.75rem 4.475rem;
+        }
+        .yo-mmckaij h1 {
+            height: .70rem;
+            padding-top: .325rem;
+            img {
+                display: block;
+                height: 150%;
+                margin: 0 auto 0;
+            }
+        }
+    }
+}
+.yo-kjqiu{
+    overflow: hidden;
+    width: calc(100% - .5rem);
+    margin: 10px auto;
+    h4 {
+        background: #27277d;
+        border: .025rem solid #ffef12;
+        color: #fff;
+        border-radius: .75rem;
+        font-weight: normal;
+        text-align: center;
+        font-size: .40rem;
+        width: 3.5rem;
+        height: .75rem;
+        line-height: .75rem;
+        margin: .25rem auto;
+    }
+    ul {
+        width: calc(100% + .05rem);
+        li {
+            display: block;
+            float: left;
+            overflow: hidden;
+            width: calc(20% - .025rem);
+            border-right: .025rem solid #222285;
+            height: 1.75rem;
+        }
+        span {
+            display: block;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            text-shadow: 0 3px 0 rgba(235, 52, 88, .54);
+            width: 1.25rem;
+            height: 1.25rem;
+            line-height: 1.25rem;
+            margin: .25rem auto;
+            background: -moz-radial-gradient(circle, #ff7767, #ff3a69);
+            background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ff7767), to(#ff3a69));
+            background: -webkit-radial-gradient(circle, #ff7767, #ff3a69);
+            border-radius: 50%;
+            box-shadow: 0 6px 3px rgba(60, 13, 68, .54);
+        }
+    }
+}
+.yo-mmckjjj {
+    width: 8.75rem;
+    margin: .2rem auto 0;
+    h2 {
+        font-size: .45rem;
+        color: #fff;
+        font-weight: normal;
+        height: 1rem;
+        line-height: 1rem;
+    }
+}
+ 
+div[class*="kjjg"] ul {
+    background: #fff;
+    border-radius: 0.15rem;
+    padding: .25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0px 4px 2px rgba(30, 25, 135, .54);
+    li {
+        height: .75rem;
+        line-height: .75rem;
+        p {
+            font-size: .35rem;
+            margin:0;
+            &.money {
+                color: #ff6701;
+                padding-right: .125rem;
+                padding-left: .25rem;
+            }
+        }
+    }
+}
+.kjjg {
+    ul.mmc-draw-message {
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 165px;
+        min-height: .75rem;
+        -webkit-overflow-scrolling: touch;
+        text-align: left;
+    }
+    li.yzj {
+        position: relative;
+        img.jb {
+            position: absolute;
+            margin-left: .55rem;
+            top: .1rem;
+            height: .5rem;
+        }
+    }
+}
+.jb-animate {
+    width: 8.75rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    overflow: hidden;
+    img {
+        width: 200%;
+        margin-left: -70%;
+        margin-top: -20%;
+    }
+}
+div.kjjg-tow ul {
+  padding: .35rem .25rem;
+}
+.yo-mmc-but {
+    text-align: center;
+    width: 8.75rem;
+    margin: 0 auto ;
+    a {
+        display: inline-block;
+        width: calc(~"50% - .1rem");
+        border-radius: 0.15rem;
+        height: 1rem;
+        line-height: 1rem;
+        box-shadow: 0px 4px 2px rgba(30, 25, 135, .54);
+        font-size: .45rem;
+        &.but-blue {
+            background: #677cff;
+            color: #2135ad;
+        }
+        &.but-yellow {
+            background: #f9de60;
+            color: #cc5f23;
+        }
+    }
+    a.but-stop {
+      width: 85%;
+    }
+}
+p.tips {
+  color: #fff;
+  height: .5rem;
+  line-height: .5rem;
+  font-size: .32rem;
+  text-align: center;
+}
+/*****适应iPhone5****/
+@media only screen and (max-width: 374px) {
+    .miaomiaocai{
+        .yo-mmc-cen{
+            .yo-mmckaij {
+                width: 7.5rem;
+                background-size: 7.5rem 4.475rem;
+            }
+        }
+    }
+    .yo-mmckjjj, .yo-mmc-but, .jb-animate {
+        width: 7.5rem;
+    }
+    p.tips {
+        font-size: .35rem;
+    }
+    .kjjg li.yzj img.jb {
+        height: .35rem;
+        top: .2rem;
+        margin-left: .275rem;
+    }
+}
+.yo-mmc-time {
+    h4 {
+        background: #27277d;
+        border: .025rem solid #ffef12;
+        color: #fff;
+        border-radius: .75rem;
+        font-weight: normal;
+        text-align: center;
+        font-size: .40rem;
+        width: 3.5rem;
+        height: .75rem;
+        line-height: .75rem;
+        margin: .5rem auto;
+    }
+    ul {
+        margin: 15px 0 0 15px;
+        padding: 0;
+        li {
+            display: block;
+            margin: 0 9px;
+            float: left;
+            background: url('@{imgUrl}/mmc/h5_qiu-bj.png');
+            height: 46px;
+            span {
+                display: block;
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+                text-align: center;
+                font-size: 26px;
+                color: #fff;
+                box-shadow: 0 6px 3px rgba(60,13,68,0.54);
+                text-shadow: 0 3px 0 rgba(235,52,88,0.54);
+                border-radius: 50%;
+            }
+            label {
+                display: block;
+                width: .035rem;
+                height: 1.45rem;
+                background: #222285;
+                line-height: 50px;
+                position: relative;
+                top: -52px;
+                left: 54px;
+            }
+        }
+    }
+}
+.isSimulate{
+    text-align: center;
+    z-index: 2;
+}
+.isSimulate a.but-stop {
+    width: 85% !important;
+    background: #e4e2db !important;
+}
+.isSimulate .goback>a {
+    width: 85% !important;
+}
+.isSimulate a {
+    width: 85%;
+    margin: .15rem auto !important;
+}
+.jinbidonghua{position: absolute;top: 15%;left:3%;}
+.dice{width:400px; height:185px; background:url('@{imgUrl}/mmc/jbdonghua.png') no-repeat; cursor:pointer;background-position:300px 300px;}
+.dice_0{background-position:0px  0px}
+.dice_1{background-position:0px  -256px}
+.dice_2{background-position:0px  -512px}
+.dice_3{background-position:0px  -768px}
+.dice_4{background-position:0px  -1024px}
+.dice_5{background-position:0px  -1280px}
+.dice_6{background-position:0px  -1536px}
+.dice_7{background-position:0px  -1792px}
+.dice_8{background-position:0px  -2048px}
+.dice_9{background-position:0px  -2304px}
+.dice_10{background-position:0px  -2560px}
+.dice_11{background-position:0px  -2816px}
+.dice_12{background-position:0px  -3072px}
+.dice_13{background-position:0px  -3328px}
+.dice_14{background-position:0px  -3584px}
+.dice_15{background-position:0px  -3840px}
+.dice_16{background-position:0px  -4096px}
+.dice_17{background-position:0px  -4352px}
+.dice_18{background-position:0px  -4608px}
+.dice_19{background-position:0px  -4864px}
+.dice_20{background-position:0px  -5120px}
+.dice_21{background-position:0px  -5376px}
+.dice_22{background-position:0px  -5632px}
+.dice_23{background-position:0px  -5888px}
+.dice_24{background-position:0px  -6144px}
+.dice_25{background-position:0px  -6400px}
+.dice_26{background-position:0px  -6656px}
+.dice_27{background-position:0px  -6912px}
+.dice_28{background-position:0px  -7168px}
+.dice_29{background-position:0px  -7424px}
+.dice_30{background-position:0px  -7680px}
+.dice_31{background-position:0px  -7936px}
+p#result{text-align:center; font-size:16px}
+p#result span{font-weight:bold; color:#f30; margin:6px}
+#dice_mask{width:90px; height:90px; background:#fff; opacity:0; position:absolute; top:0; left:0; z-index:999}
+
+// 摇一摇
+.shake {
+  background: url('@{imgUrl}/rightSideMenu/shake.png') no-repeat;
+  background-size: contain;
+  background-position: 25% 0;
+  margin: 0 0 0 0; 
+}
+.simulateBtn {
+  background: Linear-gradient(#b286ff, #7237d2);
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+}
+
+// mmc下注
+.mmcScroll {
+  overflow: auto;
+  height:auto;
+}
+
+
+.betHeadmachin {
+  border: 1px solid red;
+  background: Linear-gradient(#e1dddc, #cdcbc8);
+  color: #1e1d1d;
+  display: inline-block;
+  padding: .3rem 1rem;
+  border-radius: 4px;
+  margin-top: 2px; 
+}
+
+#mmcFix {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background: white;
+}
+
+.range-area {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+#betOption .txtshow {
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+#betOption .txtshow .pull-left {
+  margin-left: 10px;
+}
+
+#betOption .txtshow > span {
+  min-width: 100px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+#betOption .txtshow .pull-right {
+  margin-right: 10px;
+}
+
+.pull-right {
+  float: right;
+}
+
+#betOption .list {
+  padding: 0;
+  width: 74%;
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 80px;
+  position: static;
+  vertical-align: middle;
+}
+
+#betOption .range-positive.betNum {
+  background: #f8f8f8;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#betOption .range {
+  padding: 0;
+}
+
+.range {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+#betOption .range-positive.betNum .i-minu {
+  left: 6px;
+  background: url('@{imgUrl}/mmc/jian.png') no-repeat;
+}
+
+#betOption .range-positive.betNum i {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: #FF9A00;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  width: 210px;
+  border-radius: 2px;
+  /*background: -webkit-linear-gradient(top, #ff9b01 90%, #de6a03 100%) no-repeat 1px 14px;*/
+  background-size: 0 35%;
+  border: none;
+}
+
+.range input {
+  background-size: 99% 35%;
+  height: 40px;
+}
+
+.range input {
+  display: inline-block;
+  overflow: hidden;
+  margin: 5px 0px;
+  padding-right: 2px;
+  padding-left: 1px;
+  outline: none;
+  /*background: linear-gradient(to right, #ccc 0, #ccc 100%);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+}
+
+.range input {
+  flex: 1;
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+  background: -webkit-linear-gradient(#ff9b01, #ff9b01) no-repeat 1px 14px;
+  background-size: 0% 35%;
+}
+
+input[type=range]::-moz-range-progress {
+  background: linear-gradient(to right, #ff9b01, #ff9b01 100%, #ff9b01);
+  height: 15px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 15px;
+  /* border-radius: 10px; 将轨道设为圆角的 */
+  box-shadow: 0 1px 1px #ccc, inset 0 .125em .125em #ccc; /*轨道内置阴影效果*/
+}
+input[type=range]::-moz-range-track {
+  height: 15px;
+  /* border-radius: 10px; 将轨道设为圆角的 */
+  background-color: #ccc;
+  box-shadow: 0 1px 1px #ccc, inset 0 .125em .125em #ccc; /*轨道内置阴影效果*/
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+#betOption .range-positive.betNum .i-add {
+  left: -8px;
+  background: url('@{imgUrl}/mmc/jia.png') no-repeat;
+}
+
+#betOption .range-positive.betNum i {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: #FF9A00;
+  color: white;
+  text-align: center;
+}
+
+#betOption #winStop {
+  width: 20%;
+  display: inline-block;
+  padding: 4px 1px;
+  border-radius: 4px;
+  margin-left: 1.4%;
+  text-align: center;
+  margin-bottom: 0;
+  position: absolute;
+  top: 40px;
+  background: Linear-gradient(#e1dddc, #cdcbc8);
+  color: #1e1d1d;
+  text-decoration: none;
+}
+
+#betOption #winStop.active {
+  background: Linear-gradient(#24e07a, #0dce9a);
+  color: white;
+}
+
+#mmcFix #betFooterA.at-once {
+  margin-bottom: 30px;
+}
+
+#betOption #betFooterA {
+  position: static;
+  background: transparent;
+}
+
+#betOption #betFooterA {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  z-index: 11;
+}
+
+#betFooterA.at-once {
+  margin-bottom: 30px;
+}
+
+#betFooterA {
+  height: 48px;
+  background: #333333;
+  text-align: center;
+}
+
+.foot-cen {
+  padding: 0 .1rem;
+}
+
+#betFooterA a {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.foot-cen a.f-chip {
+  background: linear-gradient(#4c60ff, #1c2aff);
+}
+
+.foot-cen a.f-cm-a {
+  border: .075rem solid #21262c;
+  border-radius: .4rem;
+  text-align: center;
+  color: #fff;
+  margin: .4rem .05rem;
+  width: 95%;
+  height: 2.175rem;
+  line-height: 1.875rem;
+}
+
+/* begin 秒秒赛车弹窗 */
+@ball-width: 6.8vw;
+@ball-height: @ball-width * 1.2;
+.mmsc-award {
+    width: 100%;
+    height: 100%;
+    background: url('@{imgUrl}/mmsc/bkg.jpg')no-repeat;
+    background-size: 100% 100%;
+    .content-area {
+        width: 100%;
+        height: 100%;
+    }
+    .mmsc-race-animate {
+        width: 100%;
+        height: 32%;
+    }
+    .award-area {
+        height: 68%;
+        width: 100%;
+        padding: 0 4.5vw;
+        overflow-y: auto;
+    }
+    .award-result {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .cur-title {
+        color: #fff;
+        font-size: 12px;
+        height: 27px;
+        line-height: 27px;
+    }
+    .current-result {
+        padding: 10px 5px;
+        background-color: rgba(64, 62, 73, 0.6);
+        .result-no {
+            width: 100%;
+            height: @ball-height;
+            max-height: 46px;
+        }
+    }
+    .award-record-area {
+        margin-top: 40px;
+        width: 100%;
+        background-color: rgba(64, 62, 73, 0.6);
+    }
+}
+/* end 秒秒赛车弹窗 */
+
+.ball-single {
+    width: @ball-width;
+    height: @ball-height;
+    max-width: 40px;
+    max-height: 46px;
+    line-height: @ball-height;
+    margin: 0 0.93vw;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    .ball-border-bottom {
+        width: 100%;
+        height: 100%;
+        border-radius: 17px;
+        display: block;
+        overflow: hidden;
+    }
+    .ball-border-top {
+        width: 60px;
+        height: 50px;
+        border-radius: 25px;
+        display: block;
+        position: absolute;
+        bottom: 24px;
+        left: -3px;
+    }
+    .ball-num {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        -webkit-text-stroke-color: #333;
+        -webkit-text-stroke-width: 0.8px;
+        font-family: fantasy;
+        color: #fff;
+        z-index: 30;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+.ball-block {
+  .ball-border-bottom {
+      border-radius: 2px;
+  }
+  .ball-border-top {
+      border-radius: 0;
+      bottom: 34px;
+  }
+}
+.ball-single_1 {
+    .top-color {
+        background-color: #ffff57;
+    }
+    .bottom-color {
+        background-color: #cbcb00;
+    }
+    .ball-num {
+        -webkit-text-stroke-color: #2e2e2e;
+    }
+}
+.ball-single_2 {
+    .top-color {
+        background-color: #2596ff;
+    }
+    .bottom-color {
+        background-color: #0070d5;
+    }
+}
+.ball-single_3 {
+    .top-color {
+        background-color: #474747;
+    }
+    .bottom-color {
+        background-color: #1f1f1f;
+    }
+}
+.ball-single_4 {
+    .top-color {
+        background-color: #ff9000;
+    }
+    .bottom-color {
+        background-color: #e56700;
+    }
+}
+.ball-single_5 {
+    .top-color {
+        background-color: #75e7e7;
+    }
+    .bottom-color {
+        background-color: #26cece;
+    }
+    .ball-num {
+        -webkit-text-stroke-color: #2e2e2e;
+    }
+}
+.ball-single_6 {
+    .top-color {
+        background-color: #5300ff;
+    }
+    .bottom-color {
+        background-color: #1f00cf;
+    }
+}
+.ball-single_7 {
+    .top-color {
+        background-color: #e1e1e1;
+    }
+    .bottom-color {
+        background-color: #9c9c9c;
+    }
+    .ball-num {
+        -webkit-text-stroke-color: #2e2e2e;
+    }
+}
+.ball-single_8 {
+    .top-color {
+        background-color: #de1a5e;
+    }
+    .bottom-color {
+        background-color: #b8114b;
+    }
+}
+.ball-single_9 {
+    .top-color {
+        background-color: #860000;
+    }
+    .bottom-color {
+        background-color: #5b0000;
+    }
+}
+.ball-single_10 {
+    .top-color {
+        background-color: #00ca00;
+    }
+    .bottom-color {
+        background-color: #008900;
+    }
+}
+
+/* begin 秒秒赛车弹窗中开奖表格 */
+
+.din-header {
+  height: 24px;
+  width: 100%;
+  .header-bg {
+    width: 70%;
+    height: 10.67vw;
+    max-height: 40px;
+    margin: 0 auto;
+    position: relative;
+    top: -24px;
+    background: url('@{imgUrl}/mmsc/curAward.png')no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.din-table {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 13px;
+    color: #fff;
+    em {
+        font-style: normal; // 字体不倾斜
+    }
+    .din-tbody {
+        width: 100%!important;
+        max-height: 165px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        table {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        tr td {
+          height: 33px;
+          text-align: center;
+          border: none;
+          line-height: 25px;
+          padding: 2px 0;
+        }
+        tr td:first-child {
+          padding-left: 5px;
+        }
+        tr td:last-child {
+          padding-right: 20px;
+        }
+    }
+    thead th,thead td,tfoot td {
+        height: 40px;
+        text-align: center;
+        border: none;
+    }
+    .tfoot-bg {
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(47, 46, 54, 0.8);
+        .total-title {
+          text-align: center;
+          padding: 0 5px;
+        }
+        .total-money {
+          padding-right: 20px;
+          text-align: center;
+        }
+    }
+    .win-bg {
+      .times-dv {
+        background-color: #fff;
+        color: #f89101;
+      }
+      .other-dv {
+        background-color: #f9ad04;
+        position: relative;
+        .trophy-tr {
+          background: url('@{imgUrl}/mmsc/trophy.png')no-repeat;
+          background-size: 100% 100%;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          right: -20px;
+          top: -10px;
+        }
+      }
+    }
+    .win-color {
+      font-size: 14px;
+      color: #f9ad04;
+    }
+}
+/* end 秒秒赛车弹窗中开奖表格 */
+
+/*****适应iPhone5尺寸****/
+@media only screen and (max-width: 374px) {
+    .din-table .din-tbody {
+      max-height: 132px;
+    }
+    .din-header {
+      height:20px;
+      .header-bg {
+        top: -20px;
+      }
+    }
+    .mmsc-award .award-record-area {
+      margin-top: 30px;
+    }
+}
+
+/* begin 秒秒赛车弹窗中按钮区域 */
+.din-footer {
+    width: 100%;
+    margin: 10px 0;
+}
+.button-style {
+    margin: 0 auto;
+    text-align: center;
+    ul {
+        display: inline;
+    }
+    ul li {
+        display: inline-block;
+        margin: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        background-color: #ff9b39;
+        a {
+            display: block;
+            height: 100%;
+            padding: 0 30px;
+            font-size: 18px;
+            color: #fff;
+            border: 0;
+            border-radius: 2px;
+            word-spacing: 3px;
+            letter-spacing: 3px;
+        }
+    }
+    ul li:hover {
+        background-color: #ff872f;
+    }
+}
+/* begin 秒秒赛车弹窗中按钮区域 */
+
+.simulate-title {
+    margin: 5px 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.two-btn {
+    background: url('@{imgUrl}/mmsc/twoBtn.png') no-repeat;
+    background-size: 100% 100%;
+    width: 260px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #303b53;
+    .btn-left {
+      width: 50%;
+      height: 100%;
+      line-height: 36px;
+      float: left;
+    }
+    .btn-right {
+      width: 50%;
+      height: 100%;
+      line-height: 36px;
+      float: right;
+    }
+}
+.two-btn:active {
+  background: url('@{imgUrl}/mmsc/twoBtnHover.png') no-repeat;
+  background-size: 100% 100%;
+}
+.one-btn {
+    background: url('@{imgUrl}/mmsc/btn.png') no-repeat;
+    background-size: 100% 100%;
+    width: 260px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #303b53;
+    .btn {
+      width: 100%;
+      height: 100%;
+      line-height: 36px;
+    }
+}
+.one-btn:active {
+  background: url('@{imgUrl}/mmsc/btnHover.png') no-repeat;
+  background-size: 100% 100%;
+}
+/* begin 中奖之后的光芒彩带 */
+.winning-area {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  .winning-box {
+    position: absolute;
+    width: 100%;
+    height: 100vw;
+    top: 20vh;
+    margin: 0 auto;
+  }
+  .w-position {
+    position: absolute;
+    top: 15vh;
+  }
+  .shine-bg {
+    background: url('@{imgUrl}/mmsc/shineBg.png') no-repeat;
+    background-size: 100% 100%;
+     width: 120%;
+    height: 120%;
+    position: absolute;
+    text-align: center;
+    left: -10%;
+    top: -10%;
+  }
+  .trophy-bg {
+    background: url('@{imgUrl}/mmsc/trophyBg.png') no-repeat;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 35%;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+  }
+  canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    border: 0px solid #000;
+  }
+}
+/* end 中奖之后的光芒彩带 */
+// 旋转动画
+.rotating {
+  animation: trans-rotating 3.5s linear infinite;
+}
+@keyframes trans-rotating {
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}

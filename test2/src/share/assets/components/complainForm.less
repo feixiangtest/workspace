@@ -1,0 +1,97 @@
+// 投诉建议 中的表单样式
+.complainForm{
+	margin: 0px auto;
+	width: 1000px;
+	padding: 0 10px 15px;
+	border: 1px solid #a9a9a9;
+	background-color: #FFFFFF;
+	font-size: 12px;
+	.complainTittle {
+		padding-top: 10px;
+		color: #545454;
+		font-weight: bold;
+		font-size: 24px;
+	}
+	fieldset {
+		margin: 10px 0px;
+		border-width: 1px 0 1px 0;
+		border-style: solid;
+		border-color: #ccc;
+		p {
+			position: relative;
+			margin: 10px 0;
+			padding-left: 200px;
+			color: #545454;
+			font-family: Microsoft YaHei;
+			strong {
+				font-weight: normal;
+			}
+		}
+		label {
+			left: 0;
+			margin-top: 5px;
+			position: absolute;
+			width: 175px;
+			text-align: right;
+			font-weight: bold;
+		}
+		input[type="text"]{
+			width: 120px;
+			height: 18px;
+			border: 1px solid #a9a9a9;
+			line-height: 18px;
+			&.user_name, &.user_qq{
+				margin-right: 5px !important;
+			}
+			&.use_yzm {
+				width: 50px;
+			}
+		}
+		img.img_yzm {
+			margin-left: 5px;
+			width: 50px;
+			height: 20px;
+			vertical-align: bottom;
+			cursor: pointer;
+		}
+	}
+	.bannerWrap{
+		margin: 20px 0;
+		width: 100%;
+		height: 88px;
+		.fldgk {
+			float: left;
+			margin-left: 80px;
+		}
+		.bannerds {
+			float: left;
+			width: 395px;
+			height: 88px;
+		}
+	}
+	textarea {
+		width: 520px;
+		border: 1px solid #969696;
+		resize: none;
+	}
+	.tijiao {
+		margin: 0 auto;
+		width: 192px;
+		.submitBut {
+			width: 191px;
+			height: 23px;
+			border: 1px solid #114030;
+			color: #000;
+			font-weight: bold;
+			cursor: pointer;
+			.linear-gradient(#fefefe, #d4d4d4);
+			&:hover {
+				.linear-gradient(#fddd19, #e1be00);
+			}
+		}
+	}
+}
+ 
+
+
+

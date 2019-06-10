@@ -1,0 +1,208 @@
+.yo-balance {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    z-index: 100;
+    -webkit-overflow-scroll:touch;
+}
+.tabBd{
+   height: 100%;
+   overflow-y: scroll;
+   .balanceFigure:last-child{
+      padding-bottom: 142px;
+   }
+   ul.titl{
+       border: 0;
+       li{
+         width: 100%;
+         height: 32px;
+         line-height: 32px;
+         font-size: 16px;
+         color: #D13324;
+         background:#FBF1F0;
+         border: 0;
+       }
+   }
+}
+.yo-bal-nav {
+    overflow: hidden;
+    // margin-top: 31px;
+    // margin-bottom: 21px;
+    border-top: 1px solid #E83B50;
+    border-bottom: 1px solid #E83B50;
+    li {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        background: #fff;
+        color: #E83B50;
+        font-size: 18px;
+        &.cur {
+            background: #E83B50;
+            color: #fff;
+        }
+    }
+}
+.baseTable {
+    background: #fff;
+    margin: .15rem 0;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-bottom: 46px;
+    table {
+        width: 100%;
+        text-align: center;
+       tr:nth-child(even){
+           background: #eee;
+       }
+        td {
+            height: 48px;
+            line-height:48px;
+            padding: .1rem;
+            border: 0;
+            &.qi {
+                color: #438cd0;
+            }
+        }
+    }
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.yo-b-menu {
+    ul {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        padding: .15rem 0;
+        li {
+            width: 25%;
+            text-align: center;
+            height: 31.2px;
+            line-height: 31.2px;
+            background: #e4e4e4;
+            font-size: 0.8em;
+            color: #555;
+            border-radius: 5px;
+            margin: 2px 1px;
+            border: 1px solid #e4e4e4;
+            &.cur {
+                border: .1px solid #fba031;
+                background: #ffcd65;
+            }
+        }
+    }
+}
+.balanceFigure {
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: .2rem;
+    // box-shadow: -1px 1px 0 #b6b6b7;
+    ul {
+        overflow: hidden;
+        border-left: 1px solid #D8D8D8;
+    }
+    ul:nth-child(2){
+        margin-top: 8px;
+        border-top: 1px solid #D8D8D8;
+    }
+    li {
+        height: 15px;
+        line-height: 15px;
+        display: block;
+        width: 4.34%;
+        float: left;
+        border-right: 1px solid #D8D8D8;
+        border-bottom: 1px solid #D8D8D8;
+        background: #fff;
+        span {
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            color: #fff;
+            border-radius: 50%;
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+    }
+}
+.danshuang ul {
+    width: 100%;
+    text-align: center;
+}
+.baOne.borderTop {
+    border-bottom: 1px solid #D8D8D8;
+    height: 0;
+    width: 99.8%;
+}
+.balanceFigure li.豹子 span {
+  background: #00cc00;
+}
+.balanceFigure li.小 span {
+    background: #0656cb;
+}
+.balanceFigure li.大 span {
+    background: #c8262c;
+}
+.balanceFigure li.双 span {
+    background: #0656cb;
+}
+.balanceFigure li.尾大 span {
+    background: #c8262c;
+}
+.balanceFigure li.尾小 span {
+    background: #0656cb;
+}
+.balanceFigure li.单 span {
+    background: #c8262c;
+}
+.balanceFigure li.luzi-number span {
+    background: #b62929;
+    font-size: 9px;
+}
+.balanceFigure li.龙 span {
+    background: #c8262c;
+}
+.balanceFigure li.虎 span {
+    background: #0656cb;
+}
+.balanceFigure li.和 span {
+    background: #40c80a;
+}
+.balanceFigure li.金 span {
+    background: #daa520;
+}
+.balanceFigure li.木 span {
+    background: #4daf33;
+}
+.balanceFigure li.水 span {
+    background: #0191db;
+}
+.balanceFigure li.火 span {
+    background: #d9271b;
+}
+.balanceFigure li.土 span {
+    background: #8b4513;
+}
+.yo-bal-nav li.curChang {
+    width: 100%;
+    background-color: #E83B50;
+    color: #fff;
+}

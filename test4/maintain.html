@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>传统彩平台例行维护</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link rel="stylesheet" type="text/css" href="//www.weiyuzw.com/static/lt_h5_v2/local/css/maintain.css" />
+    <script src="//www.weiyuzw.com/static/lt_h5_v2/local/js/common/jquery.min_1.8.2.js"></script>
+  </head>
+  <body class="yo-ctcwh-pc yo-ctcwh-wap" >
+    <div class="yo-m-center clearfix" id="app">
+        <div class="logo">
+            <img src="//sytl3.com/static/lt_h5_v3/local/img/maintain/logo.png" alt="">
+        </div>
+        <h1 class="yo-titile"><img src="//sytl3.com/static/lt_h5_v3/local/img/maintain/weihu-title.svg" alt=""></h1>
+        <div class="yo-wh-time"    id="maintainDiv" style="display:none">
+            <p>维护时间至<maintaindate id="maintainDateTxt"></maintaindate><br>（北京时间）</p>
+        </div>
+          <div class="yo-wh-time"  id="stopDiv" style="display:none">
+            <p>本网站已经停用！</p>
+          </div>
+    </div>
+    <script type="text/javascript">
+      $.ajax({
+        type: 'POST',
+        url: 'common/serverTime',
+        async: false,
+        success: function (res) {
+          // 发个请求判断是否在维护
+          if (res.status !== '999') {
+                  // 如果没有维护就跳转到首页
+            window.location.href = '/'
+          } else {
+            if (!res.data.isStop) {
+              $('#maintainDateTxt').html(res.data.maintainEndDate)
+              $('#maintainDiv').show()
+            } else {
+              $('#stopDiv').show()
+            }
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
