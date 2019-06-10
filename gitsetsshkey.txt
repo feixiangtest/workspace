@@ -1,0 +1,4 @@
+$ git config --global user.name "feixiangsnail"
+$ git config --global user.email "feixiangsnail@hotmail.com"
+$ ssh-keygen -t rsa -C "feixiangsnail@hotmail.com"
+最后把c盘里.ssh文件夹下的pub后缀的内容复制到github里面new sshkey

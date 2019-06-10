@@ -1,0 +1,22 @@
+{
+"git.path": "E:\\installedsoftware\\Git\\cmd\\git.exe",
+// "editor.parameterHints": false,
+// "editor.quickSuggestions": false,
+"fileheader.Author": "ZhangShuai",
+"fileheader.LastModifiedBy": "ZhangShuai",
+"fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Last Modified by: {lastModifiedBy} \r\n * @Last Modified time: {updateTime} \r\n */\r\n",
+"workbench.colorCustomizations": {
+"editor.selectionBackground": "#6622aa"
+},
+"editor.wordWrap": "on" ,
+"editor.minimap.enabled": false,
+"window.zoomLevel": 3,
+"workbench.colorTheme": "Material Theme",
+"git.ignoreMissingGitWarning": true
+}
+ 
+ 
+ 
+1.主题颜色  material Theme;
+ 2.快捷键链接http://blog.csdn.net/crper/article/details/54099319;
+3.在当前文件夹中打开文件快捷键为 ctrl+o;
