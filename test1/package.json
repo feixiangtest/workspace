@@ -29,7 +29,7 @@
     "gulp-rev": "^8.1.1",
     "happypack": "^5.0.0",
     "imagemin-webpack-plugin": "^1.6.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "js-beautify": "^1.7.5",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
