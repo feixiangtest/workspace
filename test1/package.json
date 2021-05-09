@@ -34,7 +34,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "less-plugin-autoprefix": "^2.0.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "mint-ui": "^2.2.9",
     "muse-ui": "^2.1.0",
     "rd": "^1.1.2",
